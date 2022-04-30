@@ -45,6 +45,16 @@ namespace BarcodeSales
             this.txtBarkod = new System.Windows.Forms.TextBox();
             this.txtMiktar = new System.Windows.Forms.TextBox();
             this.dataGridViewSatisListesi = new System.Windows.Forms.DataGridView();
+            this.gvBarkod = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gvUrunAdi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gvMiktar = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gvFiyat = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gvToplam = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gvKdvTutar = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gvBirim = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gvUrunGrup = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gvAlisFiyat = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gvSil = new System.Windows.Forms.DataGridViewImageColumn();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.btnNakitAndKart = new System.Windows.Forms.Button();
             this.btnKrediKartı = new System.Windows.Forms.Button();
@@ -118,16 +128,6 @@ namespace BarcodeSales
             this.btnHizliTus = new System.Windows.Forms.Button();
             this.btnDigerUrun = new System.Windows.Forms.Button();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.gvBarkod = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gvUrunAdi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gvMiktar = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gvFiyat = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gvToplam = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gvKdvTutar = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gvBirim = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gvUrunGrup = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gvAlisFiyat = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gvSil = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -157,6 +157,7 @@ namespace BarcodeSales
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer1.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
             this.splitContainer1.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
@@ -166,7 +167,7 @@ namespace BarcodeSales
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.splitContainer2);
-            this.splitContainer1.Size = new System.Drawing.Size(1422, 735);
+            this.splitContainer1.Size = new System.Drawing.Size(1421, 735);
             this.splitContainer1.SplitterDistance = 520;
             this.splitContainer1.TabIndex = 0;
             // 
@@ -196,9 +197,10 @@ namespace BarcodeSales
             this.panel1.Controls.Add(this.txtBarkod);
             this.panel1.Controls.Add(this.txtMiktar);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Location = new System.Drawing.Point(3, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(514, 94);
+            this.panel1.Size = new System.Drawing.Size(514, 96);
             this.panel1.TabIndex = 0;
             // 
             // chSatisIadeIslemi
@@ -211,7 +213,8 @@ namespace BarcodeSales
             this.chSatisIadeIslemi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.chSatisIadeIslemi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chSatisIadeIslemi.ForeColor = System.Drawing.Color.White;
-            this.chSatisIadeIslemi.Location = new System.Drawing.Point(9, 3);
+            this.chSatisIadeIslemi.Location = new System.Drawing.Point(9, 2);
+            this.chSatisIadeIslemi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chSatisIadeIslemi.Name = "chSatisIadeIslemi";
             this.chSatisIadeIslemi.Size = new System.Drawing.Size(140, 30);
             this.chSatisIadeIslemi.TabIndex = 4;
@@ -234,7 +237,7 @@ namespace BarcodeSales
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.DarkOrange;
-            this.label5.Location = new System.Drawing.Point(34, 33);
+            this.label5.Location = new System.Drawing.Point(35, 33);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(65, 25);
             this.label5.TabIndex = 2;
@@ -243,7 +246,8 @@ namespace BarcodeSales
             // txtBarkod
             // 
             this.txtBarkod.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBarkod.Location = new System.Drawing.Point(117, 61);
+            this.txtBarkod.Location = new System.Drawing.Point(117, 62);
+            this.txtBarkod.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtBarkod.Name = "txtBarkod";
             this.txtBarkod.Size = new System.Drawing.Size(388, 30);
             this.txtBarkod.TabIndex = 1;
@@ -253,7 +257,8 @@ namespace BarcodeSales
             // txtMiktar
             // 
             this.txtMiktar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMiktar.Location = new System.Drawing.Point(10, 62);
+            this.txtMiktar.Location = new System.Drawing.Point(11, 62);
+            this.txtMiktar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtMiktar.Name = "txtMiktar";
             this.txtMiktar.Size = new System.Drawing.Size(100, 30);
             this.txtMiktar.TabIndex = 0;
@@ -265,6 +270,7 @@ namespace BarcodeSales
             this.dataGridViewSatisListesi.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewSatisListesi.BackgroundColor = System.Drawing.Color.LightBlue;
             this.dataGridViewSatisListesi.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridViewSatisListesi.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.LightBlue;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -287,17 +293,102 @@ namespace BarcodeSales
             this.gvAlisFiyat,
             this.gvSil});
             this.dataGridViewSatisListesi.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridViewSatisListesi.Location = new System.Drawing.Point(3, 103);
+            this.dataGridViewSatisListesi.Location = new System.Drawing.Point(3, 102);
+            this.dataGridViewSatisListesi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridViewSatisListesi.Name = "dataGridViewSatisListesi";
             this.dataGridViewSatisListesi.RowHeadersVisible = false;
             this.dataGridViewSatisListesi.RowHeadersWidth = 51;
             dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle7.Padding = new System.Windows.Forms.Padding(3);
             this.dataGridViewSatisListesi.RowsDefaultCellStyle = dataGridViewCellStyle7;
-            this.dataGridViewSatisListesi.RowTemplate.Height = 24;
+            this.dataGridViewSatisListesi.RowTemplate.DefaultCellStyle.Padding = new System.Windows.Forms.Padding(3);
+            this.dataGridViewSatisListesi.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.dataGridViewSatisListesi.RowTemplate.Height = 30;
             this.dataGridViewSatisListesi.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewSatisListesi.Size = new System.Drawing.Size(514, 470);
+            this.dataGridViewSatisListesi.Size = new System.Drawing.Size(514, 472);
             this.dataGridViewSatisListesi.TabIndex = 1;
+            this.dataGridViewSatisListesi.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewSatisListesi_CellContentClick);
+            // 
+            // gvBarkod
+            // 
+            this.gvBarkod.HeaderText = "Barkod";
+            this.gvBarkod.MinimumWidth = 6;
+            this.gvBarkod.Name = "gvBarkod";
+            // 
+            // gvUrunAdi
+            // 
+            this.gvUrunAdi.HeaderText = "Ürün Adı";
+            this.gvUrunAdi.MinimumWidth = 6;
+            this.gvUrunAdi.Name = "gvUrunAdi";
+            // 
+            // gvMiktar
+            // 
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.gvMiktar.DefaultCellStyle = dataGridViewCellStyle2;
+            this.gvMiktar.HeaderText = "Miktar";
+            this.gvMiktar.MinimumWidth = 6;
+            this.gvMiktar.Name = "gvMiktar";
+            // 
+            // gvFiyat
+            // 
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle3.Format = "C2";
+            dataGridViewCellStyle3.NullValue = null;
+            this.gvFiyat.DefaultCellStyle = dataGridViewCellStyle3;
+            this.gvFiyat.HeaderText = "Fiyat";
+            this.gvFiyat.MinimumWidth = 6;
+            this.gvFiyat.Name = "gvFiyat";
+            // 
+            // gvToplam
+            // 
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle4.Format = "C2";
+            dataGridViewCellStyle4.NullValue = null;
+            this.gvToplam.DefaultCellStyle = dataGridViewCellStyle4;
+            this.gvToplam.HeaderText = "Toplam";
+            this.gvToplam.MinimumWidth = 6;
+            this.gvToplam.Name = "gvToplam";
+            // 
+            // gvKdvTutar
+            // 
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.NullValue = null;
+            this.gvKdvTutar.DefaultCellStyle = dataGridViewCellStyle5;
+            this.gvKdvTutar.HeaderText = "Kdv Tutarı";
+            this.gvKdvTutar.MinimumWidth = 6;
+            this.gvKdvTutar.Name = "gvKdvTutar";
+            this.gvKdvTutar.Visible = false;
+            // 
+            // gvBirim
+            // 
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.gvBirim.DefaultCellStyle = dataGridViewCellStyle6;
+            this.gvBirim.HeaderText = "Birim";
+            this.gvBirim.MinimumWidth = 6;
+            this.gvBirim.Name = "gvBirim";
+            // 
+            // gvUrunGrup
+            // 
+            this.gvUrunGrup.HeaderText = "Ürün Grup";
+            this.gvUrunGrup.MinimumWidth = 6;
+            this.gvUrunGrup.Name = "gvUrunGrup";
+            this.gvUrunGrup.Visible = false;
+            // 
+            // gvAlisFiyat
+            // 
+            this.gvAlisFiyat.HeaderText = "Alış Fiyatı";
+            this.gvAlisFiyat.MinimumWidth = 6;
+            this.gvAlisFiyat.Name = "gvAlisFiyat";
+            this.gvAlisFiyat.Visible = false;
+            // 
+            // gvSil
+            // 
+            this.gvSil.HeaderText = "Sil";
+            this.gvSil.Image = global::BarcodeSales.Properties.Resources.remove;
+            this.gvSil.MinimumWidth = 6;
+            this.gvSil.Name = "gvSil";
+            this.gvSil.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.gvSil.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // tableLayoutPanel2
             // 
@@ -401,7 +492,6 @@ namespace BarcodeSales
             this.txtGenelToplam.Name = "txtGenelToplam";
             this.txtGenelToplam.Size = new System.Drawing.Size(207, 46);
             this.txtGenelToplam.TabIndex = 0;
-            this.txtGenelToplam.Text = "111";
             this.txtGenelToplam.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // tableLayoutPanel10
@@ -458,7 +548,8 @@ namespace BarcodeSales
             this.textOdenen.Dock = System.Windows.Forms.DockStyle.Fill;
             this.textOdenen.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textOdenen.ForeColor = System.Drawing.Color.White;
-            this.textOdenen.Location = new System.Drawing.Point(3, 62);
+            this.textOdenen.Location = new System.Drawing.Point(3, 61);
+            this.textOdenen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textOdenen.Name = "textOdenen";
             this.textOdenen.Size = new System.Drawing.Size(98, 21);
             this.textOdenen.TabIndex = 1;
@@ -489,7 +580,8 @@ namespace BarcodeSales
             this.textParaUstu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.textParaUstu.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textParaUstu.ForeColor = System.Drawing.Color.White;
-            this.textParaUstu.Location = new System.Drawing.Point(3, 62);
+            this.textParaUstu.Location = new System.Drawing.Point(3, 61);
+            this.textParaUstu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textParaUstu.Name = "textParaUstu";
             this.textParaUstu.Size = new System.Drawing.Size(99, 21);
             this.textParaUstu.TabIndex = 2;
@@ -516,6 +608,7 @@ namespace BarcodeSales
             this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer2.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
             this.splitContainer2.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.splitContainer2.Name = "splitContainer2";
             this.splitContainer2.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -526,7 +619,7 @@ namespace BarcodeSales
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.Controls.Add(this.tableLayoutPanel5);
-            this.splitContainer2.Size = new System.Drawing.Size(898, 735);
+            this.splitContainer2.Size = new System.Drawing.Size(897, 735);
             this.splitContainer2.SplitterDistance = 539;
             this.splitContainer2.TabIndex = 0;
             // 
@@ -565,6 +658,7 @@ namespace BarcodeSales
             this.tableLayoutPanel4.Controls.Add(this.btnHizli1, 0, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel4.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 5;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
@@ -572,7 +666,7 @@ namespace BarcodeSales
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(898, 539);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(897, 539);
             this.tableLayoutPanel4.TabIndex = 0;
             // 
             // btnHizli25
@@ -586,7 +680,7 @@ namespace BarcodeSales
             this.btnHizli25.Location = new System.Drawing.Point(717, 429);
             this.btnHizli25.Margin = new System.Windows.Forms.Padding(1);
             this.btnHizli25.Name = "btnHizli25";
-            this.btnHizli25.Size = new System.Drawing.Size(180, 109);
+            this.btnHizli25.Size = new System.Drawing.Size(179, 109);
             this.btnHizli25.TabIndex = 24;
             this.btnHizli25.Text = "bHizli";
             this.btnHizli25.UseVisualStyleBackColor = false;
@@ -666,7 +760,7 @@ namespace BarcodeSales
             this.btnHizli20.Location = new System.Drawing.Point(717, 322);
             this.btnHizli20.Margin = new System.Windows.Forms.Padding(1);
             this.btnHizli20.Name = "btnHizli20";
-            this.btnHizli20.Size = new System.Drawing.Size(180, 105);
+            this.btnHizli20.Size = new System.Drawing.Size(179, 105);
             this.btnHizli20.TabIndex = 19;
             this.btnHizli20.Text = "bHizli";
             this.btnHizli20.UseVisualStyleBackColor = false;
@@ -746,7 +840,7 @@ namespace BarcodeSales
             this.btnHizli15.Location = new System.Drawing.Point(717, 215);
             this.btnHizli15.Margin = new System.Windows.Forms.Padding(1);
             this.btnHizli15.Name = "btnHizli15";
-            this.btnHizli15.Size = new System.Drawing.Size(180, 105);
+            this.btnHizli15.Size = new System.Drawing.Size(179, 105);
             this.btnHizli15.TabIndex = 14;
             this.btnHizli15.Text = "bHizli";
             this.btnHizli15.UseVisualStyleBackColor = false;
@@ -826,7 +920,7 @@ namespace BarcodeSales
             this.btnHizli10.Location = new System.Drawing.Point(717, 108);
             this.btnHizli10.Margin = new System.Windows.Forms.Padding(1);
             this.btnHizli10.Name = "btnHizli10";
-            this.btnHizli10.Size = new System.Drawing.Size(180, 105);
+            this.btnHizli10.Size = new System.Drawing.Size(179, 105);
             this.btnHizli10.TabIndex = 9;
             this.btnHizli10.Text = "bHizli";
             this.btnHizli10.UseVisualStyleBackColor = false;
@@ -906,7 +1000,7 @@ namespace BarcodeSales
             this.btnHizli5.Location = new System.Drawing.Point(717, 1);
             this.btnHizli5.Margin = new System.Windows.Forms.Padding(1);
             this.btnHizli5.Name = "btnHizli5";
-            this.btnHizli5.Size = new System.Drawing.Size(180, 105);
+            this.btnHizli5.Size = new System.Drawing.Size(179, 105);
             this.btnHizli5.TabIndex = 4;
             this.btnHizli5.Text = "bHizli";
             this.btnHizli5.UseVisualStyleBackColor = false;
@@ -986,10 +1080,11 @@ namespace BarcodeSales
             this.tableLayoutPanel5.Controls.Add(this.tableLayoutPanel9, 2, 0);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel5.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 1;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(898, 192);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(897, 192);
             this.tableLayoutPanel5.TabIndex = 0;
             // 
             // tableLayoutPanel6
@@ -1125,7 +1220,7 @@ namespace BarcodeSales
             this.tableLayoutPanel7.RowCount = 2;
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 34F));
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(357, 190);
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(356, 190);
             this.tableLayoutPanel7.TabIndex = 1;
             // 
             // txtTusTakimi
@@ -1136,7 +1231,7 @@ namespace BarcodeSales
             this.txtTusTakimi.Location = new System.Drawing.Point(1, 1);
             this.txtTusTakimi.Margin = new System.Windows.Forms.Padding(1);
             this.txtTusTakimi.Name = "txtTusTakimi";
-            this.txtTusTakimi.Size = new System.Drawing.Size(355, 30);
+            this.txtTusTakimi.Size = new System.Drawing.Size(354, 30);
             this.txtTusTakimi.TabIndex = 2;
             this.txtTusTakimi.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -1167,7 +1262,7 @@ namespace BarcodeSales
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel8.Size = new System.Drawing.Size(357, 156);
+            this.tableLayoutPanel8.Size = new System.Drawing.Size(356, 156);
             this.tableLayoutPanel8.TabIndex = 0;
             // 
             // btnVirgul
@@ -1178,10 +1273,10 @@ namespace BarcodeSales
             this.btnVirgul.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVirgul.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVirgul.ForeColor = System.Drawing.Color.White;
-            this.btnVirgul.Location = new System.Drawing.Point(239, 118);
+            this.btnVirgul.Location = new System.Drawing.Point(237, 118);
             this.btnVirgul.Margin = new System.Windows.Forms.Padding(1);
             this.btnVirgul.Name = "btnVirgul";
-            this.btnVirgul.Size = new System.Drawing.Size(117, 37);
+            this.btnVirgul.Size = new System.Drawing.Size(118, 37);
             this.btnVirgul.TabIndex = 12;
             this.btnVirgul.Text = ",";
             this.btnVirgul.UseVisualStyleBackColor = false;
@@ -1194,10 +1289,10 @@ namespace BarcodeSales
             this.btn0Tus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn0Tus.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn0Tus.ForeColor = System.Drawing.Color.White;
-            this.btn0Tus.Location = new System.Drawing.Point(120, 118);
+            this.btn0Tus.Location = new System.Drawing.Point(119, 118);
             this.btn0Tus.Margin = new System.Windows.Forms.Padding(1);
             this.btn0Tus.Name = "btn0Tus";
-            this.btn0Tus.Size = new System.Drawing.Size(117, 37);
+            this.btn0Tus.Size = new System.Drawing.Size(116, 37);
             this.btn0Tus.TabIndex = 11;
             this.btn0Tus.Text = "0";
             this.btn0Tus.UseVisualStyleBackColor = false;
@@ -1213,7 +1308,7 @@ namespace BarcodeSales
             this.btnKucuktur.Location = new System.Drawing.Point(1, 118);
             this.btnKucuktur.Margin = new System.Windows.Forms.Padding(1);
             this.btnKucuktur.Name = "btnKucuktur";
-            this.btnKucuktur.Size = new System.Drawing.Size(117, 37);
+            this.btnKucuktur.Size = new System.Drawing.Size(116, 37);
             this.btnKucuktur.TabIndex = 10;
             this.btnKucuktur.Text = "<";
             this.btnKucuktur.UseVisualStyleBackColor = false;
@@ -1226,10 +1321,10 @@ namespace BarcodeSales
             this.btn9Tus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn9Tus.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn9Tus.ForeColor = System.Drawing.Color.White;
-            this.btn9Tus.Location = new System.Drawing.Point(239, 79);
+            this.btn9Tus.Location = new System.Drawing.Point(237, 79);
             this.btn9Tus.Margin = new System.Windows.Forms.Padding(1);
             this.btn9Tus.Name = "btn9Tus";
-            this.btn9Tus.Size = new System.Drawing.Size(117, 37);
+            this.btn9Tus.Size = new System.Drawing.Size(118, 37);
             this.btn9Tus.TabIndex = 9;
             this.btn9Tus.Text = "9";
             this.btn9Tus.UseVisualStyleBackColor = false;
@@ -1242,10 +1337,10 @@ namespace BarcodeSales
             this.btn8Tus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn8Tus.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn8Tus.ForeColor = System.Drawing.Color.White;
-            this.btn8Tus.Location = new System.Drawing.Point(120, 79);
+            this.btn8Tus.Location = new System.Drawing.Point(119, 79);
             this.btn8Tus.Margin = new System.Windows.Forms.Padding(1);
             this.btn8Tus.Name = "btn8Tus";
-            this.btn8Tus.Size = new System.Drawing.Size(117, 37);
+            this.btn8Tus.Size = new System.Drawing.Size(116, 37);
             this.btn8Tus.TabIndex = 8;
             this.btn8Tus.Text = "8";
             this.btn8Tus.UseVisualStyleBackColor = false;
@@ -1261,7 +1356,7 @@ namespace BarcodeSales
             this.btn7Tus.Location = new System.Drawing.Point(1, 79);
             this.btn7Tus.Margin = new System.Windows.Forms.Padding(1);
             this.btn7Tus.Name = "btn7Tus";
-            this.btn7Tus.Size = new System.Drawing.Size(117, 37);
+            this.btn7Tus.Size = new System.Drawing.Size(116, 37);
             this.btn7Tus.TabIndex = 7;
             this.btn7Tus.Text = "7";
             this.btn7Tus.UseVisualStyleBackColor = false;
@@ -1274,10 +1369,10 @@ namespace BarcodeSales
             this.btn6Tus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn6Tus.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn6Tus.ForeColor = System.Drawing.Color.White;
-            this.btn6Tus.Location = new System.Drawing.Point(239, 40);
+            this.btn6Tus.Location = new System.Drawing.Point(237, 40);
             this.btn6Tus.Margin = new System.Windows.Forms.Padding(1);
             this.btn6Tus.Name = "btn6Tus";
-            this.btn6Tus.Size = new System.Drawing.Size(117, 37);
+            this.btn6Tus.Size = new System.Drawing.Size(118, 37);
             this.btn6Tus.TabIndex = 6;
             this.btn6Tus.Text = "6";
             this.btn6Tus.UseVisualStyleBackColor = false;
@@ -1290,10 +1385,10 @@ namespace BarcodeSales
             this.btn5Tus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn5Tus.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn5Tus.ForeColor = System.Drawing.Color.White;
-            this.btn5Tus.Location = new System.Drawing.Point(120, 40);
+            this.btn5Tus.Location = new System.Drawing.Point(119, 40);
             this.btn5Tus.Margin = new System.Windows.Forms.Padding(1);
             this.btn5Tus.Name = "btn5Tus";
-            this.btn5Tus.Size = new System.Drawing.Size(117, 37);
+            this.btn5Tus.Size = new System.Drawing.Size(116, 37);
             this.btn5Tus.TabIndex = 5;
             this.btn5Tus.Text = "5";
             this.btn5Tus.UseVisualStyleBackColor = false;
@@ -1309,7 +1404,7 @@ namespace BarcodeSales
             this.btn4Tus.Location = new System.Drawing.Point(1, 40);
             this.btn4Tus.Margin = new System.Windows.Forms.Padding(1);
             this.btn4Tus.Name = "btn4Tus";
-            this.btn4Tus.Size = new System.Drawing.Size(117, 37);
+            this.btn4Tus.Size = new System.Drawing.Size(116, 37);
             this.btn4Tus.TabIndex = 4;
             this.btn4Tus.Text = "4";
             this.btn4Tus.UseVisualStyleBackColor = false;
@@ -1322,10 +1417,10 @@ namespace BarcodeSales
             this.btn3Tus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn3Tus.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn3Tus.ForeColor = System.Drawing.Color.White;
-            this.btn3Tus.Location = new System.Drawing.Point(239, 1);
+            this.btn3Tus.Location = new System.Drawing.Point(237, 1);
             this.btn3Tus.Margin = new System.Windows.Forms.Padding(1);
             this.btn3Tus.Name = "btn3Tus";
-            this.btn3Tus.Size = new System.Drawing.Size(117, 37);
+            this.btn3Tus.Size = new System.Drawing.Size(118, 37);
             this.btn3Tus.TabIndex = 3;
             this.btn3Tus.Text = "3";
             this.btn3Tus.UseVisualStyleBackColor = false;
@@ -1338,10 +1433,10 @@ namespace BarcodeSales
             this.btn2Tus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn2Tus.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn2Tus.ForeColor = System.Drawing.Color.White;
-            this.btn2Tus.Location = new System.Drawing.Point(120, 1);
+            this.btn2Tus.Location = new System.Drawing.Point(119, 1);
             this.btn2Tus.Margin = new System.Windows.Forms.Padding(1);
             this.btn2Tus.Name = "btn2Tus";
-            this.btn2Tus.Size = new System.Drawing.Size(117, 37);
+            this.btn2Tus.Size = new System.Drawing.Size(116, 37);
             this.btn2Tus.TabIndex = 2;
             this.btn2Tus.Text = "2";
             this.btn2Tus.UseVisualStyleBackColor = false;
@@ -1357,7 +1452,7 @@ namespace BarcodeSales
             this.btn1Tus.Location = new System.Drawing.Point(1, 1);
             this.btn1Tus.Margin = new System.Windows.Forms.Padding(1);
             this.btn1Tus.Name = "btn1Tus";
-            this.btn1Tus.Size = new System.Drawing.Size(117, 37);
+            this.btn1Tus.Size = new System.Drawing.Size(116, 37);
             this.btn1Tus.TabIndex = 1;
             this.btn1Tus.Text = "1";
             this.btn1Tus.UseVisualStyleBackColor = false;
@@ -1376,7 +1471,7 @@ namespace BarcodeSales
             this.tableLayoutPanel9.Controls.Add(this.btnHizliTus, 1, 0);
             this.tableLayoutPanel9.Controls.Add(this.btnDigerUrun, 0, 0);
             this.tableLayoutPanel9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel9.Location = new System.Drawing.Point(539, 1);
+            this.tableLayoutPanel9.Location = new System.Drawing.Point(538, 1);
             this.tableLayoutPanel9.Margin = new System.Windows.Forms.Padding(1);
             this.tableLayoutPanel9.Name = "tableLayoutPanel9";
             this.tableLayoutPanel9.RowCount = 4;
@@ -1526,94 +1621,14 @@ namespace BarcodeSales
             this.dataGridViewImageColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.dataGridViewImageColumn1.Width = 125;
             // 
-            // gvBarkod
-            // 
-            this.gvBarkod.HeaderText = "Barkod";
-            this.gvBarkod.MinimumWidth = 6;
-            this.gvBarkod.Name = "gvBarkod";
-            // 
-            // gvUrunAdi
-            // 
-            this.gvUrunAdi.HeaderText = "Ürün Adı";
-            this.gvUrunAdi.MinimumWidth = 6;
-            this.gvUrunAdi.Name = "gvUrunAdi";
-            // 
-            // gvMiktar
-            // 
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.gvMiktar.DefaultCellStyle = dataGridViewCellStyle2;
-            this.gvMiktar.HeaderText = "Miktar";
-            this.gvMiktar.MinimumWidth = 6;
-            this.gvMiktar.Name = "gvMiktar";
-            // 
-            // gvFiyat
-            // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle3.Format = "C2";
-            dataGridViewCellStyle3.NullValue = null;
-            this.gvFiyat.DefaultCellStyle = dataGridViewCellStyle3;
-            this.gvFiyat.HeaderText = "Fiyat";
-            this.gvFiyat.MinimumWidth = 6;
-            this.gvFiyat.Name = "gvFiyat";
-            // 
-            // gvToplam
-            // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle4.Format = "C2";
-            dataGridViewCellStyle4.NullValue = null;
-            this.gvToplam.DefaultCellStyle = dataGridViewCellStyle4;
-            this.gvToplam.HeaderText = "Toplam";
-            this.gvToplam.MinimumWidth = 6;
-            this.gvToplam.Name = "gvToplam";
-            // 
-            // gvKdvTutar
-            // 
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.NullValue = null;
-            this.gvKdvTutar.DefaultCellStyle = dataGridViewCellStyle5;
-            this.gvKdvTutar.HeaderText = "Kdv Tutarı";
-            this.gvKdvTutar.MinimumWidth = 6;
-            this.gvKdvTutar.Name = "gvKdvTutar";
-            this.gvKdvTutar.Visible = false;
-            // 
-            // gvBirim
-            // 
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.gvBirim.DefaultCellStyle = dataGridViewCellStyle6;
-            this.gvBirim.HeaderText = "Birim";
-            this.gvBirim.MinimumWidth = 6;
-            this.gvBirim.Name = "gvBirim";
-            // 
-            // gvUrunGrup
-            // 
-            this.gvUrunGrup.HeaderText = "Ürün Grup";
-            this.gvUrunGrup.MinimumWidth = 6;
-            this.gvUrunGrup.Name = "gvUrunGrup";
-            this.gvUrunGrup.Visible = false;
-            // 
-            // gvAlisFiyat
-            // 
-            this.gvAlisFiyat.HeaderText = "Alış Fiyatı";
-            this.gvAlisFiyat.MinimumWidth = 6;
-            this.gvAlisFiyat.Name = "gvAlisFiyat";
-            this.gvAlisFiyat.Visible = false;
-            // 
-            // gvSil
-            // 
-            this.gvSil.HeaderText = "Sil";
-            this.gvSil.Image = global::BarcodeSales.Properties.Resources.remove;
-            this.gvSil.MinimumWidth = 6;
-            this.gvSil.Name = "gvSil";
-            this.gvSil.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.gvSil.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
             // fSatis
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightBlue;
-            this.ClientSize = new System.Drawing.Size(1422, 735);
+            this.ClientSize = new System.Drawing.Size(1421, 735);
             this.Controls.Add(this.splitContainer1);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "fSatis";
             this.Text = "BARKODLU SATIŞ PROGRAMI";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

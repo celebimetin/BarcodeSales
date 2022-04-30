@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace BarcodeSales
@@ -23,7 +18,6 @@ namespace BarcodeSales
         {
             if (e.KeyCode == Keys.Enter)
             {
-                //MessageBox.Show(textBarkod.Text);
                 string barkod = txtBarkod.Text.Trim();
                 if (barkod.Length <= 2)
                 {
@@ -36,57 +30,90 @@ namespace BarcodeSales
                     if (db.Uruns.Any(u => u.Barkod == barkod))
                     {
                         var urun = db.Uruns.Where(x => x.Barkod == barkod).FirstOrDefault();
-                        //MessageBox.Show(urun.UrunAdı);
-                        int satirSayisi = dataGridViewSatisListesi.Rows.Count;
                         double miktar = Convert.ToDouble(txtMiktar.Text);
-                        bool eklenmismi = false;
-                        if (satirSayisi > 0)
+                        ListeyeUrunGetir(urun, barkod, miktar);
+                    }
+                    else
+                    {
+                        int teraziOnEk = Convert.ToInt32(barkod.Substring(0, 2));
+                        if (db.Terazis.Any(x => x.TeraziOnEk == teraziOnEk))
                         {
-                            for (int i = 0; i < satirSayisi; i++)
+                            string teraziUrunNo = barkod.Substring(2, 5);
+                            if (db.Uruns.Any(x => x.Barkod == teraziUrunNo))
                             {
-                                if (dataGridViewSatisListesi.Rows[i].Cells["gvBarkod"].Value.ToString() == barkod)
-                                {
-                                    dataGridViewSatisListesi.Rows[i].Cells["gvMiktar"].Value = miktar + Convert.ToDouble(dataGridViewSatisListesi.Rows[i].Cells["gvMiktar"].Value);
-
-                                    dataGridViewSatisListesi.Rows[i].Cells["gvToplam"].Value = Math.Round(Convert.ToDouble(dataGridViewSatisListesi.Rows[i].Cells["gvMiktar"].Value) * Convert.ToDouble(dataGridViewSatisListesi.Rows[i].Cells["gvFiyat"].Value), 2);
-
-                                    eklenmismi = true;
-                                }
+                                var urunTerazi = db.Uruns.Where(x => x.Barkod == teraziUrunNo).FirstOrDefault();
+                                double miktarKg = Convert.ToDouble(barkod.Substring(7, 5)) / 1000;
+                                ListeyeUrunGetir(urunTerazi, teraziUrunNo, miktarKg);
+                            }
+                            else
+                            {
+                                MessageBox.Show("Kg ürün yok ekleme sayfası yapılacak");
                             }
                         }
-                        if (!eklenmismi)
+                        else
                         {
-                            dataGridViewSatisListesi.Rows.Add();
-                            dataGridViewSatisListesi.Rows[satirSayisi].Cells["gvBarkod"].Value = barkod;
-                            dataGridViewSatisListesi.Rows[satirSayisi].Cells["gvUrunAdi"].Value = urun.UrunAdı;
-                            dataGridViewSatisListesi.Rows[satirSayisi].Cells["gvMiktar"].Value = miktar;
-                            dataGridViewSatisListesi.Rows[satirSayisi].Cells["gvFiyat"].Value = urun.SatisFiyat;
-                            dataGridViewSatisListesi.Rows[satirSayisi].Cells["gvToplam"].Value = Math.Round(miktar * (double)urun.SatisFiyat, 2);
-                            dataGridViewSatisListesi.Rows[satirSayisi].Cells["gvKdvTutar"].Value = urun.SatisFiyat * urun.KdvOrani / 100;
-                            dataGridViewSatisListesi.Rows[satirSayisi].Cells["gvBirim"].Value = urun.Birim;
-                            dataGridViewSatisListesi.Rows[satirSayisi].Cells["gvUrunGrup"].Value = urun.UrunGrup;
-                            dataGridViewSatisListesi.Rows[satirSayisi].Cells["gvAlisFiyat"].Value = urun.AlisFiyat;
+                            MessageBox.Show("normal ürün yok ekleme sayfası yapılacak");
                         }
                     }
                 }
                 dataGridViewSatisListesi.ClearSelection();
                 GenelToplam();
-                
+            }
+        }
+
+        private void ListeyeUrunGetir(Urun urun, string barkod, double miktar)
+        {
+            int satirSayisi = dataGridViewSatisListesi.Rows.Count;
+            bool eklenmismi = false;
+            if (satirSayisi > 0)
+            {
+                for (int i = 0; i < satirSayisi; i++)
+                {
+                    if (dataGridViewSatisListesi.Rows[i].Cells["gvBarkod"].Value.ToString() == barkod)
+                    {
+                        dataGridViewSatisListesi.Rows[i].Cells["gvMiktar"].Value = miktar + Convert.ToDouble(dataGridViewSatisListesi.Rows[i].Cells["gvMiktar"].Value);
+
+                        dataGridViewSatisListesi.Rows[i].Cells["gvToplam"].Value = Math.Round(Convert.ToDouble(dataGridViewSatisListesi.Rows[i].Cells["gvMiktar"].Value) * Convert.ToDouble(dataGridViewSatisListesi.Rows[i].Cells["gvFiyat"].Value), 2);
+
+                        eklenmismi = true;
+                    }
+                }
+            }
+            if (!eklenmismi)
+            {
+                dataGridViewSatisListesi.Rows.Add();
+                dataGridViewSatisListesi.Rows[satirSayisi].Cells["gvBarkod"].Value = barkod;
+                dataGridViewSatisListesi.Rows[satirSayisi].Cells["gvUrunAdi"].Value = urun.UrunAdı;
+                dataGridViewSatisListesi.Rows[satirSayisi].Cells["gvMiktar"].Value = miktar;
+                dataGridViewSatisListesi.Rows[satirSayisi].Cells["gvFiyat"].Value = urun.SatisFiyat;
+                dataGridViewSatisListesi.Rows[satirSayisi].Cells["gvToplam"].Value = Math.Round(miktar * (double)urun.SatisFiyat, 2);
+                dataGridViewSatisListesi.Rows[satirSayisi].Cells["gvKdvTutar"].Value = urun.SatisFiyat * urun.KdvOrani / 100;
+                dataGridViewSatisListesi.Rows[satirSayisi].Cells["gvBirim"].Value = urun.Birim;
+                dataGridViewSatisListesi.Rows[satirSayisi].Cells["gvUrunGrup"].Value = urun.UrunGrup;
+                dataGridViewSatisListesi.Rows[satirSayisi].Cells["gvAlisFiyat"].Value = urun.AlisFiyat;
             }
         }
 
         private void GenelToplam()
         {
-            if (dataGridViewSatisListesi.Rows.Count > 0)
+            double genelToplam = 0;
+            for (int i = 0; i < dataGridViewSatisListesi.Rows.Count; i++)
             {
-                double toplam = 0;
-                for (int i = 0; i < dataGridViewSatisListesi.Rows.Count; i++)
-                {
-                    toplam += Convert.ToDouble(dataGridViewSatisListesi.Rows[i].Cells["gvToplam"].Value);
+                genelToplam += Convert.ToDouble(dataGridViewSatisListesi.Rows[i].Cells["gvToplam"].Value);
 
-                }
-                txtGenelToplam.Text = toplam.ToString("C2");
-                txtBarkod.Clear();
+            }
+            txtGenelToplam.Text = genelToplam.ToString("C2");
+            txtBarkod.Clear();
+            txtBarkod.Focus();
+        }
+
+        private void dataGridViewSatisListesi_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 9)
+            {
+                dataGridViewSatisListesi.Rows.Remove(dataGridViewSatisListesi.CurrentRow);
+                dataGridViewSatisListesi.ClearSelection();
+                GenelToplam();
                 txtBarkod.Focus();
             }
         }
