@@ -99,10 +99,10 @@ namespace BarcodeSales
                 dataGridViewSatisListesi.Rows[satirSayisi].Cells["gvMiktar"].Value = miktar;
                 dataGridViewSatisListesi.Rows[satirSayisi].Cells["gvFiyat"].Value = urun.SatisFiyat;
                 dataGridViewSatisListesi.Rows[satirSayisi].Cells["gvToplam"].Value = Math.Round(miktar * (double)urun.SatisFiyat, 2);
-                dataGridViewSatisListesi.Rows[satirSayisi].Cells["gvKdvTutar"].Value = urun.SatisFiyat * urun.KdvOrani / 100;
+                dataGridViewSatisListesi.Rows[satirSayisi].Cells["gvKdvTutari"].Value = urun.SatisFiyat * urun.KdvOrani / 100;
                 dataGridViewSatisListesi.Rows[satirSayisi].Cells["gvBirim"].Value = urun.Birim;
                 dataGridViewSatisListesi.Rows[satirSayisi].Cells["gvUrunGrup"].Value = urun.UrunGrup;
-                dataGridViewSatisListesi.Rows[satirSayisi].Cells["gvAlisFiyat"].Value = urun.AlisFiyat;
+                dataGridViewSatisListesi.Rows[satirSayisi].Cells["gvAlisFiyati"].Value = urun.AlisFiyat;
             }
         }
 
@@ -112,9 +112,9 @@ namespace BarcodeSales
             for (int i = 0; i < dataGridViewSatisListesi.Rows.Count; i++)
             {
                 genelToplam += Convert.ToDouble(dataGridViewSatisListesi.Rows[i].Cells["gvToplam"].Value);
-
             }
             txtGenelToplam.Text = genelToplam.ToString("C2");
+            txtMiktar.Text = "1";
             txtBarkod.Clear();
             txtBarkod.Focus();
         }
@@ -234,8 +234,10 @@ namespace BarcodeSales
         {
             if (txtTusTakimiNumarator.Text != "")
             {
-                double sonuc = Islemler.DoubleYap(txtTusTakimiNumarator.Text) - Islemler.DoubleYap(txtGenelToplam.Text);
-                txtParaUstu.Text = sonuc.ToString("C2");
+                double paraUstuSonuc = Islemler.DoubleYap(txtGenelToplam.Text) - Islemler.DoubleYap(txtTusTakimiNumarator.Text);
+                txtParaUstu.Text = paraUstuSonuc.ToString("C2");
+                double odenenSonuc = Convert.ToDouble(txtTusTakimiNumarator.Text);
+                txtOdenen.Text = odenenSonuc.ToString("C2");
                 txtTusTakimiNumarator.Clear();
                 txtBarkod.Focus();
             }
@@ -262,8 +264,69 @@ namespace BarcodeSales
         private void ParaUstuHesapla_Click(object sender, EventArgs e)
         {
             Button btn = (Button)sender;
-            double sonuc = Islemler.DoubleYap(btn.Text) - Islemler.DoubleYap(txtGenelToplam.Text);
-            txtParaUstu.Text = sonuc.ToString("C2");
+            double paraUstuSonuc = Islemler.DoubleYap(txtGenelToplam.Text) - Islemler.DoubleYap(btn.Text);
+            txtParaUstu.Text = paraUstuSonuc.ToString("C2");
+            double odenenSonuc = Islemler.DoubleYap(btn.Text);
+            txtOdenen.Text = odenenSonuc.ToString("C2");
+        }
+
+        private void btnDigerUrun_Click(object sender, EventArgs e)
+        {
+            if (txtTusTakimiNumarator.Text != "")
+            {
+                int satirSayisi = dataGridViewSatisListesi.Rows.Count;
+                dataGridViewSatisListesi.Rows.Add();
+                dataGridViewSatisListesi.Rows[satirSayisi].Cells["gvBarkod"].Value = "1111111111116";
+                dataGridViewSatisListesi.Rows[satirSayisi].Cells["gvUrunAdi"].Value = "Barkodsuz Ürün";
+                dataGridViewSatisListesi.Rows[satirSayisi].Cells["gvUrunGrup"].Value = "Barkodsuz Ürün";
+                dataGridViewSatisListesi.Rows[satirSayisi].Cells["gvBirim"].Value = "Adet";
+                dataGridViewSatisListesi.Rows[satirSayisi].Cells["gvMiktar"].Value = 1;
+                dataGridViewSatisListesi.Rows[satirSayisi].Cells["gvKdvTutari"].Value = 0;
+                dataGridViewSatisListesi.Rows[satirSayisi].Cells["gvFiyat"].Value = Convert.ToDouble(txtTusTakimiNumarator.Text);
+                dataGridViewSatisListesi.Rows[satirSayisi].Cells["gvToplam"].Value = Convert.ToDouble(txtTusTakimiNumarator.Text);
+
+                GenelToplam();
+                txtTusTakimiNumarator.Text = "";
+                txtBarkod.Focus();
+            }
+        }
+
+        private void btnIadeIslemi_Click(object sender, EventArgs e)
+        {
+            if (chSatisIadeIslemi.Checked)
+            {
+                chSatisIadeIslemi.Checked = false;
+                chSatisIadeIslemi.Text = "Satış Yapılıyor";
+            }
+            else
+            {
+                chSatisIadeIslemi.Checked = true;
+                chSatisIadeIslemi.Text = "İade işlemi";
+            }
+        }
+
+        private void btnTemizle_Click(object sender, EventArgs e)
+        {
+            Temizle();
+        }
+
+        private void Temizle()
+        {
+            txtMiktar.Text = "1";
+            txtBarkod.Clear();
+            txtParaUstu.Clear();
+            txtOdenen.Clear();
+            txtGenelToplam.Clear();
+            txtTusTakimiNumarator.Clear();
+            dataGridViewSatisListesi.Rows.Clear();
+            txtBarkod.Clear();
+            txtBarkod.Focus();
+            chSatisIadeIslemi.Checked = false;
+        }
+
+        private void btnFisYazdir_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
