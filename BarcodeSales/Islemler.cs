@@ -1,4 +1,5 @@
-﻿using System.Globalization;
+﻿using System;
+using System.Globalization;
 
 namespace BarcodeSales
 {
@@ -8,7 +9,7 @@ namespace BarcodeSales
         {
             double sonuc;
             double.TryParse(deger, NumberStyles.Currency, CultureInfo.CurrentCulture.NumberFormat, out sonuc);
-            return sonuc;
+            return Math.Round(sonuc, 2);
         }
     }
 }

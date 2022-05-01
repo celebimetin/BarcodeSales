@@ -14,6 +14,18 @@ namespace BarcodeSales
             InitializeComponent();
         }
 
+        private void fSatis_Load(object sender, EventArgs e)
+        {
+            HizliButonDoldur();
+            txtMiktar.Text = 1.ToString();
+            btn5TL.Text = 5.ToString("C2");
+            btn10TL.Text = 10.ToString("C2");
+            btn20TL.Text = 20.ToString("C2");
+            btn50TL.Text = 50.ToString("C2");
+            btn100TL.Text = 100.ToString("C2");
+            btn200TL.Text = 200.ToString("C2");
+        }
+
         private void txtBarkod_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
@@ -118,11 +130,6 @@ namespace BarcodeSales
             }
         }
 
-        private void fSatis_Load(object sender, EventArgs e)
-        {
-            HizliButonDoldur();
-        }
-
         private void HizliButonDoldur()
         {
             var hizliUrun = db.HizliUruns.ToList();
@@ -151,7 +158,7 @@ namespace BarcodeSales
             {
                 var urunBarkod = db.HizliUruns.Where(x => x.HizliUrunId == btnId).Select(x => x.Barkod).FirstOrDefault();
                 var urun = db.Uruns.Where(x => x.Barkod == urunBarkod).FirstOrDefault();
-                ListeyeUrunGetir(urun, urunBarkod, 1);
+                ListeyeUrunGetir(urun, urunBarkod, Convert.ToDouble(txtMiktar.Text));
                 GenelToplam();
             }
         }
@@ -186,6 +193,77 @@ namespace BarcodeSales
             double fiyat = 0;
             Button btn = this.Controls.Find("btnHizli" + btnId, true).FirstOrDefault() as Button;
             btn.Text = "-" + "\n" + fiyat.ToString("C2");
+        }
+
+        private void btnNumarator_Click(object sender, EventArgs e)
+        {
+            Button btn = (Button)sender;
+            if (btn.Text == ",")
+            {
+                int virgul = txtTusTakimiNumarator.Text.Count(x => x == ',');
+                if (virgul < 1)
+                {
+                    txtTusTakimiNumarator.Text += btn.Text;
+                }
+            }
+            else if (btn.Text == "Sil")
+            {
+                if (txtTusTakimiNumarator.Text.Length > 0)
+                {
+                    txtTusTakimiNumarator.Text = txtTusTakimiNumarator.Text.Substring(0, txtTusTakimiNumarator.Text.Length - 1);
+                }
+            }
+            else
+            {
+                txtTusTakimiNumarator.Text += btn.Text;
+            }
+        }
+
+        private void btnAdet_Click(object sender, EventArgs e)
+        {
+            if (txtTusTakimiNumarator.Text != "")
+            {
+                txtMiktar.Text = txtTusTakimiNumarator.Text;
+                txtTusTakimiNumarator.Clear();
+                txtBarkod.Clear();
+                txtBarkod.Focus();
+            }
+        }
+
+        private void btnOdenen_Click(object sender, EventArgs e)
+        {
+            if (txtTusTakimiNumarator.Text != "")
+            {
+                double sonuc = Islemler.DoubleYap(txtTusTakimiNumarator.Text) - Islemler.DoubleYap(txtGenelToplam.Text);
+                txtParaUstu.Text = sonuc.ToString("C2");
+                txtTusTakimiNumarator.Clear();
+                txtBarkod.Focus();
+            }
+        }
+
+        private void btnBarkod_Click(object sender, EventArgs e)
+        {
+            if (txtTusTakimiNumarator.Text != "")
+            {
+                if (db.Uruns.Any(x => x.Barkod == txtTusTakimiNumarator.Text))
+                {
+                    var urun = db.Uruns.Where(x => x.Barkod == txtTusTakimiNumarator.Text).FirstOrDefault();
+                    ListeyeUrunGetir(urun, txtTusTakimiNumarator.Text, Convert.ToDouble(txtMiktar.Text));
+                    txtTusTakimiNumarator.Clear();
+                    txtBarkod.Focus();
+                }
+                else
+                {
+
+                }
+            }
+        }
+
+        private void ParaUstuHesapla_Click(object sender, EventArgs e)
+        {
+            Button btn = (Button)sender;
+            double sonuc = Islemler.DoubleYap(btn.Text) - Islemler.DoubleYap(txtGenelToplam.Text);
+            txtParaUstu.Text = sonuc.ToString("C2");
         }
     }
 }
