@@ -27,5 +27,6 @@ namespace BarcodeSales
     
         public virtual DbSet<Urun> Uruns { get; set; }
         public virtual DbSet<Terazi> Terazis { get; set; }
+        public virtual DbSet<HizliUrun> HizliUruns { get; set; }
     }
 }

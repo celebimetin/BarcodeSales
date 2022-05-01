@@ -7,6 +7,7 @@
       <Diagram DiagramId="8103b082cf13464aa119c70841be7d40" Name="Diagram1">
         <EntityTypeShape EntityType="BarcodeSalesDbModel.Urun" Width="2.125" PointX="1.25" PointY="0.5" IsExpanded="true" />
         <EntityTypeShape EntityType="BarcodeSalesDbModel.Terazi" Width="1.5" PointX="3.625" PointY="0.5" />
+        <EntityTypeShape EntityType="BarcodeSalesDbModel.HizliUrun" Width="1.5" PointX="5.5" PointY="0.5" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

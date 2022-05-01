@@ -302,7 +302,6 @@ namespace BarcodeSales
             dataGridViewCellStyle7.Padding = new System.Windows.Forms.Padding(3);
             this.dataGridViewSatisListesi.RowsDefaultCellStyle = dataGridViewCellStyle7;
             this.dataGridViewSatisListesi.RowTemplate.DefaultCellStyle.Padding = new System.Windows.Forms.Padding(3);
-            this.dataGridViewSatisListesi.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.Empty;
             this.dataGridViewSatisListesi.RowTemplate.Height = 30;
             this.dataGridViewSatisListesi.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewSatisListesi.Size = new System.Drawing.Size(514, 472);
@@ -668,6 +667,7 @@ namespace BarcodeSales
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel4.Size = new System.Drawing.Size(897, 539);
             this.tableLayoutPanel4.TabIndex = 0;
+            this.tableLayoutPanel4.Click += new System.EventHandler(this.HizliButonClick);
             // 
             // btnHizli25
             // 
@@ -684,6 +684,8 @@ namespace BarcodeSales
             this.btnHizli25.TabIndex = 24;
             this.btnHizli25.Text = "bHizli";
             this.btnHizli25.UseVisualStyleBackColor = false;
+            this.btnHizli25.Click += new System.EventHandler(this.HizliButonClick);
+            this.btnHizli25.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bh_MouseDown);
             // 
             // btnHizli24
             // 
@@ -700,6 +702,8 @@ namespace BarcodeSales
             this.btnHizli24.TabIndex = 23;
             this.btnHizli24.Text = "bHizli";
             this.btnHizli24.UseVisualStyleBackColor = false;
+            this.btnHizli24.Click += new System.EventHandler(this.HizliButonClick);
+            this.btnHizli24.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bh_MouseDown);
             // 
             // btnHizli23
             // 
@@ -716,6 +720,8 @@ namespace BarcodeSales
             this.btnHizli23.TabIndex = 22;
             this.btnHizli23.Text = "bHizli";
             this.btnHizli23.UseVisualStyleBackColor = false;
+            this.btnHizli23.Click += new System.EventHandler(this.HizliButonClick);
+            this.btnHizli23.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bh_MouseDown);
             // 
             // btnHizli22
             // 
@@ -732,6 +738,8 @@ namespace BarcodeSales
             this.btnHizli22.TabIndex = 21;
             this.btnHizli22.Text = "bHizli";
             this.btnHizli22.UseVisualStyleBackColor = false;
+            this.btnHizli22.Click += new System.EventHandler(this.HizliButonClick);
+            this.btnHizli22.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bh_MouseDown);
             // 
             // btnHizli21
             // 
@@ -748,6 +756,8 @@ namespace BarcodeSales
             this.btnHizli21.TabIndex = 20;
             this.btnHizli21.Text = "bHizli";
             this.btnHizli21.UseVisualStyleBackColor = false;
+            this.btnHizli21.Click += new System.EventHandler(this.HizliButonClick);
+            this.btnHizli21.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bh_MouseDown);
             // 
             // btnHizli20
             // 
@@ -764,6 +774,8 @@ namespace BarcodeSales
             this.btnHizli20.TabIndex = 19;
             this.btnHizli20.Text = "bHizli";
             this.btnHizli20.UseVisualStyleBackColor = false;
+            this.btnHizli20.Click += new System.EventHandler(this.HizliButonClick);
+            this.btnHizli20.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bh_MouseDown);
             // 
             // btnHizli19
             // 
@@ -780,6 +792,8 @@ namespace BarcodeSales
             this.btnHizli19.TabIndex = 18;
             this.btnHizli19.Text = "bHizli";
             this.btnHizli19.UseVisualStyleBackColor = false;
+            this.btnHizli19.Click += new System.EventHandler(this.HizliButonClick);
+            this.btnHizli19.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bh_MouseDown);
             // 
             // btnHizli18
             // 
@@ -796,6 +810,8 @@ namespace BarcodeSales
             this.btnHizli18.TabIndex = 17;
             this.btnHizli18.Text = "bHizli";
             this.btnHizli18.UseVisualStyleBackColor = false;
+            this.btnHizli18.Click += new System.EventHandler(this.HizliButonClick);
+            this.btnHizli18.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bh_MouseDown);
             // 
             // btnHizli17
             // 
@@ -812,6 +828,8 @@ namespace BarcodeSales
             this.btnHizli17.TabIndex = 16;
             this.btnHizli17.Text = "bHizli";
             this.btnHizli17.UseVisualStyleBackColor = false;
+            this.btnHizli17.Click += new System.EventHandler(this.HizliButonClick);
+            this.btnHizli17.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bh_MouseDown);
             // 
             // btnHizli16
             // 
@@ -828,6 +846,8 @@ namespace BarcodeSales
             this.btnHizli16.TabIndex = 15;
             this.btnHizli16.Text = "bHizli";
             this.btnHizli16.UseVisualStyleBackColor = false;
+            this.btnHizli16.Click += new System.EventHandler(this.HizliButonClick);
+            this.btnHizli16.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bh_MouseDown);
             // 
             // btnHizli15
             // 
@@ -844,6 +864,8 @@ namespace BarcodeSales
             this.btnHizli15.TabIndex = 14;
             this.btnHizli15.Text = "bHizli";
             this.btnHizli15.UseVisualStyleBackColor = false;
+            this.btnHizli15.Click += new System.EventHandler(this.HizliButonClick);
+            this.btnHizli15.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bh_MouseDown);
             // 
             // btnHizli14
             // 
@@ -860,6 +882,8 @@ namespace BarcodeSales
             this.btnHizli14.TabIndex = 13;
             this.btnHizli14.Text = "bHizli";
             this.btnHizli14.UseVisualStyleBackColor = false;
+            this.btnHizli14.Click += new System.EventHandler(this.HizliButonClick);
+            this.btnHizli14.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bh_MouseDown);
             // 
             // btnHizli13
             // 
@@ -876,6 +900,8 @@ namespace BarcodeSales
             this.btnHizli13.TabIndex = 12;
             this.btnHizli13.Text = "bHizli";
             this.btnHizli13.UseVisualStyleBackColor = false;
+            this.btnHizli13.Click += new System.EventHandler(this.HizliButonClick);
+            this.btnHizli13.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bh_MouseDown);
             // 
             // btnHizli12
             // 
@@ -892,6 +918,8 @@ namespace BarcodeSales
             this.btnHizli12.TabIndex = 11;
             this.btnHizli12.Text = "bHizli";
             this.btnHizli12.UseVisualStyleBackColor = false;
+            this.btnHizli12.Click += new System.EventHandler(this.HizliButonClick);
+            this.btnHizli12.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bh_MouseDown);
             // 
             // btnHizli11
             // 
@@ -908,6 +936,8 @@ namespace BarcodeSales
             this.btnHizli11.TabIndex = 10;
             this.btnHizli11.Text = "bHizli";
             this.btnHizli11.UseVisualStyleBackColor = false;
+            this.btnHizli11.Click += new System.EventHandler(this.HizliButonClick);
+            this.btnHizli11.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bh_MouseDown);
             // 
             // btnHizli10
             // 
@@ -924,6 +954,8 @@ namespace BarcodeSales
             this.btnHizli10.TabIndex = 9;
             this.btnHizli10.Text = "bHizli";
             this.btnHizli10.UseVisualStyleBackColor = false;
+            this.btnHizli10.Click += new System.EventHandler(this.HizliButonClick);
+            this.btnHizli10.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bh_MouseDown);
             // 
             // btnHizli9
             // 
@@ -940,6 +972,8 @@ namespace BarcodeSales
             this.btnHizli9.TabIndex = 8;
             this.btnHizli9.Text = "bHizli";
             this.btnHizli9.UseVisualStyleBackColor = false;
+            this.btnHizli9.Click += new System.EventHandler(this.HizliButonClick);
+            this.btnHizli9.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bh_MouseDown);
             // 
             // btnHizli8
             // 
@@ -956,6 +990,8 @@ namespace BarcodeSales
             this.btnHizli8.TabIndex = 7;
             this.btnHizli8.Text = "bHizli";
             this.btnHizli8.UseVisualStyleBackColor = false;
+            this.btnHizli8.Click += new System.EventHandler(this.HizliButonClick);
+            this.btnHizli8.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bh_MouseDown);
             // 
             // btnHizli7
             // 
@@ -972,6 +1008,8 @@ namespace BarcodeSales
             this.btnHizli7.TabIndex = 6;
             this.btnHizli7.Text = "bHizli";
             this.btnHizli7.UseVisualStyleBackColor = false;
+            this.btnHizli7.Click += new System.EventHandler(this.HizliButonClick);
+            this.btnHizli7.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bh_MouseDown);
             // 
             // btnHizli6
             // 
@@ -988,6 +1026,8 @@ namespace BarcodeSales
             this.btnHizli6.TabIndex = 5;
             this.btnHizli6.Text = "bHizli";
             this.btnHizli6.UseVisualStyleBackColor = false;
+            this.btnHizli6.Click += new System.EventHandler(this.HizliButonClick);
+            this.btnHizli6.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bh_MouseDown);
             // 
             // btnHizli5
             // 
@@ -1004,6 +1044,8 @@ namespace BarcodeSales
             this.btnHizli5.TabIndex = 4;
             this.btnHizli5.Text = "bHizli";
             this.btnHizli5.UseVisualStyleBackColor = false;
+            this.btnHizli5.Click += new System.EventHandler(this.HizliButonClick);
+            this.btnHizli5.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bh_MouseDown);
             // 
             // btnHizli4
             // 
@@ -1020,6 +1062,8 @@ namespace BarcodeSales
             this.btnHizli4.TabIndex = 3;
             this.btnHizli4.Text = "bHizli";
             this.btnHizli4.UseVisualStyleBackColor = false;
+            this.btnHizli4.Click += new System.EventHandler(this.HizliButonClick);
+            this.btnHizli4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bh_MouseDown);
             // 
             // btnHizli3
             // 
@@ -1036,6 +1080,8 @@ namespace BarcodeSales
             this.btnHizli3.TabIndex = 2;
             this.btnHizli3.Text = "bHizli";
             this.btnHizli3.UseVisualStyleBackColor = false;
+            this.btnHizli3.Click += new System.EventHandler(this.HizliButonClick);
+            this.btnHizli3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bh_MouseDown);
             // 
             // btnHizli2
             // 
@@ -1052,6 +1098,8 @@ namespace BarcodeSales
             this.btnHizli2.TabIndex = 1;
             this.btnHizli2.Text = "bHizli";
             this.btnHizli2.UseVisualStyleBackColor = false;
+            this.btnHizli2.Click += new System.EventHandler(this.HizliButonClick);
+            this.btnHizli2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bh_MouseDown);
             // 
             // btnHizli1
             // 
@@ -1068,6 +1116,8 @@ namespace BarcodeSales
             this.btnHizli1.TabIndex = 0;
             this.btnHizli1.Text = "bHizli";
             this.btnHizli1.UseVisualStyleBackColor = false;
+            this.btnHizli1.Click += new System.EventHandler(this.HizliButonClick);
+            this.btnHizli1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bh_MouseDown);
             // 
             // tableLayoutPanel5
             // 
@@ -1632,6 +1682,7 @@ namespace BarcodeSales
             this.Name = "fSatis";
             this.Text = "BARKODLU SATIŞ PROGRAMI";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.fSatis_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();

@@ -5,6 +5,15 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="BarcodeSalesDbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="HizliUrun">
+          <Key>
+            <PropertyRef Name="HizliUrunId" />
+          </Key>
+          <Property Name="HizliUrunId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Barkod" Type="nvarchar" MaxLength="20" />
+          <Property Name="UrunAdi" Type="nvarchar" MaxLength="100" />
+          <Property Name="Fiyat" Type="float" />
+        </EntityType>
         <EntityType Name="Terazi">
           <Key>
             <PropertyRef Name="TeraziId" />
@@ -31,6 +40,7 @@
           <Property Name="Kullanici" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityContainer Name="BarcodeSalesDbModelStoreContainer">
+          <EntitySet Name="HizliUrun" EntityType="Self.HizliUrun" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Terazi" EntityType="Self.Terazi" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Urun" EntityType="Self.Urun" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
@@ -59,6 +69,7 @@
         <EntityContainer Name="BarcodeSalesDbEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Uruns" EntityType="Self.Urun" />
           <EntitySet Name="Terazis" EntityType="BarcodeSalesDbModel.Terazi" />
+          <EntitySet Name="HizliUruns" EntityType="BarcodeSalesDbModel.HizliUrun" />
         </EntityContainer>
         <EntityType Name="Terazi">
           <Key>
@@ -66,6 +77,15 @@
           </Key>
           <Property Name="TeraziId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="TeraziOnEk" Type="Int32" />
+        </EntityType>
+        <EntityType Name="HizliUrun">
+          <Key>
+            <PropertyRef Name="HizliUrunId" />
+          </Key>
+          <Property Name="HizliUrunId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Barkod" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="UrunAdi" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Fiyat" Type="Double" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -97,6 +117,16 @@
               <MappingFragment StoreEntitySet="Terazi">
                 <ScalarProperty Name="TeraziOnEk" ColumnName="TeraziOnEk" />
                 <ScalarProperty Name="TeraziId" ColumnName="TeraziId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HizliUruns">
+            <EntityTypeMapping TypeName="BarcodeSalesDbModel.HizliUrun">
+              <MappingFragment StoreEntitySet="HizliUrun">
+                <ScalarProperty Name="Fiyat" ColumnName="Fiyat" />
+                <ScalarProperty Name="UrunAdi" ColumnName="UrunAdi" />
+                <ScalarProperty Name="Barkod" ColumnName="Barkod" />
+                <ScalarProperty Name="HizliUrunId" ColumnName="HizliUrunId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

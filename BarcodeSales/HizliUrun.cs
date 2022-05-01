@@ -12,9 +12,11 @@ namespace BarcodeSales
     using System;
     using System.Collections.Generic;
     
-    public partial class Terazi
+    public partial class HizliUrun
     {
-        public int TeraziId { get; set; }
-        public Nullable<int> TeraziOnEk { get; set; }
+        public int HizliUrunId { get; set; }
+        public string Barkod { get; set; }
+        public string UrunAdi { get; set; }
+        public Nullable<double> Fiyat { get; set; }
     }
 }
