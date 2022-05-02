@@ -11,9 +11,9 @@ namespace BarcodeSales
 {
     using System;
     
-    public partial class Terazi
+    public partial class Islem
     {
-        public int TeraziId { get; set; }
-        public Nullable<int> TeraziOnEk { get; set; }
+        public int IslemId { get; set; }
+        public Nullable<int> IslemNo { get; set; }
     }
 }

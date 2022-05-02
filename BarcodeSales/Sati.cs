@@ -11,18 +11,21 @@ namespace BarcodeSales
 {
     using System;
     
-    public partial class Urun
+    public partial class Sati
     {
-        public int UrunId { get; set; }
-        public string Barkod { get; set; }
+        public int SatisId { get; set; }
+        public Nullable<int> IslemNoId { get; set; }
         public string UrunAdi { get; set; }
+        public string Barkod { get; set; }
         public string UrunGrup { get; set; }
+        public string Birim { get; set; }
         public Nullable<double> AlisFiyat { get; set; }
         public Nullable<double> SatisFiyat { get; set; }
-        public Nullable<int> KdvOrani { get; set; }
-        public Nullable<double> KdvTutari { get; set; }
-        public string Birim { get; set; }
         public Nullable<double> Miktar { get; set; }
+        public Nullable<double> Toplam { get; set; }
+        public Nullable<double> KdvTutar { get; set; }
+        public string OdemeSekli { get; set; }
+        public Nullable<bool> Iade { get; set; }
         public Nullable<System.DateTime> Tarih { get; set; }
         public string Kullanici { get; set; }
     }

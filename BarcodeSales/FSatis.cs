@@ -95,7 +95,7 @@ namespace BarcodeSales
             {
                 dataGridViewSatisListesi.Rows.Add();
                 dataGridViewSatisListesi.Rows[satirSayisi].Cells["gvBarkod"].Value = barkod;
-                dataGridViewSatisListesi.Rows[satirSayisi].Cells["gvUrunAdi"].Value = urun.UrunAdı;
+                dataGridViewSatisListesi.Rows[satirSayisi].Cells["gvUrunAdi"].Value = urun.UrunAdi;
                 dataGridViewSatisListesi.Rows[satirSayisi].Cells["gvMiktar"].Value = miktar;
                 dataGridViewSatisListesi.Rows[satirSayisi].Cells["gvFiyat"].Value = urun.SatisFiyat;
                 dataGridViewSatisListesi.Rows[satirSayisi].Cells["gvToplam"].Value = Math.Round(miktar * (double)urun.SatisFiyat, 2);
@@ -325,6 +325,11 @@ namespace BarcodeSales
         }
 
         private void btnFisYazdir_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SatisYap(string odemeSekli)
         {
 
         }

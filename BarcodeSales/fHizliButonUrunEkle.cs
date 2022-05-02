@@ -19,7 +19,7 @@ namespace BarcodeSales
             if (txtUrunAra.Text != "")
             {
                 var urunAdi = txtUrunAra.Text;
-                var urunler = db.Uruns.Where(x => x.UrunAdı.Contains(urunAdi)).ToList();
+                var urunler = db.Uruns.Where(x => x.UrunAdi.Contains(urunAdi)).ToList();
                 dataGridViewUrunEkleListesi.DataSource = urunler;
             }
         }
