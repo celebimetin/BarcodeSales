@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -7,7 +8,8 @@ namespace BarcodeSales
 {
     public partial class fSatis : Form
     {
-        BarcodeSalesDbEntities db = new BarcodeSalesDbEntities();
+        private readonly BarcodeSalesDbEntities db = new BarcodeSalesDbEntities();
+        fIsemBeklet fIsemBeklet = new fIsemBeklet();
 
         public fSatis()
         {
@@ -236,8 +238,7 @@ namespace BarcodeSales
             {
                 double paraUstuSonuc = Islemler.DoubleYap(txtGenelToplam.Text) - Islemler.DoubleYap(txtTusTakimiNumarator.Text);
                 txtParaUstu.Text = paraUstuSonuc.ToString("C2");
-                double odenenSonuc = Convert.ToDouble(txtTusTakimiNumarator.Text);
-                txtOdenen.Text = odenenSonuc.ToString("C2");
+                txtOdenen.Text = Islemler.DoubleYap(txtTusTakimiNumarator.Text).ToString("C2");
                 txtTusTakimiNumarator.Clear();
                 txtBarkod.Focus();
             }
@@ -266,8 +267,7 @@ namespace BarcodeSales
             Button btn = (Button)sender;
             double paraUstuSonuc = Islemler.DoubleYap(txtGenelToplam.Text) - Islemler.DoubleYap(btn.Text);
             txtParaUstu.Text = paraUstuSonuc.ToString("C2");
-            double odenenSonuc = Islemler.DoubleYap(btn.Text);
-            txtOdenen.Text = odenenSonuc.ToString("C2");
+            txtOdenen.Text = Islemler.DoubleYap(btn.Text).ToString("C2");
         }
 
         private void btnDigerUrun_Click(object sender, EventArgs e)
@@ -281,6 +281,7 @@ namespace BarcodeSales
                 dataGridViewSatisListesi.Rows[satirSayisi].Cells["gvUrunGrup"].Value = "Barkodsuz Ürün";
                 dataGridViewSatisListesi.Rows[satirSayisi].Cells["gvBirim"].Value = "Adet";
                 dataGridViewSatisListesi.Rows[satirSayisi].Cells["gvMiktar"].Value = 1;
+                dataGridViewSatisListesi.Rows[satirSayisi].Cells["gvAlisFiyati"].Value = 0;
                 dataGridViewSatisListesi.Rows[satirSayisi].Cells["gvKdvTutari"].Value = 0;
                 dataGridViewSatisListesi.Rows[satirSayisi].Cells["gvFiyat"].Value = Convert.ToDouble(txtTusTakimiNumarator.Text);
                 dataGridViewSatisListesi.Rows[satirSayisi].Cells["gvToplam"].Value = Convert.ToDouble(txtTusTakimiNumarator.Text);
@@ -324,12 +325,190 @@ namespace BarcodeSales
             chSatisIadeIslemi.Checked = false;
         }
 
-        private void btnFisYazdir_Click(object sender, EventArgs e)
+        public void SatisYap(string odemeSekli)
         {
+            int satirSayisi = dataGridViewSatisListesi.Rows.Count;
+            bool satisIade = chSatisIadeIslemi.Checked;
+            double alisFiyatToplam = 0;
+            if (satirSayisi > 0)
+            {
+                int? islemNo = db.Islems.First().IslemNo;
+                Sati satis = new Sati();
+                for (int i = 0; i < satirSayisi; i++)
+                {
+                    satis.IslemNoId = islemNo;
+                    satis.UrunAdi = dataGridViewSatisListesi.Rows[i].Cells["gvUrunAdi"].Value.ToString();
+                    satis.UrunGrup = dataGridViewSatisListesi.Rows[i].Cells["gvUrunGrup"].Value.ToString();
+                    satis.Barkod = dataGridViewSatisListesi.Rows[i].Cells["gvBarkod"].Value.ToString();
+                    satis.Birim = dataGridViewSatisListesi.Rows[i].Cells["gvBirim"].Value.ToString();
+                    satis.AlisFiyat = Islemler.DoubleYap(dataGridViewSatisListesi.Rows[i].Cells["gvAlisFiyati"].Value.ToString());
+                    satis.SatisFiyat = Islemler.DoubleYap(dataGridViewSatisListesi.Rows[i].Cells["gvFiyat"].Value.ToString());
+                    satis.Miktar = Islemler.DoubleYap(dataGridViewSatisListesi.Rows[i].Cells["gvMiktar"].Value.ToString());
+                    satis.Toplam = Islemler.DoubleYap(dataGridViewSatisListesi.Rows[i].Cells["gvToplam"].Value.ToString());
+                    satis.KdvTutar = Islemler.DoubleYap(dataGridViewSatisListesi.Rows[i].Cells["gvKdvTutari"].Value.ToString()) * Islemler.DoubleYap(dataGridViewSatisListesi.Rows[i].Cells["gvMiktar"].Value.ToString());
+                    satis.OdemeSekli = odemeSekli;
+                    satis.Iade = satisIade;
+                    satis.Tarih = DateTime.Now;
+                    satis.Kullanici = lblKullanici.Text;
 
+                    db.Satis.Add(satis);
+                    db.SaveChanges();
+
+                    if (!satisIade)
+                    {
+                        Islemler.StokAzalt(dataGridViewSatisListesi.Rows[i].Cells["gvBarkod"].Value.ToString(), Islemler.DoubleYap(dataGridViewSatisListesi.Rows[i].Cells["gvMiktar"].Value.ToString()));
+                    }
+                    else
+                    {
+                        Islemler.StokArttir(dataGridViewSatisListesi.Rows[i].Cells["gvBarkod"].Value.ToString(), Islemler.DoubleYap(dataGridViewSatisListesi.Rows[i].Cells["gvMiktar"].Value.ToString()));
+                    }
+
+                    alisFiyatToplam += Islemler.DoubleYap(dataGridViewSatisListesi.Rows[i].Cells["gvAlisFiyati"].Value.ToString());
+                }
+
+                IslemOzet islemOzet = new IslemOzet();
+                islemOzet.IslemNoId = islemNo;
+                islemOzet.Iade = satisIade;
+                islemOzet.AlisFiyatToplam = alisFiyatToplam;
+                islemOzet.Gelir = false;
+                islemOzet.Gider = false;
+                if (!satisIade)
+                {
+                    islemOzet.Aciklama = odemeSekli + " " + "Satış";
+                }
+                else
+                {
+                    islemOzet.Aciklama = "İade İşlemi (" + odemeSekli + ")";
+                }
+                islemOzet.OdemeSekli = odemeSekli;
+                islemOzet.Kullanici = lblKullanici.Text;
+                islemOzet.Tarih = DateTime.Now;
+                switch (odemeSekli)
+                {
+                    case "Nakit":
+                        islemOzet.Nakit = Islemler.DoubleYap(txtGenelToplam.Text);
+                        islemOzet.KrediKartı = 0;
+                        break;
+                    case "Kredi Kartı":
+                        islemOzet.KrediKartı = Islemler.DoubleYap(txtGenelToplam.Text);
+                        islemOzet.Nakit = 0;
+                        break;
+                    case "Nakit Kart":
+                        islemOzet.Nakit = Islemler.DoubleYap(lblNakit.Text);
+                        islemOzet.KrediKartı = Islemler.DoubleYap(lblKart.Text);
+                        break;
+                }
+
+                db.IslemOzets.Add(islemOzet);
+                db.SaveChanges();
+
+                var islemNoArttir = db.Islems.First();
+                islemNoArttir.IslemNo += 1;
+                db.SaveChanges();
+
+                MessageBox.Show("Yazdırma İşlemi Yap");
+                Temizle();
+            }
         }
 
-        private void SatisYap(string odemeSekli)
+        private void btnNakit_Click(object sender, EventArgs e)
+        {
+            SatisYap("Nakit");
+        }
+
+        private void btnKrediKartı_Click(object sender, EventArgs e)
+        {
+            SatisYap("Kredi Kartı");
+        }
+
+        private void btnNakitAndKart_Click(object sender, EventArgs e)
+        {
+            fNakitKart fNakitKart = new fNakitKart();
+            fNakitKart.ShowDialog();
+        }
+
+        private void txtMiktar_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsDigit(e.KeyChar) == false && e.KeyChar != (char)08)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void fSatis_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.F1)
+            {
+                SatisYap("Nakit");
+            }
+            if (e.KeyCode == Keys.F2)
+            {
+                SatisYap("Kredi Kartı");
+            }
+            if (e.KeyCode == Keys.F3)
+            {
+                fNakitKart fNakitKart = new fNakitKart();
+                fNakitKart.ShowDialog();
+            }
+        }
+
+        private void btnIslemBeklet_Click(object sender, EventArgs e)
+        {
+            if (btnIslemBeklet.Text == "İşlem Beklet")
+            {
+                IslemBeklet();
+                btnIslemBeklet.BackColor = Color.OrangeRed;
+                btnIslemBeklet.Text = "İşlem Bekliyor";
+                dataGridViewSatisListesi.Rows.Clear();
+            }
+            else
+            {
+                IslemGeriAl();
+                btnIslemBeklet.BackColor = Color.DimGray;
+                btnIslemBeklet.Text = "İşlem Beklet";
+                fIsemBeklet.dataGridViewIslemBeklet.Rows.Clear();
+            }
+        }
+
+        private void IslemBeklet()
+        {
+            int satir = dataGridViewSatisListesi.Rows.Count;
+            int sutun = dataGridViewSatisListesi.Columns.Count;
+
+            if (satir > 0)
+            {
+                for (int i = 0; i < satir; i++)
+                {
+                    fIsemBeklet.dataGridViewIslemBeklet.Rows.Add();
+
+                    for (int j = 0; j < sutun - 1; j++)
+                    {
+                        fIsemBeklet.dataGridViewIslemBeklet.Rows[i].Cells[j].Value = dataGridViewSatisListesi.Rows[i].Cells[j].Value;
+                    }
+                }
+            }
+        }
+
+        private void IslemGeriAl()
+        {
+            int satir = fIsemBeklet.dataGridViewIslemBeklet.Rows.Count;
+            int sutun = fIsemBeklet.dataGridViewIslemBeklet.Columns.Count;
+
+            if (satir > 0)
+            {
+                for (int i = 0; i < satir; i++)
+                {
+                    dataGridViewSatisListesi.Rows.Add();
+
+                    for (int j = 0; j < sutun - 1; j++)
+                    {
+                        dataGridViewSatisListesi.Rows[i].Cells[j].Value = fIsemBeklet.dataGridViewIslemBeklet.Rows[i].Cells[j].Value;
+                    }
+                }
+            }
+        }
+
+        private void btnFisYazdir_Click(object sender, EventArgs e)
         {
 
         }

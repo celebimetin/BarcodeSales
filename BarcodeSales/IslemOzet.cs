@@ -12,18 +12,18 @@ namespace BarcodeSales
     using System;
     using System.Collections.Generic;
     
-    public partial class Urun
+    public partial class IslemOzet
     {
-        public int UrunId { get; set; }
-        public string Barkod { get; set; }
-        public string UrunAdi { get; set; }
-        public string UrunGrup { get; set; }
-        public Nullable<double> AlisFiyat { get; set; }
-        public Nullable<double> SatisFiyat { get; set; }
-        public Nullable<int> KdvOrani { get; set; }
-        public Nullable<double> KdvTutari { get; set; }
-        public string Birim { get; set; }
-        public Nullable<double> Miktar { get; set; }
+        public int IslemOzetId { get; set; }
+        public Nullable<int> IslemNoId { get; set; }
+        public Nullable<bool> Iade { get; set; }
+        public string OdemeSekli { get; set; }
+        public Nullable<double> Nakit { get; set; }
+        public Nullable<double> KrediKartı { get; set; }
+        public Nullable<bool> Gelir { get; set; }
+        public Nullable<bool> Gider { get; set; }
+        public Nullable<double> AlisFiyatToplam { get; set; }
+        public string Aciklama { get; set; }
         public Nullable<System.DateTime> Tarih { get; set; }
         public string Kullanici { get; set; }
     }

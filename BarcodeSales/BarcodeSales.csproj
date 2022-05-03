@@ -76,6 +76,18 @@
     <Compile Include="fHizliButonUrunEkle.Designer.cs">
       <DependentUpon>fHizliButonUrunEkle.cs</DependentUpon>
     </Compile>
+    <Compile Include="fIsemBeklet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fIsemBeklet.Designer.cs">
+      <DependentUpon>fIsemBeklet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fNakitKart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fNakitKart.Designer.cs">
+      <DependentUpon>fNakitKart.cs</DependentUpon>
+    </Compile>
     <Compile Include="fSatis.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,6 +101,9 @@
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Islemler.cs" />
+    <Compile Include="IslemOzet.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Model1.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -117,6 +132,12 @@
     </Compile>
     <EmbeddedResource Include="fHizliButonUrunEkle.resx">
       <DependentUpon>fHizliButonUrunEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fIsemBeklet.resx">
+      <DependentUpon>fIsemBeklet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fNakitKart.resx">
+      <DependentUpon>fNakitKart.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fSatis.resx">
       <DependentUpon>fSatis.cs</DependentUpon>

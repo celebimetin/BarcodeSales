@@ -29,7 +29,7 @@ namespace BarcodeSales
             if (dataGridViewUrunEkleListesi.Rows.Count > 0)
             {
                 string barkod = dataGridViewUrunEkleListesi.CurrentRow.Cells["Barkod"].Value.ToString();
-                string urunAdi = dataGridViewUrunEkleListesi.CurrentRow.Cells["UrunAdı"].Value.ToString();
+                string urunAdi = dataGridViewUrunEkleListesi.CurrentRow.Cells["UrunAdi"].Value.ToString();
                 double fiyat = Convert.ToDouble(dataGridViewUrunEkleListesi.CurrentRow.Cells["SatisFiyat"].Value.ToString());
                 int id = Convert.ToInt16(lblButonId.Text);
 
@@ -41,10 +41,10 @@ namespace BarcodeSales
 
                 MessageBox.Show("Buton tanımlaması yapıldı");
 
-                fSatis form = (fSatis)Application.OpenForms["fSatis"];
-                if (form != null)
+                fSatis fSatis = (fSatis)Application.OpenForms["fSatis"];
+                if (fSatis != null)
                 {
-                    Button btn = form.Controls.Find("btnHizli" + id, true).FirstOrDefault() as Button;
+                    Button btn = fSatis.Controls.Find("btnHizli" + id, true).FirstOrDefault() as Button;
                     btn.Text = urunAdi + "\n" + fiyat.ToString("C2");
                 }
             }
