@@ -66,7 +66,9 @@ namespace BarcodeSales
                         }
                         else
                         {
-                            MessageBox.Show("normal ürün yok ekleme sayfası yapılacak");
+                            fUrunGiris fUrunGiris = new fUrunGiris();
+                            fUrunGiris.txtBarkod.Text = barkod;
+                            fUrunGiris.ShowDialog();
                         }
                     }
                 }

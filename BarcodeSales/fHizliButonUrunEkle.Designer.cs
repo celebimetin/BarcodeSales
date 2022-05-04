@@ -65,7 +65,7 @@ namespace BarcodeSales
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.dataGridViewUrunEkleListesi);
-            this.splitContainer1.Size = new System.Drawing.Size(910, 707);
+            this.splitContainer1.Size = new System.Drawing.Size(982, 753);
             this.splitContainer1.SplitterDistance = 105;
             this.splitContainer1.TabIndex = 0;
             // 
@@ -154,7 +154,7 @@ namespace BarcodeSales
             this.dataGridViewUrunEkleListesi.RowTemplate.DefaultCellStyle.Padding = new System.Windows.Forms.Padding(3);
             this.dataGridViewUrunEkleListesi.RowTemplate.Height = 30;
             this.dataGridViewUrunEkleListesi.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewUrunEkleListesi.Size = new System.Drawing.Size(910, 598);
+            this.dataGridViewUrunEkleListesi.Size = new System.Drawing.Size(982, 644);
             this.dataGridViewUrunEkleListesi.TabIndex = 2;
             this.dataGridViewUrunEkleListesi.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewUrunEkleListesi_CellDoubleClick);
             // 
@@ -163,8 +163,10 @@ namespace BarcodeSales
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.ClientSize = new System.Drawing.Size(910, 707);
+            this.ClientSize = new System.Drawing.Size(982, 753);
             this.Controls.Add(this.splitContainer1);
+            this.MaximumSize = new System.Drawing.Size(1000, 800);
+            this.MinimumSize = new System.Drawing.Size(1000, 800);
             this.Name = "fHizliButonUrunEkle";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SATIŞ HIZLI ÜRÜN EKLE";
