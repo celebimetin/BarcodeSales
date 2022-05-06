@@ -30,7 +30,10 @@ namespace BarcodeSales
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.lblKullanici = new BarcodeSales.lblStandart();
+            this.lblStandart10 = new BarcodeSales.lblStandart();
             this.txtUrunSayisi = new BarcodeSales.txtNumeric();
             this.lblStandart9 = new BarcodeSales.lblStandart();
             this.txtUrunAra = new BarcodeSales.txtStandart();
@@ -42,8 +45,6 @@ namespace BarcodeSales
             this.btnUrunGrubuEkle = new BarcodeSales.btnStandart();
             this.txtKdvOrani = new BarcodeSales.txtNumeric();
             this.txtMiktar = new BarcodeSales.txtNumeric();
-            this.txtSatisFiyati = new BarcodeSales.txtNumeric();
-            this.txtAlisFiyati = new BarcodeSales.txtNumeric();
             this.lblStandart7 = new BarcodeSales.lblStandart();
             this.lblStandart6 = new BarcodeSales.lblStandart();
             this.lblStandart5 = new BarcodeSales.lblStandart();
@@ -55,6 +56,8 @@ namespace BarcodeSales
             this.lblStandart2 = new BarcodeSales.lblStandart();
             this.lblStandart1 = new BarcodeSales.lblStandart();
             this.dataGridViewUrunGiris = new BarcodeSales.ozelDataGridView();
+            this.txtAlisFiyati = new System.Windows.Forms.TextBox();
+            this.txtSatisFiyati = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -72,6 +75,10 @@ namespace BarcodeSales
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.txtSatisFiyati);
+            this.splitContainer1.Panel1.Controls.Add(this.txtAlisFiyati);
+            this.splitContainer1.Panel1.Controls.Add(this.lblKullanici);
+            this.splitContainer1.Panel1.Controls.Add(this.lblStandart10);
             this.splitContainer1.Panel1.Controls.Add(this.txtUrunSayisi);
             this.splitContainer1.Panel1.Controls.Add(this.lblStandart9);
             this.splitContainer1.Panel1.Controls.Add(this.txtUrunAra);
@@ -83,8 +90,6 @@ namespace BarcodeSales
             this.splitContainer1.Panel1.Controls.Add(this.btnUrunGrubuEkle);
             this.splitContainer1.Panel1.Controls.Add(this.txtKdvOrani);
             this.splitContainer1.Panel1.Controls.Add(this.txtMiktar);
-            this.splitContainer1.Panel1.Controls.Add(this.txtSatisFiyati);
-            this.splitContainer1.Panel1.Controls.Add(this.txtAlisFiyati);
             this.splitContainer1.Panel1.Controls.Add(this.lblStandart7);
             this.splitContainer1.Panel1.Controls.Add(this.lblStandart6);
             this.splitContainer1.Panel1.Controls.Add(this.lblStandart5);
@@ -99,9 +104,31 @@ namespace BarcodeSales
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.dataGridViewUrunGiris);
-            this.splitContainer1.Size = new System.Drawing.Size(992, 753);
+            this.splitContainer1.Size = new System.Drawing.Size(982, 574);
             this.splitContainer1.SplitterDistance = 300;
             this.splitContainer1.TabIndex = 0;
+            // 
+            // lblKullanici
+            // 
+            this.lblKullanici.AutoSize = true;
+            this.lblKullanici.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lblKullanici.ForeColor = System.Drawing.Color.Black;
+            this.lblKullanici.Location = new System.Drawing.Point(858, 40);
+            this.lblKullanici.Name = "lblKullanici";
+            this.lblKullanici.Size = new System.Drawing.Size(104, 25);
+            this.lblKullanici.TabIndex = 25;
+            this.lblKullanici.Text = "lblKullanici";
+            // 
+            // lblStandart10
+            // 
+            this.lblStandart10.AutoSize = true;
+            this.lblStandart10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lblStandart10.ForeColor = System.Drawing.Color.Black;
+            this.lblStandart10.Location = new System.Drawing.Point(858, 11);
+            this.lblStandart10.Name = "lblStandart10";
+            this.lblStandart10.Size = new System.Drawing.Size(85, 25);
+            this.lblStandart10.TabIndex = 24;
+            this.lblStandart10.Text = "Kullanıcı";
             // 
             // txtUrunSayisi
             // 
@@ -133,6 +160,7 @@ namespace BarcodeSales
             this.txtUrunAra.Name = "txtUrunAra";
             this.txtUrunAra.Size = new System.Drawing.Size(250, 30);
             this.txtUrunAra.TabIndex = 12;
+            this.txtUrunAra.TextChanged += new System.EventHandler(this.txtUrunAra_TextChanged);
             // 
             // lblStandart8
             // 
@@ -153,14 +181,15 @@ namespace BarcodeSales
             this.btnExcelAktar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExcelAktar.ForeColor = System.Drawing.Color.White;
             this.btnExcelAktar.Image = global::BarcodeSales.Properties.Resources.excel;
-            this.btnExcelAktar.Location = new System.Drawing.Point(831, 177);
+            this.btnExcelAktar.Location = new System.Drawing.Point(660, 175);
             this.btnExcelAktar.Margin = new System.Windows.Forms.Padding(1);
             this.btnExcelAktar.Name = "btnExcelAktar";
-            this.btnExcelAktar.Size = new System.Drawing.Size(150, 110);
+            this.btnExcelAktar.Size = new System.Drawing.Size(150, 113);
             this.btnExcelAktar.TabIndex = 9;
             this.btnExcelAktar.Text = "Excel\'e Aktar";
             this.btnExcelAktar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnExcelAktar.UseVisualStyleBackColor = false;
+            this.btnExcelAktar.Click += new System.EventHandler(this.btnExcelAktar_Click);
             // 
             // btnKaydet
             // 
@@ -170,7 +199,7 @@ namespace BarcodeSales
             this.btnKaydet.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnKaydet.ForeColor = System.Drawing.Color.White;
             this.btnKaydet.Image = global::BarcodeSales.Properties.Resources.save;
-            this.btnKaydet.Location = new System.Drawing.Point(831, 94);
+            this.btnKaydet.Location = new System.Drawing.Point(660, 92);
             this.btnKaydet.Margin = new System.Windows.Forms.Padding(1);
             this.btnKaydet.Name = "btnKaydet";
             this.btnKaydet.Size = new System.Drawing.Size(150, 75);
@@ -178,6 +207,7 @@ namespace BarcodeSales
             this.btnKaydet.Text = "Kaydet";
             this.btnKaydet.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnKaydet.UseVisualStyleBackColor = false;
+            this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
             // 
             // btnIptal
             // 
@@ -187,7 +217,7 @@ namespace BarcodeSales
             this.btnIptal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIptal.ForeColor = System.Drawing.Color.White;
             this.btnIptal.Image = global::BarcodeSales.Properties.Resources.delete;
-            this.btnIptal.Location = new System.Drawing.Point(831, 10);
+            this.btnIptal.Location = new System.Drawing.Point(660, 8);
             this.btnIptal.Margin = new System.Windows.Forms.Padding(1);
             this.btnIptal.Name = "btnIptal";
             this.btnIptal.Size = new System.Drawing.Size(150, 75);
@@ -195,6 +225,7 @@ namespace BarcodeSales
             this.btnIptal.Text = "İptal";
             this.btnIptal.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnIptal.UseVisualStyleBackColor = false;
+            this.btnIptal.Click += new System.EventHandler(this.btnIptal_Click);
             // 
             // btnBarkodOlustur
             // 
@@ -212,6 +243,7 @@ namespace BarcodeSales
             this.btnBarkodOlustur.Text = "Barkod Oluştur";
             this.btnBarkodOlustur.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.btnBarkodOlustur.UseVisualStyleBackColor = false;
+            this.btnBarkodOlustur.Click += new System.EventHandler(this.btnBarkodOlustur_Click);
             // 
             // btnUrunGrubuEkle
             // 
@@ -229,6 +261,7 @@ namespace BarcodeSales
             this.btnUrunGrubuEkle.Text = "Ürün Grubu Ekle";
             this.btnUrunGrubuEkle.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.btnUrunGrubuEkle.UseVisualStyleBackColor = false;
+            this.btnUrunGrubuEkle.Click += new System.EventHandler(this.btnUrunGrubuEkle_Click);
             // 
             // txtKdvOrani
             // 
@@ -238,6 +271,7 @@ namespace BarcodeSales
             this.txtKdvOrani.Name = "txtKdvOrani";
             this.txtKdvOrani.Size = new System.Drawing.Size(120, 30);
             this.txtKdvOrani.TabIndex = 6;
+            this.txtKdvOrani.Text = "8";
             this.txtKdvOrani.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtMiktar
@@ -248,27 +282,8 @@ namespace BarcodeSales
             this.txtMiktar.Name = "txtMiktar";
             this.txtMiktar.Size = new System.Drawing.Size(120, 30);
             this.txtMiktar.TabIndex = 5;
+            this.txtMiktar.Text = "0";
             this.txtMiktar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // txtSatisFiyati
-            // 
-            this.txtSatisFiyati.BackColor = System.Drawing.Color.White;
-            this.txtSatisFiyati.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtSatisFiyati.Location = new System.Drawing.Point(511, 53);
-            this.txtSatisFiyati.Name = "txtSatisFiyati";
-            this.txtSatisFiyati.Size = new System.Drawing.Size(120, 30);
-            this.txtSatisFiyati.TabIndex = 4;
-            this.txtSatisFiyati.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // txtAlisFiyati
-            // 
-            this.txtAlisFiyati.BackColor = System.Drawing.Color.White;
-            this.txtAlisFiyati.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtAlisFiyati.Location = new System.Drawing.Point(511, 11);
-            this.txtAlisFiyati.Name = "txtAlisFiyati";
-            this.txtAlisFiyati.Size = new System.Drawing.Size(120, 30);
-            this.txtAlisFiyati.TabIndex = 3;
-            this.txtAlisFiyati.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // lblStandart7
             // 
@@ -331,6 +346,7 @@ namespace BarcodeSales
             this.txtBarkod.Name = "txtBarkod";
             this.txtBarkod.Size = new System.Drawing.Size(250, 30);
             this.txtBarkod.TabIndex = 15;
+            this.txtBarkod.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBarkod_KeyDown);
             // 
             // comboBoxUrunGrubu
             // 
@@ -399,25 +415,54 @@ namespace BarcodeSales
             this.dataGridViewUrunGiris.Name = "dataGridViewUrunGiris";
             this.dataGridViewUrunGiris.RowHeadersVisible = false;
             this.dataGridViewUrunGiris.RowHeadersWidth = 51;
-            this.dataGridViewUrunGiris.RowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(1);
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewUrunGiris.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewUrunGiris.RowTemplate.DefaultCellStyle.Padding = new System.Windows.Forms.Padding(3);
             this.dataGridViewUrunGiris.RowTemplate.Height = 30;
             this.dataGridViewUrunGiris.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewUrunGiris.Size = new System.Drawing.Size(992, 449);
+            this.dataGridViewUrunGiris.Size = new System.Drawing.Size(982, 270);
             this.dataGridViewUrunGiris.TabIndex = 14;
+            // 
+            // txtAlisFiyati
+            // 
+            this.txtAlisFiyati.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAlisFiyati.Location = new System.Drawing.Point(511, 11);
+            this.txtAlisFiyati.Name = "txtAlisFiyati";
+            this.txtAlisFiyati.Size = new System.Drawing.Size(120, 30);
+            this.txtAlisFiyati.TabIndex = 3;
+            this.txtAlisFiyati.Text = "0";
+            this.txtAlisFiyati.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtAlisFiyati.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAlisFiyati_KeyPress);
+            // 
+            // txtSatisFiyati
+            // 
+            this.txtSatisFiyati.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSatisFiyati.Location = new System.Drawing.Point(511, 53);
+            this.txtSatisFiyati.Name = "txtSatisFiyati";
+            this.txtSatisFiyati.Size = new System.Drawing.Size(120, 30);
+            this.txtSatisFiyati.TabIndex = 4;
+            this.txtSatisFiyati.Text = "0";
+            this.txtSatisFiyati.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtSatisFiyati.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSatisFiyati_KeyPress);
             // 
             // fUrunGiris
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightBlue;
-            this.ClientSize = new System.Drawing.Size(992, 753);
+            this.ClientSize = new System.Drawing.Size(982, 574);
             this.Controls.Add(this.splitContainer1);
-            this.MaximumSize = new System.Drawing.Size(1010, 800);
-            this.MinimumSize = new System.Drawing.Size(1010, 800);
             this.Name = "fUrunGiris";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ÜRÜN GİRİŞ";
+            this.Load += new System.EventHandler(this.fUrunGiris_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);
@@ -431,7 +476,6 @@ namespace BarcodeSales
         #endregion
 
         private System.Windows.Forms.SplitContainer splitContainer1;
-        private System.Windows.Forms.ComboBox comboBoxUrunGrubu;
         private lblStandart lblStandart3;
         private lblStandart lblStandart2;
         private lblStandart lblStandart1;
@@ -441,8 +485,6 @@ namespace BarcodeSales
         private lblStandart lblStandart5;
         private lblStandart lblStandart4;
         private txtNumeric txtMiktar;
-        private txtNumeric txtSatisFiyati;
-        private txtNumeric txtAlisFiyati;
         private txtNumeric txtKdvOrani;
         private btnStandart btnBarkodOlustur;
         private btnStandart btnUrunGrubuEkle;
@@ -455,5 +497,10 @@ namespace BarcodeSales
         private txtNumeric txtUrunSayisi;
         private ozelDataGridView dataGridViewUrunGiris;
         internal txtStandart txtBarkod;
+        private lblStandart lblStandart10;
+        internal lblStandart lblKullanici;
+        internal System.Windows.Forms.ComboBox comboBoxUrunGrubu;
+        private System.Windows.Forms.TextBox txtAlisFiyati;
+        private System.Windows.Forms.TextBox txtSatisFiyati;
     }
 }

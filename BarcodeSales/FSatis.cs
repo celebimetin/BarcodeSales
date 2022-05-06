@@ -19,7 +19,6 @@ namespace BarcodeSales
         private void fSatis_Load(object sender, EventArgs e)
         {
             HizliButonDoldur();
-            txtMiktar.Text = 1.ToString();
             btn5TL.Text = 5.ToString("C2");
             btn10TL.Text = 10.ToString("C2");
             btn20TL.Text = 20.ToString("C2");
@@ -281,7 +280,7 @@ namespace BarcodeSales
                 dataGridViewSatisListesi.Rows[satirSayisi].Cells["gvBarkod"].Value = "1111111111116";
                 dataGridViewSatisListesi.Rows[satirSayisi].Cells["gvUrunAdi"].Value = "Barkodsuz Ürün";
                 dataGridViewSatisListesi.Rows[satirSayisi].Cells["gvUrunGrup"].Value = "Barkodsuz Ürün";
-                dataGridViewSatisListesi.Rows[satirSayisi].Cells["gvBirim"].Value = "Adet";
+                dataGridViewSatisListesi.Rows[satirSayisi].Cells["gvBirim"].Value = Convert.ToString(BirimTipi.Diger);
                 dataGridViewSatisListesi.Rows[satirSayisi].Cells["gvMiktar"].Value = 1;
                 dataGridViewSatisListesi.Rows[satirSayisi].Cells["gvAlisFiyati"].Value = 0;
                 dataGridViewSatisListesi.Rows[satirSayisi].Cells["gvKdvTutari"].Value = 0;
@@ -315,7 +314,7 @@ namespace BarcodeSales
 
         private void Temizle()
         {
-            txtMiktar.Text = "1";
+            txtMiktar.Text = 1.ToString();
             txtBarkod.Clear();
             txtParaUstu.Clear();
             txtOdenen.Clear();
