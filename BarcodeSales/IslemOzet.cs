@@ -19,7 +19,7 @@ namespace BarcodeSales
         public Nullable<bool> Iade { get; set; }
         public string OdemeSekli { get; set; }
         public Nullable<double> Nakit { get; set; }
-        public Nullable<double> KrediKartı { get; set; }
+        public Nullable<double> KrediKarti { get; set; }
         public Nullable<bool> Gelir { get; set; }
         public Nullable<bool> Gider { get; set; }
         public Nullable<double> AlisFiyatToplam { get; set; }

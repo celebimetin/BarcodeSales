@@ -21,6 +21,7 @@ namespace BarcodeSales
                 var urunAdi = txtUrunAra.Text;
                 var urunler = db.Uruns.Where(x => x.UrunAdi.Contains(urunAdi)).ToList();
                 dataGridViewUrunEkleListesi.DataSource = urunler;
+                Islemler.DataGridViewDüzenle(dataGridViewUrunEkleListesi);
             }
         }
 
@@ -55,6 +56,7 @@ namespace BarcodeSales
             if (checkBoxTumunuGoster.Checked)
             {
                 dataGridViewUrunEkleListesi.DataSource = db.Uruns.ToList();
+                Islemler.DataGridViewDüzenle(dataGridViewUrunEkleListesi);
             }
             else
             {

@@ -37,7 +37,7 @@
           <Property Name="Iade" Type="bit" />
           <Property Name="OdemeSekli" Type="nvarchar" MaxLength="50" />
           <Property Name="Nakit" Type="float" />
-          <Property Name="KrediKartı" Type="float" />
+          <Property Name="KrediKarti" Type="float" />
           <Property Name="Gelir" Type="bit" />
           <Property Name="Gider" Type="bit" />
           <Property Name="AlisFiyatToplam" Type="float" />
@@ -176,27 +176,10 @@
           <EntitySet Name="Satis" EntityType="Self.Sati" />
           <EntitySet Name="Terazis" EntityType="Self.Terazi" />
           <EntitySet Name="Uruns" EntityType="Self.Urun" />
-          <EntitySet Name="IslemOzets" EntityType="BarcodeSalesDbModel.IslemOzet" />
           <EntitySet Name="UrunGrups" EntityType="BarcodeSalesDbModel.UrunGrup" />
           <EntitySet Name="Barkods" EntityType="BarcodeSalesDbModel.Barkod" />
+          <EntitySet Name="IslemOzets" EntityType="BarcodeSalesDbModel.IslemOzet" />
         </EntityContainer>
-        <EntityType Name="IslemOzet">
-          <Key>
-            <PropertyRef Name="IslemOzetId" />
-          </Key>
-          <Property Name="IslemOzetId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="IslemNoId" Type="Int32" />
-          <Property Name="Iade" Type="Boolean" />
-          <Property Name="OdemeSekli" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Nakit" Type="Double" />
-          <Property Name="KrediKartı" Type="Double" />
-          <Property Name="Gelir" Type="Boolean" />
-          <Property Name="Gider" Type="Boolean" />
-          <Property Name="AlisFiyatToplam" Type="Double" />
-          <Property Name="Aciklama" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
-          <Property Name="Tarih" Type="DateTime" Precision="3" />
-          <Property Name="Kullanici" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-        </EntityType>
         <EntityType Name="UrunGrup">
           <Key>
             <PropertyRef Name="UrunGrupId" />
@@ -210,6 +193,23 @@
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="BarkodNo" Type="Int32" />
+        </EntityType>
+        <EntityType Name="IslemOzet">
+          <Key>
+            <PropertyRef Name="IslemOzetId" />
+          </Key>
+          <Property Name="IslemOzetId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IslemNoId" Type="Int32" />
+          <Property Name="Iade" Type="Boolean" />
+          <Property Name="OdemeSekli" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Nakit" Type="Double" />
+          <Property Name="KrediKarti" Type="Double" />
+          <Property Name="Gelir" Type="Boolean" />
+          <Property Name="Gider" Type="Boolean" />
+          <Property Name="AlisFiyatToplam" Type="Double" />
+          <Property Name="Aciklama" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Tarih" Type="DateTime" Precision="3" />
+          <Property Name="Kullanici" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -282,24 +282,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="IslemOzets">
-            <EntityTypeMapping TypeName="BarcodeSalesDbModel.IslemOzet">
-              <MappingFragment StoreEntitySet="IslemOzet">
-                <ScalarProperty Name="Kullanici" ColumnName="Kullanici" />
-                <ScalarProperty Name="Tarih" ColumnName="Tarih" />
-                <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
-                <ScalarProperty Name="AlisFiyatToplam" ColumnName="AlisFiyatToplam" />
-                <ScalarProperty Name="Gider" ColumnName="Gider" />
-                <ScalarProperty Name="Gelir" ColumnName="Gelir" />
-                <ScalarProperty Name="KrediKartı" ColumnName="KrediKartı" />
-                <ScalarProperty Name="Nakit" ColumnName="Nakit" />
-                <ScalarProperty Name="OdemeSekli" ColumnName="OdemeSekli" />
-                <ScalarProperty Name="Iade" ColumnName="Iade" />
-                <ScalarProperty Name="IslemNoId" ColumnName="IslemNoId" />
-                <ScalarProperty Name="IslemOzetId" ColumnName="IslemOzetId" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="UrunGrups">
             <EntityTypeMapping TypeName="BarcodeSalesDbModel.UrunGrup">
               <MappingFragment StoreEntitySet="UrunGrup">
@@ -313,6 +295,24 @@
               <MappingFragment StoreEntitySet="Barkod">
                 <ScalarProperty Name="BarkodNo" ColumnName="BarkodNo" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="IslemOzets">
+            <EntityTypeMapping TypeName="BarcodeSalesDbModel.IslemOzet">
+              <MappingFragment StoreEntitySet="IslemOzet">
+                <ScalarProperty Name="Kullanici" ColumnName="Kullanici" />
+                <ScalarProperty Name="Tarih" ColumnName="Tarih" />
+                <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
+                <ScalarProperty Name="AlisFiyatToplam" ColumnName="AlisFiyatToplam" />
+                <ScalarProperty Name="Gider" ColumnName="Gider" />
+                <ScalarProperty Name="Gelir" ColumnName="Gelir" />
+                <ScalarProperty Name="KrediKarti" ColumnName="KrediKarti" />
+                <ScalarProperty Name="Nakit" ColumnName="Nakit" />
+                <ScalarProperty Name="OdemeSekli" ColumnName="OdemeSekli" />
+                <ScalarProperty Name="Iade" ColumnName="Iade" />
+                <ScalarProperty Name="IslemNoId" ColumnName="IslemNoId" />
+                <ScalarProperty Name="IslemOzetId" ColumnName="IslemOzetId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

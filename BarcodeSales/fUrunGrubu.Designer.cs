@@ -33,6 +33,7 @@ namespace BarcodeSales
             this.txtUrunGrubuAdi = new BarcodeSales.txtStandart();
             this.listBoxUrunGrubu = new System.Windows.Forms.ListBox();
             this.btnUrunGrubuKaydet = new BarcodeSales.btnStandart();
+            this.btnUrunGrubuSil = new BarcodeSales.btnStandart();
             this.SuspendLayout();
             // 
             // lblStandart1
@@ -73,15 +74,33 @@ namespace BarcodeSales
             this.btnUrunGrubuKaydet.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUrunGrubuKaydet.ForeColor = System.Drawing.Color.White;
             this.btnUrunGrubuKaydet.Image = global::BarcodeSales.Properties.Resources.save;
-            this.btnUrunGrubuKaydet.Location = new System.Drawing.Point(18, 365);
+            this.btnUrunGrubuKaydet.Location = new System.Drawing.Point(145, 368);
             this.btnUrunGrubuKaydet.Margin = new System.Windows.Forms.Padding(1);
             this.btnUrunGrubuKaydet.Name = "btnUrunGrubuKaydet";
-            this.btnUrunGrubuKaydet.Size = new System.Drawing.Size(250, 75);
+            this.btnUrunGrubuKaydet.Size = new System.Drawing.Size(123, 75);
             this.btnUrunGrubuKaydet.TabIndex = 0;
             this.btnUrunGrubuKaydet.Text = "Kaydet";
             this.btnUrunGrubuKaydet.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.btnUrunGrubuKaydet.UseVisualStyleBackColor = false;
             this.btnUrunGrubuKaydet.Click += new System.EventHandler(this.btnUrunGrubuKaydet_Click);
+            // 
+            // btnUrunGrubuSil
+            // 
+            this.btnUrunGrubuSil.BackColor = System.Drawing.Color.Red;
+            this.btnUrunGrubuSil.FlatAppearance.BorderColor = System.Drawing.Color.LimeGreen;
+            this.btnUrunGrubuSil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUrunGrubuSil.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUrunGrubuSil.ForeColor = System.Drawing.Color.White;
+            this.btnUrunGrubuSil.Image = global::BarcodeSales.Properties.Resources.remove;
+            this.btnUrunGrubuSil.Location = new System.Drawing.Point(18, 368);
+            this.btnUrunGrubuSil.Margin = new System.Windows.Forms.Padding(1);
+            this.btnUrunGrubuSil.Name = "btnUrunGrubuSil";
+            this.btnUrunGrubuSil.Size = new System.Drawing.Size(125, 75);
+            this.btnUrunGrubuSil.TabIndex = 0;
+            this.btnUrunGrubuSil.Text = "Sil";
+            this.btnUrunGrubuSil.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.btnUrunGrubuSil.UseVisualStyleBackColor = false;
+            this.btnUrunGrubuSil.Click += new System.EventHandler(this.btnUrunGrubuSil_Click);
             // 
             // fUrunGrubu
             // 
@@ -89,6 +108,7 @@ namespace BarcodeSales
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightBlue;
             this.ClientSize = new System.Drawing.Size(282, 453);
+            this.Controls.Add(this.btnUrunGrubuSil);
             this.Controls.Add(this.btnUrunGrubuKaydet);
             this.Controls.Add(this.listBoxUrunGrubu);
             this.Controls.Add(this.txtUrunGrubuAdi);
@@ -110,5 +130,6 @@ namespace BarcodeSales
         private txtStandart txtUrunGrubuAdi;
         private System.Windows.Forms.ListBox listBoxUrunGrubu;
         private btnStandart btnUrunGrubuKaydet;
+        private btnStandart btnUrunGrubuSil;
     }
 }

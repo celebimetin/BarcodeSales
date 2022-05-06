@@ -29,9 +29,12 @@ namespace BarcodeSales
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.txtSatisFiyati = new System.Windows.Forms.TextBox();
+            this.txtAlisFiyati = new System.Windows.Forms.TextBox();
             this.lblKullanici = new BarcodeSales.lblStandart();
             this.lblStandart10 = new BarcodeSales.lblStandart();
             this.txtUrunSayisi = new BarcodeSales.txtNumeric();
@@ -56,13 +59,14 @@ namespace BarcodeSales
             this.lblStandart2 = new BarcodeSales.lblStandart();
             this.lblStandart1 = new BarcodeSales.lblStandart();
             this.dataGridViewUrunGiris = new BarcodeSales.ozelDataGridView();
-            this.txtAlisFiyati = new System.Windows.Forms.TextBox();
-            this.txtSatisFiyati = new System.Windows.Forms.TextBox();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.silToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUrunGiris)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -107,6 +111,28 @@ namespace BarcodeSales
             this.splitContainer1.Size = new System.Drawing.Size(982, 574);
             this.splitContainer1.SplitterDistance = 300;
             this.splitContainer1.TabIndex = 0;
+            // 
+            // txtSatisFiyati
+            // 
+            this.txtSatisFiyati.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSatisFiyati.Location = new System.Drawing.Point(511, 53);
+            this.txtSatisFiyati.Name = "txtSatisFiyati";
+            this.txtSatisFiyati.Size = new System.Drawing.Size(120, 30);
+            this.txtSatisFiyati.TabIndex = 4;
+            this.txtSatisFiyati.Text = "0";
+            this.txtSatisFiyati.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtSatisFiyati.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSatisFiyati_KeyPress);
+            // 
+            // txtAlisFiyati
+            // 
+            this.txtAlisFiyati.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAlisFiyati.Location = new System.Drawing.Point(511, 11);
+            this.txtAlisFiyati.Name = "txtAlisFiyati";
+            this.txtAlisFiyati.Size = new System.Drawing.Size(120, 30);
+            this.txtAlisFiyati.TabIndex = 3;
+            this.txtAlisFiyati.Text = "0";
+            this.txtAlisFiyati.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtAlisFiyati.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAlisFiyati_KeyPress);
             // 
             // lblKullanici
             // 
@@ -407,6 +433,7 @@ namespace BarcodeSales
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewUrunGiris.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewUrunGiris.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewUrunGiris.ContextMenuStrip = this.contextMenuStrip1;
             this.dataGridViewUrunGiris.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewUrunGiris.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewUrunGiris.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -430,27 +457,20 @@ namespace BarcodeSales
             this.dataGridViewUrunGiris.Size = new System.Drawing.Size(982, 270);
             this.dataGridViewUrunGiris.TabIndex = 14;
             // 
-            // txtAlisFiyati
+            // contextMenuStrip1
             // 
-            this.txtAlisFiyati.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAlisFiyati.Location = new System.Drawing.Point(511, 11);
-            this.txtAlisFiyati.Name = "txtAlisFiyati";
-            this.txtAlisFiyati.Size = new System.Drawing.Size(120, 30);
-            this.txtAlisFiyati.TabIndex = 3;
-            this.txtAlisFiyati.Text = "0";
-            this.txtAlisFiyati.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtAlisFiyati.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAlisFiyati_KeyPress);
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.silToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(211, 56);
             // 
-            // txtSatisFiyati
+            // silToolStripMenuItem
             // 
-            this.txtSatisFiyati.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSatisFiyati.Location = new System.Drawing.Point(511, 53);
-            this.txtSatisFiyati.Name = "txtSatisFiyati";
-            this.txtSatisFiyati.Size = new System.Drawing.Size(120, 30);
-            this.txtSatisFiyati.TabIndex = 4;
-            this.txtSatisFiyati.Text = "0";
-            this.txtSatisFiyati.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtSatisFiyati.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSatisFiyati_KeyPress);
+            this.silToolStripMenuItem.Name = "silToolStripMenuItem";
+            this.silToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.silToolStripMenuItem.Text = "Sil";
+            this.silToolStripMenuItem.Click += new System.EventHandler(this.silToolStripMenuItem_Click);
             // 
             // fUrunGiris
             // 
@@ -469,6 +489,7 @@ namespace BarcodeSales
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUrunGiris)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -502,5 +523,7 @@ namespace BarcodeSales
         internal System.Windows.Forms.ComboBox comboBoxUrunGrubu;
         private System.Windows.Forms.TextBox txtAlisFiyati;
         private System.Windows.Forms.TextBox txtSatisFiyati;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem silToolStripMenuItem;
     }
 }

@@ -10,9 +10,9 @@
         <EntityTypeShape EntityType="BarcodeSalesDbModel.Sati" Width="1.875" PointX="6" PointY="0.5" IsExpanded="true" />
         <EntityTypeShape EntityType="BarcodeSalesDbModel.Terazi" Width="1.5" PointX="0.5" PointY="2.125" IsExpanded="true" />
         <EntityTypeShape EntityType="BarcodeSalesDbModel.Urun" Width="1.5" PointX="2.5" PointY="0.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="BarcodeSalesDbModel.IslemOzet" Width="1.5" PointX="8" PointY="0.5" />
         <EntityTypeShape EntityType="BarcodeSalesDbModel.UrunGrup" Width="1.5" PointX="0.75" PointY="4.75" />
         <EntityTypeShape EntityType="BarcodeSalesDbModel.Barkod" Width="1.5" PointX="2.375" PointY="4.75" />
+        <EntityTypeShape EntityType="BarcodeSalesDbModel.IslemOzet" Width="1.5" PointX="8" PointY="0.5" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

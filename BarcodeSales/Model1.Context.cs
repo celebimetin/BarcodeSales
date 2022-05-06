@@ -30,8 +30,8 @@ namespace BarcodeSales
         public virtual DbSet<Sati> Satis { get; set; }
         public virtual DbSet<Terazi> Terazis { get; set; }
         public virtual DbSet<Urun> Uruns { get; set; }
-        public virtual DbSet<IslemOzet> IslemOzets { get; set; }
         public virtual DbSet<UrunGrup> UrunGrups { get; set; }
         public virtual DbSet<Barkod> Barkods { get; set; }
+        public virtual DbSet<IslemOzet> IslemOzets { get; set; }
     }
 }

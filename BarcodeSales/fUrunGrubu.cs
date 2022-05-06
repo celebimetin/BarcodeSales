@@ -33,13 +33,32 @@ namespace BarcodeSales
 
                 fUrunGiris fUrunGiris = (fUrunGiris)Application.OpenForms["fUrunGiris"];
                 if (fUrunGiris != null)
-                fUrunGiris.UrunGrupDolur();
+                    fUrunGiris.UrunGrupDolur();
             }
             else
             {
                 MessageBox.Show("Ürün Grup Adı boş olamaz.");
             }
 
+        }
+
+        private void btnUrunGrubuSil_Click(object sender, EventArgs e)
+        {
+            int grupId = Convert.ToInt32(listBoxUrunGrubu.SelectedValue);
+            string grupAdi = listBoxUrunGrubu.Text;
+            DialogResult deleteOnay = MessageBox.Show(grupAdi + " Grubunu silmek istediğinize emin misiniz?", "Silme İşlemi", MessageBoxButtons.YesNo);
+            if (deleteOnay == DialogResult.Yes)
+            {
+                var removeUrunGrup = db.UrunGrups.FirstOrDefault(x => x.UrunGrupId == grupId);
+                db.UrunGrups.Remove(removeUrunGrup);
+                db.SaveChanges();
+                UrunGrupDolur();
+                txtUrunGrubuAdi.Focus();
+
+                fUrunGiris fUrunGiris = (fUrunGiris)Application.OpenForms["fUrunGiris"];
+                if (fUrunGiris != null)
+                    fUrunGiris.UrunGrupDolur();
+            }
         }
 
         private void UrunGrupDolur()

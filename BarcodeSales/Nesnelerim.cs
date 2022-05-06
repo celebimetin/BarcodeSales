@@ -64,7 +64,7 @@ namespace BarcodeSales
 
         private void TxtNumeric_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (char.IsDigit(e.KeyChar) == false && e.KeyChar != (char)08)
+            if (char.IsDigit(e.KeyChar) == false && e.KeyChar != (char)8 && e.KeyChar != (char)46)
             {
                 e.Handled = true;
             }

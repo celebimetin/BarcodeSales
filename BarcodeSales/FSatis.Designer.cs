@@ -39,8 +39,6 @@ namespace BarcodeSales
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lblKullanici = new BarcodeSales.lblStandart();
-            this.lblStandart10 = new BarcodeSales.lblStandart();
             this.lblNakit = new System.Windows.Forms.Label();
             this.lblKart = new System.Windows.Forms.Label();
             this.chSatisIadeIslemi = new System.Windows.Forms.CheckBox();
@@ -132,6 +130,8 @@ namespace BarcodeSales
             this.btnIslemBeklet = new System.Windows.Forms.Button();
             this.btnDigerUrun = new System.Windows.Forms.Button();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.lblKullanici = new BarcodeSales.lblStandart();
+            this.lblStandart10 = new BarcodeSales.lblStandart();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -211,32 +211,10 @@ namespace BarcodeSales
             this.panel1.Size = new System.Drawing.Size(514, 96);
             this.panel1.TabIndex = 0;
             // 
-            // lblKullanici
-            // 
-            this.lblKullanici.AutoSize = true;
-            this.lblKullanici.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lblKullanici.ForeColor = System.Drawing.Color.Black;
-            this.lblKullanici.Location = new System.Drawing.Point(238, 8);
-            this.lblKullanici.Name = "lblKullanici";
-            this.lblKullanici.Size = new System.Drawing.Size(89, 20);
-            this.lblKullanici.TabIndex = 27;
-            this.lblKullanici.Text = "lblKullanici";
-            // 
-            // lblStandart10
-            // 
-            this.lblStandart10.AutoSize = true;
-            this.lblStandart10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lblStandart10.ForeColor = System.Drawing.Color.Black;
-            this.lblStandart10.Location = new System.Drawing.Point(155, 7);
-            this.lblStandart10.Name = "lblStandart10";
-            this.lblStandart10.Size = new System.Drawing.Size(82, 20);
-            this.lblStandart10.TabIndex = 26;
-            this.lblStandart10.Text = "Kullanıcı :";
-            // 
             // lblNakit
             // 
             this.lblNakit.AutoSize = true;
-            this.lblNakit.Location = new System.Drawing.Point(471, 7);
+            this.lblNakit.Location = new System.Drawing.Point(471, 23);
             this.lblNakit.Name = "lblNakit";
             this.lblNakit.Size = new System.Drawing.Size(40, 17);
             this.lblNakit.TabIndex = 7;
@@ -246,7 +224,7 @@ namespace BarcodeSales
             // lblKart
             // 
             this.lblKart.AutoSize = true;
-            this.lblKart.Location = new System.Drawing.Point(431, 7);
+            this.lblKart.Location = new System.Drawing.Point(471, 40);
             this.lblKart.Name = "lblKart";
             this.lblKart.Size = new System.Drawing.Size(34, 17);
             this.lblKart.TabIndex = 6;
@@ -713,7 +691,7 @@ namespace BarcodeSales
             this.tableLayoutPanel4.Controls.Add(this.btnHizli1, 0, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel4.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 5;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
@@ -1753,6 +1731,28 @@ namespace BarcodeSales
             this.dataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewImageColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.dataGridViewImageColumn1.Width = 125;
+            // 
+            // lblKullanici
+            // 
+            this.lblKullanici.AutoSize = true;
+            this.lblKullanici.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lblKullanici.ForeColor = System.Drawing.Color.Black;
+            this.lblKullanici.Location = new System.Drawing.Point(376, 4);
+            this.lblKullanici.Name = "lblKullanici";
+            this.lblKullanici.Size = new System.Drawing.Size(89, 20);
+            this.lblKullanici.TabIndex = 27;
+            this.lblKullanici.Text = "lblKullanici";
+            // 
+            // lblStandart10
+            // 
+            this.lblStandart10.AutoSize = true;
+            this.lblStandart10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lblStandart10.ForeColor = System.Drawing.Color.Black;
+            this.lblStandart10.Location = new System.Drawing.Point(288, 4);
+            this.lblStandart10.Name = "lblStandart10";
+            this.lblStandart10.Size = new System.Drawing.Size(82, 20);
+            this.lblStandart10.TabIndex = 26;
+            this.lblStandart10.Text = "Kullanıcı :";
             // 
             // fSatis
             // 

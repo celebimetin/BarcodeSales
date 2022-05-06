@@ -17,6 +17,8 @@ namespace BarcodeSales
         private void fUrunGiris_Load(object sender, EventArgs e)
         {
             txtUrunSayisi.Text = db.Uruns.Count().ToString();
+            dataGridViewUrunGiris.DataSource = db.Uruns.OrderByDescending(x => x.UrunId).Take(12).ToList();
+            Islemler.DataGridViewDüzenle(dataGridViewUrunGiris);
             UrunGrupDolur();
         }
 
@@ -25,6 +27,18 @@ namespace BarcodeSales
             comboBoxUrunGrubu.DisplayMember = "UrunGrupAdi";
             comboBoxUrunGrubu.ValueMember = "UrunGrupId";
             comboBoxUrunGrubu.DataSource = db.UrunGrups.OrderBy(x => x.UrunGrupAdi).ToList();
+        }
+
+        private void Temizle()
+        {
+            txtBarkod.Clear();
+            txtUrunAdi.Clear();
+            comboBoxUrunGrubu.Text = "";
+            txtAlisFiyati.Text = 0.ToString();
+            txtSatisFiyati.Text = 0.ToString();
+            txtMiktar.Text = 0.ToString();
+            txtKdvOrani.Text = 8.ToString();
+            txtBarkod.Focus();
         }
 
         private void btnIptal_Click(object sender, EventArgs e)
@@ -91,6 +105,7 @@ namespace BarcodeSales
                 txtBarkod.Focus();
             }
             dataGridViewUrunGiris.DataSource = db.Uruns.OrderByDescending(x => x.UrunId).Take(12).ToList();
+            Islemler.DataGridViewDüzenle(dataGridViewUrunGiris);
             Temizle();
         }
 
@@ -144,24 +159,13 @@ namespace BarcodeSales
             }
         }
 
-        private void Temizle()
-        {
-            txtBarkod.Clear();
-            txtUrunAdi.Clear();
-            comboBoxUrunGrubu.Text = "girilecek";
-            txtAlisFiyati.Text = 0.ToString();
-            txtSatisFiyati.Text = 0.ToString();
-            txtMiktar.Text = 0.ToString();
-            txtKdvOrani.Text = 8.ToString();
-            txtBarkod.Focus();
-        }
-
         private void txtUrunAra_TextChanged(object sender, EventArgs e)
         {
             if (txtUrunAra.Text.Length >= 2)
             {
                 string urunAdi = txtUrunAra.Text;
                 dataGridViewUrunGiris.DataSource = db.Uruns.Where(x => x.UrunAdi.Contains(urunAdi)).ToList();
+                Islemler.DataGridViewDüzenle(dataGridViewUrunGiris);
             }
         }
 
@@ -178,6 +182,34 @@ namespace BarcodeSales
             if (char.IsDigit(e.KeyChar) == false && e.KeyChar != (char)8 && e.KeyChar != (char)46)
             {
                 e.Handled = true;
+            }
+        }
+
+        private void silToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (dataGridViewUrunGiris.Rows.Count > 0)
+            {
+                int urunId = Convert.ToInt32(dataGridViewUrunGiris.CurrentRow.Cells["UrunId"].Value.ToString());
+                string urunAdi = dataGridViewUrunGiris.CurrentRow.Cells["UrunAdi"].Value.ToString();
+                string barkod = dataGridViewUrunGiris.CurrentRow.Cells["Barkod"].Value.ToString();
+
+                DialogResult result = MessageBox.Show(urunAdi + " Ürünü silemek istediğinize emin misiniz?", "Ürün Silme İşlemi", MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
+                {
+                    var urun = db.Uruns.Find(urunId);
+                    db.Uruns.Remove(urun);
+                    db.SaveChanges();
+
+                    var hizliUrun = db.HizliUruns.Where(x => x.Barkod == barkod).SingleOrDefault();
+                    hizliUrun.Barkod = "-";
+                    hizliUrun.UrunAdi = "-";
+                    hizliUrun.Fiyat = 0;
+                    db.SaveChanges();
+
+                    dataGridViewUrunGiris.DataSource = db.Uruns.OrderByDescending(x => x.UrunId).Take(12).ToList();
+                    Islemler.DataGridViewDüzenle(dataGridViewUrunGiris);
+                    txtBarkod.Focus();
+                }
             }
         }
     }
