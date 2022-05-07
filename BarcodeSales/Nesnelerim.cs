@@ -11,7 +11,7 @@ namespace BarcodeSales
     {
         public lblStandart()
         {
-            this.ForeColor = Color.DarkOrange;
+            this.ForeColor = Color.DarkSlateGray;
             this.Text = "lblStandart";
             this.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
             this.Name = "lblStandart";

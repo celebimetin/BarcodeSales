@@ -108,7 +108,7 @@ namespace BarcodeSales
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.dataGridViewUrunGiris);
-            this.splitContainer1.Size = new System.Drawing.Size(982, 574);
+            this.splitContainer1.Size = new System.Drawing.Size(1127, 659);
             this.splitContainer1.SplitterDistance = 300;
             this.splitContainer1.TabIndex = 0;
             // 
@@ -171,7 +171,7 @@ namespace BarcodeSales
             // 
             this.lblStandart9.AutoSize = true;
             this.lblStandart9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lblStandart9.ForeColor = System.Drawing.Color.DarkOrange;
+            this.lblStandart9.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.lblStandart9.Location = new System.Drawing.Point(392, 263);
             this.lblStandart9.Name = "lblStandart9";
             this.lblStandart9.Size = new System.Drawing.Size(112, 25);
@@ -192,7 +192,7 @@ namespace BarcodeSales
             // 
             this.lblStandart8.AutoSize = true;
             this.lblStandart8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lblStandart8.ForeColor = System.Drawing.Color.DarkOrange;
+            this.lblStandart8.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.lblStandart8.Location = new System.Drawing.Point(28, 263);
             this.lblStandart8.Name = "lblStandart8";
             this.lblStandart8.Size = new System.Drawing.Size(90, 25);
@@ -315,7 +315,7 @@ namespace BarcodeSales
             // 
             this.lblStandart7.AutoSize = true;
             this.lblStandart7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lblStandart7.ForeColor = System.Drawing.Color.DarkOrange;
+            this.lblStandart7.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.lblStandart7.Location = new System.Drawing.Point(397, 132);
             this.lblStandart7.Name = "lblStandart7";
             this.lblStandart7.Size = new System.Drawing.Size(107, 25);
@@ -326,7 +326,7 @@ namespace BarcodeSales
             // 
             this.lblStandart6.AutoSize = true;
             this.lblStandart6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lblStandart6.ForeColor = System.Drawing.Color.DarkOrange;
+            this.lblStandart6.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.lblStandart6.Location = new System.Drawing.Point(439, 94);
             this.lblStandart6.Name = "lblStandart6";
             this.lblStandart6.Size = new System.Drawing.Size(65, 25);
@@ -337,7 +337,7 @@ namespace BarcodeSales
             // 
             this.lblStandart5.AutoSize = true;
             this.lblStandart5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lblStandart5.ForeColor = System.Drawing.Color.DarkOrange;
+            this.lblStandart5.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.lblStandart5.Location = new System.Drawing.Point(397, 53);
             this.lblStandart5.Name = "lblStandart5";
             this.lblStandart5.Size = new System.Drawing.Size(107, 25);
@@ -348,7 +348,7 @@ namespace BarcodeSales
             // 
             this.lblStandart4.AutoSize = true;
             this.lblStandart4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lblStandart4.ForeColor = System.Drawing.Color.DarkOrange;
+            this.lblStandart4.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.lblStandart4.Location = new System.Drawing.Point(409, 12);
             this.lblStandart4.Name = "lblStandart4";
             this.lblStandart4.Size = new System.Drawing.Size(95, 25);
@@ -387,7 +387,7 @@ namespace BarcodeSales
             // 
             this.lblStandart3.AutoSize = true;
             this.lblStandart3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lblStandart3.ForeColor = System.Drawing.Color.DarkOrange;
+            this.lblStandart3.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.lblStandart3.Location = new System.Drawing.Point(5, 94);
             this.lblStandart3.Name = "lblStandart3";
             this.lblStandart3.Size = new System.Drawing.Size(113, 25);
@@ -398,7 +398,7 @@ namespace BarcodeSales
             // 
             this.lblStandart2.AutoSize = true;
             this.lblStandart2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lblStandart2.ForeColor = System.Drawing.Color.DarkOrange;
+            this.lblStandart2.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.lblStandart2.Location = new System.Drawing.Point(30, 53);
             this.lblStandart2.Name = "lblStandart2";
             this.lblStandart2.Size = new System.Drawing.Size(88, 25);
@@ -409,7 +409,7 @@ namespace BarcodeSales
             // 
             this.lblStandart1.AutoSize = true;
             this.lblStandart1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lblStandart1.ForeColor = System.Drawing.Color.DarkOrange;
+            this.lblStandart1.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.lblStandart1.Location = new System.Drawing.Point(44, 12);
             this.lblStandart1.Name = "lblStandart1";
             this.lblStandart1.Size = new System.Drawing.Size(74, 25);
@@ -454,7 +454,7 @@ namespace BarcodeSales
             this.dataGridViewUrunGiris.RowTemplate.DefaultCellStyle.Padding = new System.Windows.Forms.Padding(3);
             this.dataGridViewUrunGiris.RowTemplate.Height = 30;
             this.dataGridViewUrunGiris.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewUrunGiris.Size = new System.Drawing.Size(982, 270);
+            this.dataGridViewUrunGiris.Size = new System.Drawing.Size(1127, 355);
             this.dataGridViewUrunGiris.TabIndex = 14;
             // 
             // contextMenuStrip1
@@ -463,12 +463,12 @@ namespace BarcodeSales
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.silToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(211, 56);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(95, 28);
             // 
             // silToolStripMenuItem
             // 
             this.silToolStripMenuItem.Name = "silToolStripMenuItem";
-            this.silToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.silToolStripMenuItem.Size = new System.Drawing.Size(94, 24);
             this.silToolStripMenuItem.Text = "Sil";
             this.silToolStripMenuItem.Click += new System.EventHandler(this.silToolStripMenuItem_Click);
             // 
@@ -477,7 +477,7 @@ namespace BarcodeSales
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightBlue;
-            this.ClientSize = new System.Drawing.Size(982, 574);
+            this.ClientSize = new System.Drawing.Size(1127, 659);
             this.Controls.Add(this.splitContainer1);
             this.Name = "fUrunGiris";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

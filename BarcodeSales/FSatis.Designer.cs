@@ -39,6 +39,8 @@ namespace BarcodeSales
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblKullanici = new BarcodeSales.lblStandart();
+            this.lblStandart10 = new BarcodeSales.lblStandart();
             this.lblNakit = new System.Windows.Forms.Label();
             this.lblKart = new System.Windows.Forms.Label();
             this.chSatisIadeIslemi = new System.Windows.Forms.CheckBox();
@@ -130,8 +132,6 @@ namespace BarcodeSales
             this.btnIslemBeklet = new System.Windows.Forms.Button();
             this.btnDigerUrun = new System.Windows.Forms.Button();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.lblKullanici = new BarcodeSales.lblStandart();
-            this.lblStandart10 = new BarcodeSales.lblStandart();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -211,6 +211,28 @@ namespace BarcodeSales
             this.panel1.Size = new System.Drawing.Size(514, 96);
             this.panel1.TabIndex = 0;
             // 
+            // lblKullanici
+            // 
+            this.lblKullanici.AutoSize = true;
+            this.lblKullanici.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lblKullanici.ForeColor = System.Drawing.Color.Black;
+            this.lblKullanici.Location = new System.Drawing.Point(376, 4);
+            this.lblKullanici.Name = "lblKullanici";
+            this.lblKullanici.Size = new System.Drawing.Size(89, 20);
+            this.lblKullanici.TabIndex = 27;
+            this.lblKullanici.Text = "lblKullanici";
+            // 
+            // lblStandart10
+            // 
+            this.lblStandart10.AutoSize = true;
+            this.lblStandart10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lblStandart10.ForeColor = System.Drawing.Color.Black;
+            this.lblStandart10.Location = new System.Drawing.Point(288, 4);
+            this.lblStandart10.Name = "lblStandart10";
+            this.lblStandart10.Size = new System.Drawing.Size(82, 20);
+            this.lblStandart10.TabIndex = 26;
+            this.lblStandart10.Text = "Kullanıcı :";
+            // 
             // lblNakit
             // 
             this.lblNakit.AutoSize = true;
@@ -253,7 +275,7 @@ namespace BarcodeSales
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.DarkOrange;
+            this.label6.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.label6.Location = new System.Drawing.Point(268, 33);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(74, 25);
@@ -264,7 +286,7 @@ namespace BarcodeSales
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.DarkOrange;
+            this.label5.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.label5.Location = new System.Drawing.Point(35, 33);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(65, 25);
@@ -1731,28 +1753,6 @@ namespace BarcodeSales
             this.dataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewImageColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.dataGridViewImageColumn1.Width = 125;
-            // 
-            // lblKullanici
-            // 
-            this.lblKullanici.AutoSize = true;
-            this.lblKullanici.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lblKullanici.ForeColor = System.Drawing.Color.Black;
-            this.lblKullanici.Location = new System.Drawing.Point(376, 4);
-            this.lblKullanici.Name = "lblKullanici";
-            this.lblKullanici.Size = new System.Drawing.Size(89, 20);
-            this.lblKullanici.TabIndex = 27;
-            this.lblKullanici.Text = "lblKullanici";
-            // 
-            // lblStandart10
-            // 
-            this.lblStandart10.AutoSize = true;
-            this.lblStandart10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lblStandart10.ForeColor = System.Drawing.Color.Black;
-            this.lblStandart10.Location = new System.Drawing.Point(288, 4);
-            this.lblStandart10.Name = "lblStandart10";
-            this.lblStandart10.Size = new System.Drawing.Size(82, 20);
-            this.lblStandart10.TabIndex = 26;
-            this.lblStandart10.Text = "Kullanıcı :";
             // 
             // fSatis
             // 

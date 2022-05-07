@@ -40,7 +40,7 @@ namespace BarcodeSales
             // 
             this.lblStandart1.AutoSize = true;
             this.lblStandart1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lblStandart1.ForeColor = System.Drawing.Color.DarkOrange;
+            this.lblStandart1.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.lblStandart1.Location = new System.Drawing.Point(13, 13);
             this.lblStandart1.Name = "lblStandart1";
             this.lblStandart1.Size = new System.Drawing.Size(147, 25);

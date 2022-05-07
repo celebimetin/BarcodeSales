@@ -73,7 +73,7 @@ namespace BarcodeSales
             // 
             this.lblButonId.AutoSize = true;
             this.lblButonId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblButonId.ForeColor = System.Drawing.Color.DarkOrange;
+            this.lblButonId.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.lblButonId.Location = new System.Drawing.Point(180, 71);
             this.lblButonId.Name = "lblButonId";
             this.lblButonId.Size = new System.Drawing.Size(93, 25);
@@ -84,7 +84,7 @@ namespace BarcodeSales
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.DarkOrange;
+            this.label1.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.label1.Location = new System.Drawing.Point(12, 71);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(162, 25);
@@ -95,7 +95,7 @@ namespace BarcodeSales
             // 
             this.checkBoxTumunuGoster.AutoSize = true;
             this.checkBoxTumunuGoster.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxTumunuGoster.ForeColor = System.Drawing.Color.DarkOrange;
+            this.checkBoxTumunuGoster.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.checkBoxTumunuGoster.Location = new System.Drawing.Point(419, 37);
             this.checkBoxTumunuGoster.Name = "checkBoxTumunuGoster";
             this.checkBoxTumunuGoster.Size = new System.Drawing.Size(209, 29);
@@ -108,7 +108,7 @@ namespace BarcodeSales
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.DarkOrange;
+            this.label6.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.label6.Location = new System.Drawing.Point(163, 6);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(90, 25);
