@@ -29,13 +29,13 @@ namespace BarcodeSales
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridViewIslemBeklet = new System.Windows.Forms.DataGridView();
             this.gvBarkod = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gvUrunAdi = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -46,27 +46,28 @@ namespace BarcodeSales
             this.gvBirim = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gvUrunGrup = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gvAlisFiyati = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.gvSil = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewIslemBeklet)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridViewIslemBeklet
             // 
             this.dataGridViewIslemBeklet.AllowUserToAddRows = false;
+            this.dataGridViewIslemBeklet.AllowUserToDeleteRows = false;
             this.dataGridViewIslemBeklet.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewIslemBeklet.BackgroundColor = System.Drawing.Color.LightBlue;
             this.dataGridViewIslemBeklet.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridViewIslemBeklet.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.LightBlue;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.Padding = new System.Windows.Forms.Padding(3);
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewIslemBeklet.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.LightBlue;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(3);
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewIslemBeklet.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewIslemBeklet.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewIslemBeklet.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.gvBarkod,
@@ -83,11 +84,12 @@ namespace BarcodeSales
             this.dataGridViewIslemBeklet.Location = new System.Drawing.Point(0, 0);
             this.dataGridViewIslemBeklet.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridViewIslemBeklet.Name = "dataGridViewIslemBeklet";
+            this.dataGridViewIslemBeklet.ReadOnly = true;
             this.dataGridViewIslemBeklet.RowHeadersVisible = false;
             this.dataGridViewIslemBeklet.RowHeadersWidth = 51;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle14.Padding = new System.Windows.Forms.Padding(3);
-            this.dataGridViewIslemBeklet.RowsDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.Padding = new System.Windows.Forms.Padding(3);
+            this.dataGridViewIslemBeklet.RowsDefaultCellStyle = dataGridViewCellStyle7;
             this.dataGridViewIslemBeklet.RowTemplate.DefaultCellStyle.Padding = new System.Windows.Forms.Padding(3);
             this.dataGridViewIslemBeklet.RowTemplate.Height = 30;
             this.dataGridViewIslemBeklet.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -99,64 +101,72 @@ namespace BarcodeSales
             this.gvBarkod.HeaderText = "Barkod";
             this.gvBarkod.MinimumWidth = 6;
             this.gvBarkod.Name = "gvBarkod";
+            this.gvBarkod.ReadOnly = true;
             // 
             // gvUrunAdi
             // 
             this.gvUrunAdi.HeaderText = "Ürün Adı";
             this.gvUrunAdi.MinimumWidth = 6;
             this.gvUrunAdi.Name = "gvUrunAdi";
+            this.gvUrunAdi.ReadOnly = true;
             // 
             // gvMiktar
             // 
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.gvMiktar.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.gvMiktar.DefaultCellStyle = dataGridViewCellStyle2;
             this.gvMiktar.HeaderText = "Miktar";
             this.gvMiktar.MinimumWidth = 6;
             this.gvMiktar.Name = "gvMiktar";
+            this.gvMiktar.ReadOnly = true;
             // 
             // gvFiyat
             // 
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle10.Format = "C2";
-            dataGridViewCellStyle10.NullValue = null;
-            this.gvFiyat.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle3.Format = "C2";
+            dataGridViewCellStyle3.NullValue = null;
+            this.gvFiyat.DefaultCellStyle = dataGridViewCellStyle3;
             this.gvFiyat.HeaderText = "Fiyat";
             this.gvFiyat.MinimumWidth = 6;
             this.gvFiyat.Name = "gvFiyat";
+            this.gvFiyat.ReadOnly = true;
             // 
             // gvToplam
             // 
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle11.Format = "C2";
-            dataGridViewCellStyle11.NullValue = null;
-            this.gvToplam.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle4.Format = "C2";
+            dataGridViewCellStyle4.NullValue = null;
+            this.gvToplam.DefaultCellStyle = dataGridViewCellStyle4;
             this.gvToplam.HeaderText = "Toplam";
             this.gvToplam.MinimumWidth = 6;
             this.gvToplam.Name = "gvToplam";
+            this.gvToplam.ReadOnly = true;
             // 
             // gvKdvTutari
             // 
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle12.NullValue = null;
-            this.gvKdvTutari.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.NullValue = null;
+            this.gvKdvTutari.DefaultCellStyle = dataGridViewCellStyle5;
             this.gvKdvTutari.HeaderText = "Kdv Tutarı";
             this.gvKdvTutari.MinimumWidth = 6;
             this.gvKdvTutari.Name = "gvKdvTutari";
+            this.gvKdvTutari.ReadOnly = true;
             this.gvKdvTutari.Visible = false;
             // 
             // gvBirim
             // 
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.gvBirim.DefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.gvBirim.DefaultCellStyle = dataGridViewCellStyle6;
             this.gvBirim.HeaderText = "Birim";
             this.gvBirim.MinimumWidth = 6;
             this.gvBirim.Name = "gvBirim";
+            this.gvBirim.ReadOnly = true;
             // 
             // gvUrunGrup
             // 
             this.gvUrunGrup.HeaderText = "Ürün Grup";
             this.gvUrunGrup.MinimumWidth = 6;
             this.gvUrunGrup.Name = "gvUrunGrup";
+            this.gvUrunGrup.ReadOnly = true;
             this.gvUrunGrup.Visible = false;
             // 
             // gvAlisFiyati
@@ -164,7 +174,18 @@ namespace BarcodeSales
             this.gvAlisFiyati.HeaderText = "Alış Fiyatı";
             this.gvAlisFiyati.MinimumWidth = 6;
             this.gvAlisFiyati.Name = "gvAlisFiyati";
+            this.gvAlisFiyati.ReadOnly = true;
             this.gvAlisFiyati.Visible = false;
+            // 
+            // gvSil
+            // 
+            this.gvSil.HeaderText = "Sil";
+            this.gvSil.Image = global::BarcodeSales.Properties.Resources.remove;
+            this.gvSil.MinimumWidth = 6;
+            this.gvSil.Name = "gvSil";
+            this.gvSil.ReadOnly = true;
+            this.gvSil.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.gvSil.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // dataGridViewImageColumn1
             // 
@@ -175,15 +196,6 @@ namespace BarcodeSales
             this.dataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewImageColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.dataGridViewImageColumn1.Width = 118;
-            // 
-            // gvSil
-            // 
-            this.gvSil.HeaderText = "Sil";
-            this.gvSil.Image = global::BarcodeSales.Properties.Resources.remove;
-            this.gvSil.MinimumWidth = 6;
-            this.gvSil.Name = "gvSil";
-            this.gvSil.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.gvSil.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // fIsemBeklet
             // 

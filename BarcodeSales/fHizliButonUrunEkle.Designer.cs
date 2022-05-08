@@ -129,6 +129,7 @@ namespace BarcodeSales
             // dataGridViewUrunEkleListesi
             // 
             this.dataGridViewUrunEkleListesi.AllowUserToAddRows = false;
+            this.dataGridViewUrunEkleListesi.AllowUserToDeleteRows = false;
             this.dataGridViewUrunEkleListesi.BackgroundColor = System.Drawing.Color.LightBlue;
             this.dataGridViewUrunEkleListesi.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridViewUrunEkleListesi.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
@@ -146,6 +147,7 @@ namespace BarcodeSales
             this.dataGridViewUrunEkleListesi.Location = new System.Drawing.Point(0, 0);
             this.dataGridViewUrunEkleListesi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridViewUrunEkleListesi.Name = "dataGridViewUrunEkleListesi";
+            this.dataGridViewUrunEkleListesi.ReadOnly = true;
             this.dataGridViewUrunEkleListesi.RowHeadersVisible = false;
             this.dataGridViewUrunEkleListesi.RowHeadersWidth = 51;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

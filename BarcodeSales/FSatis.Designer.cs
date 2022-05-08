@@ -320,6 +320,7 @@ namespace BarcodeSales
             // dataGridViewSatisListesi
             // 
             this.dataGridViewSatisListesi.AllowUserToAddRows = false;
+            this.dataGridViewSatisListesi.AllowUserToDeleteRows = false;
             this.dataGridViewSatisListesi.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewSatisListesi.BackgroundColor = System.Drawing.Color.LightBlue;
             this.dataGridViewSatisListesi.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -349,6 +350,7 @@ namespace BarcodeSales
             this.dataGridViewSatisListesi.Location = new System.Drawing.Point(3, 102);
             this.dataGridViewSatisListesi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridViewSatisListesi.Name = "dataGridViewSatisListesi";
+            this.dataGridViewSatisListesi.ReadOnly = true;
             this.dataGridViewSatisListesi.RowHeadersVisible = false;
             this.dataGridViewSatisListesi.RowHeadersWidth = 51;
             dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -366,12 +368,14 @@ namespace BarcodeSales
             this.gvBarkod.HeaderText = "Barkod";
             this.gvBarkod.MinimumWidth = 6;
             this.gvBarkod.Name = "gvBarkod";
+            this.gvBarkod.ReadOnly = true;
             // 
             // gvUrunAdi
             // 
             this.gvUrunAdi.HeaderText = "Ürün Adı";
             this.gvUrunAdi.MinimumWidth = 6;
             this.gvUrunAdi.Name = "gvUrunAdi";
+            this.gvUrunAdi.ReadOnly = true;
             // 
             // gvMiktar
             // 
@@ -380,6 +384,7 @@ namespace BarcodeSales
             this.gvMiktar.HeaderText = "Miktar";
             this.gvMiktar.MinimumWidth = 6;
             this.gvMiktar.Name = "gvMiktar";
+            this.gvMiktar.ReadOnly = true;
             // 
             // gvFiyat
             // 
@@ -390,6 +395,7 @@ namespace BarcodeSales
             this.gvFiyat.HeaderText = "Fiyat";
             this.gvFiyat.MinimumWidth = 6;
             this.gvFiyat.Name = "gvFiyat";
+            this.gvFiyat.ReadOnly = true;
             // 
             // gvToplam
             // 
@@ -400,6 +406,7 @@ namespace BarcodeSales
             this.gvToplam.HeaderText = "Toplam";
             this.gvToplam.MinimumWidth = 6;
             this.gvToplam.Name = "gvToplam";
+            this.gvToplam.ReadOnly = true;
             // 
             // gvKdvTutari
             // 
@@ -409,6 +416,7 @@ namespace BarcodeSales
             this.gvKdvTutari.HeaderText = "Kdv Tutarı";
             this.gvKdvTutari.MinimumWidth = 6;
             this.gvKdvTutari.Name = "gvKdvTutari";
+            this.gvKdvTutari.ReadOnly = true;
             this.gvKdvTutari.Visible = false;
             // 
             // gvBirim
@@ -418,12 +426,14 @@ namespace BarcodeSales
             this.gvBirim.HeaderText = "Birim";
             this.gvBirim.MinimumWidth = 6;
             this.gvBirim.Name = "gvBirim";
+            this.gvBirim.ReadOnly = true;
             // 
             // gvUrunGrup
             // 
             this.gvUrunGrup.HeaderText = "Ürün Grup";
             this.gvUrunGrup.MinimumWidth = 6;
             this.gvUrunGrup.Name = "gvUrunGrup";
+            this.gvUrunGrup.ReadOnly = true;
             this.gvUrunGrup.Visible = false;
             // 
             // gvAlisFiyati
@@ -431,6 +441,7 @@ namespace BarcodeSales
             this.gvAlisFiyati.HeaderText = "Alış Fiyatı";
             this.gvAlisFiyati.MinimumWidth = 6;
             this.gvAlisFiyati.Name = "gvAlisFiyati";
+            this.gvAlisFiyati.ReadOnly = true;
             this.gvAlisFiyati.Visible = false;
             // 
             // gvSil
@@ -439,6 +450,7 @@ namespace BarcodeSales
             this.gvSil.Image = global::BarcodeSales.Properties.Resources.remove;
             this.gvSil.MinimumWidth = 6;
             this.gvSil.Name = "gvSil";
+            this.gvSil.ReadOnly = true;
             this.gvSil.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.gvSil.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 

@@ -12,9 +12,15 @@ namespace BarcodeSales
     using System;
     using System.Collections.Generic;
     
-    public partial class Barkod
+    public partial class StokHaraket
     {
-        public int Id { get; set; }
-        public Nullable<int> BarkodNo { get; set; }
+        public int StokHaraketId { get; set; }
+        public string Barkod { get; set; }
+        public string UrunAdi { get; set; }
+        public string Birim { get; set; }
+        public Nullable<double> Miktar { get; set; }
+        public string UrunGrup { get; set; }
+        public string Kullanici { get; set; }
+        public Nullable<System.DateTime> Tarih { get; set; }
     }
 }

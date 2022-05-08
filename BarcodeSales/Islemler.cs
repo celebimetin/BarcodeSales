@@ -123,5 +123,23 @@ namespace BarcodeSales
                 }
             }
         }
+
+        public static void StokHaraketGiris(string barkod, string urunAdi, string birim, double miktar, string urunGrup, string kullanici)
+        {
+            using (var db = new BarcodeSalesDbEntities())
+            {
+                StokHaraket stokHaraket = new StokHaraket();
+                stokHaraket.Barkod = barkod;
+                stokHaraket.UrunAdi = urunAdi;
+                stokHaraket.Birim = birim;
+                stokHaraket.Miktar = miktar;
+                stokHaraket.UrunGrup = urunGrup;
+                stokHaraket.Kullanici = kullanici;
+                stokHaraket.Tarih = DateTime.Now;
+
+                db.StokHarakets.Add(stokHaraket);
+                db.SaveChanges();
+            }  
+        }
     }
 }

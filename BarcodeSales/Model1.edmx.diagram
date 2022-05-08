@@ -13,6 +13,7 @@
         <EntityTypeShape EntityType="BarcodeSalesDbModel.UrunGrup" Width="1.5" PointX="0.75" PointY="4.75" />
         <EntityTypeShape EntityType="BarcodeSalesDbModel.Barkod" Width="1.5" PointX="2.375" PointY="4.75" />
         <EntityTypeShape EntityType="BarcodeSalesDbModel.IslemOzet" Width="1.5" PointX="8" PointY="0.5" />
+        <EntityTypeShape EntityType="BarcodeSalesDbModel.StokHaraket" Width="1.5" PointX="4.25" PointY="2.625" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

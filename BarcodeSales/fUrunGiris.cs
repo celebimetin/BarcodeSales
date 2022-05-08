@@ -98,6 +98,7 @@ namespace BarcodeSales
                         db.SaveChanges();
                     }
                 }
+                Islemler.StokHaraketGiris(txtBarkod.Text, txtUrunAdi.Text, Convert.ToString(BirimTipi.Adet), Convert.ToDouble(txtMiktar.Text), comboBoxUrunGrubu.Text, lblKullanici.Text);
             }
             else
             {

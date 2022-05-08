@@ -35,6 +35,9 @@ namespace BarcodeSales
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.txtSatisFiyati = new System.Windows.Forms.TextBox();
             this.txtAlisFiyati = new System.Windows.Forms.TextBox();
+            this.comboBoxUrunGrubu = new System.Windows.Forms.ComboBox();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.silToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lblKullanici = new BarcodeSales.lblStandart();
             this.lblStandart10 = new BarcodeSales.lblStandart();
             this.txtUrunSayisi = new BarcodeSales.txtNumeric();
@@ -54,19 +57,16 @@ namespace BarcodeSales
             this.lblStandart4 = new BarcodeSales.lblStandart();
             this.txtUrunAdi = new BarcodeSales.txtStandart();
             this.txtBarkod = new BarcodeSales.txtStandart();
-            this.comboBoxUrunGrubu = new System.Windows.Forms.ComboBox();
             this.lblStandart3 = new BarcodeSales.lblStandart();
             this.lblStandart2 = new BarcodeSales.lblStandart();
             this.lblStandart1 = new BarcodeSales.lblStandart();
             this.dataGridViewUrunGiris = new BarcodeSales.ozelDataGridView();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.silToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUrunGiris)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUrunGiris)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -133,6 +133,31 @@ namespace BarcodeSales
             this.txtAlisFiyati.Text = "0";
             this.txtAlisFiyati.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtAlisFiyati.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAlisFiyati_KeyPress);
+            // 
+            // comboBoxUrunGrubu
+            // 
+            this.comboBoxUrunGrubu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxUrunGrubu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxUrunGrubu.FormattingEnabled = true;
+            this.comboBoxUrunGrubu.Location = new System.Drawing.Point(124, 91);
+            this.comboBoxUrunGrubu.Name = "comboBoxUrunGrubu";
+            this.comboBoxUrunGrubu.Size = new System.Drawing.Size(250, 33);
+            this.comboBoxUrunGrubu.TabIndex = 2;
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.silToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(95, 28);
+            // 
+            // silToolStripMenuItem
+            // 
+            this.silToolStripMenuItem.Name = "silToolStripMenuItem";
+            this.silToolStripMenuItem.Size = new System.Drawing.Size(94, 24);
+            this.silToolStripMenuItem.Text = "Sil";
+            this.silToolStripMenuItem.Click += new System.EventHandler(this.silToolStripMenuItem_Click);
             // 
             // lblKullanici
             // 
@@ -374,15 +399,6 @@ namespace BarcodeSales
             this.txtBarkod.TabIndex = 15;
             this.txtBarkod.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBarkod_KeyDown);
             // 
-            // comboBoxUrunGrubu
-            // 
-            this.comboBoxUrunGrubu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxUrunGrubu.FormattingEnabled = true;
-            this.comboBoxUrunGrubu.Location = new System.Drawing.Point(124, 91);
-            this.comboBoxUrunGrubu.Name = "comboBoxUrunGrubu";
-            this.comboBoxUrunGrubu.Size = new System.Drawing.Size(250, 33);
-            this.comboBoxUrunGrubu.TabIndex = 2;
-            // 
             // lblStandart3
             // 
             this.lblStandart3.AutoSize = true;
@@ -419,6 +435,7 @@ namespace BarcodeSales
             // dataGridViewUrunGiris
             // 
             this.dataGridViewUrunGiris.AllowUserToAddRows = false;
+            this.dataGridViewUrunGiris.AllowUserToDeleteRows = false;
             this.dataGridViewUrunGiris.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewUrunGiris.BackgroundColor = System.Drawing.Color.LightBlue;
             this.dataGridViewUrunGiris.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -440,6 +457,7 @@ namespace BarcodeSales
             this.dataGridViewUrunGiris.Location = new System.Drawing.Point(0, 0);
             this.dataGridViewUrunGiris.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridViewUrunGiris.Name = "dataGridViewUrunGiris";
+            this.dataGridViewUrunGiris.ReadOnly = true;
             this.dataGridViewUrunGiris.RowHeadersVisible = false;
             this.dataGridViewUrunGiris.RowHeadersWidth = 51;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
@@ -457,21 +475,6 @@ namespace BarcodeSales
             this.dataGridViewUrunGiris.Size = new System.Drawing.Size(1127, 355);
             this.dataGridViewUrunGiris.TabIndex = 14;
             // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.silToolStripMenuItem});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(95, 28);
-            // 
-            // silToolStripMenuItem
-            // 
-            this.silToolStripMenuItem.Name = "silToolStripMenuItem";
-            this.silToolStripMenuItem.Size = new System.Drawing.Size(94, 24);
-            this.silToolStripMenuItem.Text = "Sil";
-            this.silToolStripMenuItem.Click += new System.EventHandler(this.silToolStripMenuItem_Click);
-            // 
             // fUrunGiris
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -488,8 +491,8 @@ namespace BarcodeSales
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUrunGiris)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUrunGiris)).EndInit();
             this.ResumeLayout(false);
 
         }

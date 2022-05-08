@@ -33,5 +33,6 @@ namespace BarcodeSales
         public virtual DbSet<UrunGrup> UrunGrups { get; set; }
         public virtual DbSet<Barkod> Barkods { get; set; }
         public virtual DbSet<IslemOzet> IslemOzets { get; set; }
+        public virtual DbSet<StokHaraket> StokHarakets { get; set; }
     }
 }

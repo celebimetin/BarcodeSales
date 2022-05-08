@@ -65,6 +65,19 @@
           <Property Name="Tarih" Type="datetime" />
           <Property Name="Kullanici" Type="nvarchar" MaxLength="50" />
         </EntityType>
+        <EntityType Name="StokHaraket">
+          <Key>
+            <PropertyRef Name="StokHaraketId" />
+          </Key>
+          <Property Name="StokHaraketId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Barkod" Type="nvarchar" MaxLength="50" />
+          <Property Name="UrunAdi" Type="nvarchar" MaxLength="100" />
+          <Property Name="Birim" Type="nvarchar" MaxLength="50" />
+          <Property Name="Miktar" Type="float" />
+          <Property Name="UrunGrup" Type="nvarchar" MaxLength="50" />
+          <Property Name="Kullanici" Type="nvarchar" MaxLength="50" />
+          <Property Name="Tarih" Type="datetime" />
+        </EntityType>
         <EntityType Name="Terazi">
           <Key>
             <PropertyRef Name="TeraziId" />
@@ -102,6 +115,7 @@
           <EntitySet Name="Islem" EntityType="Self.Islem" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="IslemOzet" EntityType="Self.IslemOzet" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Satis" EntityType="Self.Satis" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="StokHaraket" EntityType="Self.StokHaraket" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Terazi" EntityType="Self.Terazi" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Urun" EntityType="Self.Urun" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="UrunGrup" EntityType="Self.UrunGrup" Schema="dbo" store:Type="Tables" />
@@ -179,6 +193,7 @@
           <EntitySet Name="UrunGrups" EntityType="BarcodeSalesDbModel.UrunGrup" />
           <EntitySet Name="Barkods" EntityType="BarcodeSalesDbModel.Barkod" />
           <EntitySet Name="IslemOzets" EntityType="BarcodeSalesDbModel.IslemOzet" />
+          <EntitySet Name="StokHarakets" EntityType="BarcodeSalesDbModel.StokHaraket" />
         </EntityContainer>
         <EntityType Name="UrunGrup">
           <Key>
@@ -210,6 +225,19 @@
           <Property Name="Aciklama" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
           <Property Name="Tarih" Type="DateTime" Precision="3" />
           <Property Name="Kullanici" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="StokHaraket">
+          <Key>
+            <PropertyRef Name="StokHaraketId" />
+          </Key>
+          <Property Name="StokHaraketId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Barkod" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UrunAdi" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Birim" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Miktar" Type="Double" />
+          <Property Name="UrunGrup" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Kullanici" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Tarih" Type="DateTime" Precision="3" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -313,6 +341,20 @@
                 <ScalarProperty Name="Iade" ColumnName="Iade" />
                 <ScalarProperty Name="IslemNoId" ColumnName="IslemNoId" />
                 <ScalarProperty Name="IslemOzetId" ColumnName="IslemOzetId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="StokHarakets">
+            <EntityTypeMapping TypeName="BarcodeSalesDbModel.StokHaraket">
+              <MappingFragment StoreEntitySet="StokHaraket">
+                <ScalarProperty Name="Tarih" ColumnName="Tarih" />
+                <ScalarProperty Name="Kullanici" ColumnName="Kullanici" />
+                <ScalarProperty Name="UrunGrup" ColumnName="UrunGrup" />
+                <ScalarProperty Name="Miktar" ColumnName="Miktar" />
+                <ScalarProperty Name="Birim" ColumnName="Birim" />
+                <ScalarProperty Name="UrunAdi" ColumnName="UrunAdi" />
+                <ScalarProperty Name="Barkod" ColumnName="Barkod" />
+                <ScalarProperty Name="StokHaraketId" ColumnName="StokHaraketId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
