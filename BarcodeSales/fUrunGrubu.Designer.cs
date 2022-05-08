@@ -69,7 +69,7 @@ namespace BarcodeSales
             // btnUrunGrubuKaydet
             // 
             this.btnUrunGrubuKaydet.BackColor = System.Drawing.Color.Blue;
-            this.btnUrunGrubuKaydet.FlatAppearance.BorderColor = System.Drawing.Color.LimeGreen;
+            this.btnUrunGrubuKaydet.FlatAppearance.BorderColor = System.Drawing.SystemColors.WindowText;
             this.btnUrunGrubuKaydet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUrunGrubuKaydet.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUrunGrubuKaydet.ForeColor = System.Drawing.Color.White;
@@ -87,7 +87,7 @@ namespace BarcodeSales
             // btnUrunGrubuSil
             // 
             this.btnUrunGrubuSil.BackColor = System.Drawing.Color.Red;
-            this.btnUrunGrubuSil.FlatAppearance.BorderColor = System.Drawing.Color.LimeGreen;
+            this.btnUrunGrubuSil.FlatAppearance.BorderColor = System.Drawing.SystemColors.WindowText;
             this.btnUrunGrubuSil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUrunGrubuSil.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUrunGrubuSil.ForeColor = System.Drawing.Color.White;
