@@ -29,42 +29,42 @@ namespace BarcodeSales
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.txtNumeric10 = new BarcodeSales.txtNumeric();
+            this.btnGiderEkle = new System.Windows.Forms.Button();
+            this.btnGelirEkle = new System.Windows.Forms.Button();
+            this.btnGoster = new System.Windows.Forms.Button();
+            this.dateTimePickerBitis = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePickerBaslangic = new System.Windows.Forms.DateTimePicker();
+            this.listBoxFiltrelemeTuru = new System.Windows.Forms.ListBox();
+            this.txtKartKomisyon = new BarcodeSales.txtNumeric();
             this.lblStandart16 = new BarcodeSales.lblStandart();
-            this.txtNumeric9 = new BarcodeSales.txtNumeric();
+            this.txtKdvToplam = new BarcodeSales.txtNumeric();
             this.lblStandart15 = new BarcodeSales.lblStandart();
-            this.txtNumeric5 = new BarcodeSales.txtNumeric();
-            this.txtNumeric6 = new BarcodeSales.txtNumeric();
+            this.txtGiderKrediKarti = new BarcodeSales.txtNumeric();
+            this.txtGiderNakit = new BarcodeSales.txtNumeric();
             this.lblStandart9 = new BarcodeSales.lblStandart();
             this.lblStandart10 = new BarcodeSales.lblStandart();
             this.lblStandart11 = new BarcodeSales.lblStandart();
-            this.txtNumeric7 = new BarcodeSales.txtNumeric();
-            this.txtNumeric8 = new BarcodeSales.txtNumeric();
+            this.txtGelirKrediKarti = new BarcodeSales.txtNumeric();
+            this.txtGelirNakit = new BarcodeSales.txtNumeric();
             this.lblStandart12 = new BarcodeSales.lblStandart();
             this.lblStandart13 = new BarcodeSales.lblStandart();
             this.lblStandart14 = new BarcodeSales.lblStandart();
-            this.txtNumeric3 = new BarcodeSales.txtNumeric();
-            this.txtNumeric4 = new BarcodeSales.txtNumeric();
+            this.txtIadeKrediKarti = new BarcodeSales.txtNumeric();
+            this.txtIadeNakit = new BarcodeSales.txtNumeric();
             this.lblStandart6 = new BarcodeSales.lblStandart();
             this.lblStandart7 = new BarcodeSales.lblStandart();
             this.lblStandart8 = new BarcodeSales.lblStandart();
-            this.txtNumeric2 = new BarcodeSales.txtNumeric();
-            this.txtNumeric1 = new BarcodeSales.txtNumeric();
+            this.txtSatisKrediKarti = new BarcodeSales.txtNumeric();
+            this.txtSatisNakit = new BarcodeSales.txtNumeric();
             this.lblStandart3 = new BarcodeSales.lblStandart();
             this.lblStandart2 = new BarcodeSales.lblStandart();
             this.lblStandart1 = new BarcodeSales.lblStandart();
-            this.dateTimePickerBitis = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePickerBaslangic = new System.Windows.Forms.DateTimePicker();
             this.lblStandart5 = new BarcodeSales.lblStandart();
             this.lblStandart4 = new BarcodeSales.lblStandart();
-            this.listBoxFiltre = new System.Windows.Forms.ListBox();
             this.lblFiltrelemeTuru = new BarcodeSales.lblStandart();
-            this.btnAra = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.dataGridViewRapor = new BarcodeSales.ozelDataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -84,38 +84,38 @@ namespace BarcodeSales
             // 
             // splitContainer1.Panel1
             // 
-            this.splitContainer1.Panel1.Controls.Add(this.button2);
-            this.splitContainer1.Panel1.Controls.Add(this.button1);
-            this.splitContainer1.Panel1.Controls.Add(this.txtNumeric10);
+            this.splitContainer1.Panel1.Controls.Add(this.btnGiderEkle);
+            this.splitContainer1.Panel1.Controls.Add(this.btnGelirEkle);
+            this.splitContainer1.Panel1.Controls.Add(this.txtKartKomisyon);
             this.splitContainer1.Panel1.Controls.Add(this.lblStandart16);
-            this.splitContainer1.Panel1.Controls.Add(this.txtNumeric9);
+            this.splitContainer1.Panel1.Controls.Add(this.txtKdvToplam);
             this.splitContainer1.Panel1.Controls.Add(this.lblStandart15);
-            this.splitContainer1.Panel1.Controls.Add(this.txtNumeric5);
-            this.splitContainer1.Panel1.Controls.Add(this.txtNumeric6);
+            this.splitContainer1.Panel1.Controls.Add(this.txtGiderKrediKarti);
+            this.splitContainer1.Panel1.Controls.Add(this.txtGiderNakit);
             this.splitContainer1.Panel1.Controls.Add(this.lblStandart9);
             this.splitContainer1.Panel1.Controls.Add(this.lblStandart10);
             this.splitContainer1.Panel1.Controls.Add(this.lblStandart11);
-            this.splitContainer1.Panel1.Controls.Add(this.txtNumeric7);
-            this.splitContainer1.Panel1.Controls.Add(this.txtNumeric8);
+            this.splitContainer1.Panel1.Controls.Add(this.txtGelirKrediKarti);
+            this.splitContainer1.Panel1.Controls.Add(this.txtGelirNakit);
             this.splitContainer1.Panel1.Controls.Add(this.lblStandart12);
             this.splitContainer1.Panel1.Controls.Add(this.lblStandart13);
             this.splitContainer1.Panel1.Controls.Add(this.lblStandart14);
-            this.splitContainer1.Panel1.Controls.Add(this.txtNumeric3);
-            this.splitContainer1.Panel1.Controls.Add(this.txtNumeric4);
+            this.splitContainer1.Panel1.Controls.Add(this.txtIadeKrediKarti);
+            this.splitContainer1.Panel1.Controls.Add(this.txtIadeNakit);
             this.splitContainer1.Panel1.Controls.Add(this.lblStandart6);
             this.splitContainer1.Panel1.Controls.Add(this.lblStandart7);
             this.splitContainer1.Panel1.Controls.Add(this.lblStandart8);
-            this.splitContainer1.Panel1.Controls.Add(this.txtNumeric2);
-            this.splitContainer1.Panel1.Controls.Add(this.txtNumeric1);
+            this.splitContainer1.Panel1.Controls.Add(this.txtSatisKrediKarti);
+            this.splitContainer1.Panel1.Controls.Add(this.txtSatisNakit);
             this.splitContainer1.Panel1.Controls.Add(this.lblStandart3);
             this.splitContainer1.Panel1.Controls.Add(this.lblStandart2);
             this.splitContainer1.Panel1.Controls.Add(this.lblStandart1);
-            this.splitContainer1.Panel1.Controls.Add(this.btnAra);
+            this.splitContainer1.Panel1.Controls.Add(this.btnGoster);
             this.splitContainer1.Panel1.Controls.Add(this.dateTimePickerBitis);
             this.splitContainer1.Panel1.Controls.Add(this.dateTimePickerBaslangic);
             this.splitContainer1.Panel1.Controls.Add(this.lblStandart5);
             this.splitContainer1.Panel1.Controls.Add(this.lblStandart4);
-            this.splitContainer1.Panel1.Controls.Add(this.listBoxFiltre);
+            this.splitContainer1.Panel1.Controls.Add(this.listBoxFiltrelemeTuru);
             this.splitContainer1.Panel1.Controls.Add(this.lblFiltrelemeTuru);
             // 
             // splitContainer1.Panel2
@@ -125,16 +125,81 @@ namespace BarcodeSales
             this.splitContainer1.SplitterDistance = 242;
             this.splitContainer1.TabIndex = 0;
             // 
-            // txtNumeric10
+            // btnGiderEkle
             // 
-            this.txtNumeric10.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.txtNumeric10.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtNumeric10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.txtNumeric10.Location = new System.Drawing.Point(915, 169);
-            this.txtNumeric10.Name = "txtNumeric10";
-            this.txtNumeric10.Size = new System.Drawing.Size(113, 23);
-            this.txtNumeric10.TabIndex = 32;
-            this.txtNumeric10.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnGiderEkle.Image = global::BarcodeSales.Properties.Resources.plus_1_;
+            this.btnGiderEkle.Location = new System.Drawing.Point(1289, 169);
+            this.btnGiderEkle.Name = "btnGiderEkle";
+            this.btnGiderEkle.Size = new System.Drawing.Size(50, 50);
+            this.btnGiderEkle.TabIndex = 34;
+            this.btnGiderEkle.UseVisualStyleBackColor = true;
+            // 
+            // btnGelirEkle
+            // 
+            this.btnGelirEkle.Image = global::BarcodeSales.Properties.Resources.plus;
+            this.btnGelirEkle.Location = new System.Drawing.Point(1289, 46);
+            this.btnGelirEkle.Name = "btnGelirEkle";
+            this.btnGelirEkle.Size = new System.Drawing.Size(50, 50);
+            this.btnGelirEkle.TabIndex = 33;
+            this.btnGelirEkle.UseVisualStyleBackColor = true;
+            // 
+            // btnGoster
+            // 
+            this.btnGoster.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGoster.Image = global::BarcodeSales.Properties.Resources.searchReport;
+            this.btnGoster.Location = new System.Drawing.Point(507, 71);
+            this.btnGoster.Margin = new System.Windows.Forms.Padding(1);
+            this.btnGoster.Name = "btnGoster";
+            this.btnGoster.Size = new System.Drawing.Size(136, 95);
+            this.btnGoster.TabIndex = 8;
+            this.btnGoster.Text = "Göster";
+            this.btnGoster.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnGoster.UseVisualStyleBackColor = true;
+            this.btnGoster.Click += new System.EventHandler(this.btnGoster_Click);
+            // 
+            // dateTimePickerBitis
+            // 
+            this.dateTimePickerBitis.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePickerBitis.Location = new System.Drawing.Point(174, 140);
+            this.dateTimePickerBitis.Name = "dateTimePickerBitis";
+            this.dateTimePickerBitis.Size = new System.Drawing.Size(318, 26);
+            this.dateTimePickerBitis.TabIndex = 7;
+            // 
+            // dateTimePickerBaslangic
+            // 
+            this.dateTimePickerBaslangic.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePickerBaslangic.Location = new System.Drawing.Point(174, 71);
+            this.dateTimePickerBaslangic.Name = "dateTimePickerBaslangic";
+            this.dateTimePickerBaslangic.Size = new System.Drawing.Size(318, 26);
+            this.dateTimePickerBaslangic.TabIndex = 6;
+            // 
+            // listBoxFiltrelemeTuru
+            // 
+            this.listBoxFiltrelemeTuru.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.listBoxFiltrelemeTuru.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listBoxFiltrelemeTuru.FormattingEnabled = true;
+            this.listBoxFiltrelemeTuru.ItemHeight = 20;
+            this.listBoxFiltrelemeTuru.Items.AddRange(new object[] {
+            "Tümü",
+            "Satışlar",
+            "İade",
+            "Gelir (Satış Hariç)",
+            "Gider (İade Hariç)"});
+            this.listBoxFiltrelemeTuru.Location = new System.Drawing.Point(13, 42);
+            this.listBoxFiltrelemeTuru.Name = "listBoxFiltrelemeTuru";
+            this.listBoxFiltrelemeTuru.Size = new System.Drawing.Size(150, 124);
+            this.listBoxFiltrelemeTuru.TabIndex = 1;
+            // 
+            // txtKartKomisyon
+            // 
+            this.txtKartKomisyon.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtKartKomisyon.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtKartKomisyon.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.txtKartKomisyon.Location = new System.Drawing.Point(915, 169);
+            this.txtKartKomisyon.Name = "txtKartKomisyon";
+            this.txtKartKomisyon.Size = new System.Drawing.Size(113, 19);
+            this.txtKartKomisyon.TabIndex = 32;
+            this.txtKartKomisyon.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // lblStandart16
             // 
@@ -147,16 +212,16 @@ namespace BarcodeSales
             this.lblStandart16.TabIndex = 31;
             this.lblStandart16.Text = "Kart Komisyon";
             // 
-            // txtNumeric9
+            // txtKdvToplam
             // 
-            this.txtNumeric9.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.txtNumeric9.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtNumeric9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.txtNumeric9.Location = new System.Drawing.Point(706, 168);
-            this.txtNumeric9.Name = "txtNumeric9";
-            this.txtNumeric9.Size = new System.Drawing.Size(113, 23);
-            this.txtNumeric9.TabIndex = 30;
-            this.txtNumeric9.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtKdvToplam.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtKdvToplam.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtKdvToplam.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.txtKdvToplam.Location = new System.Drawing.Point(706, 168);
+            this.txtKdvToplam.Name = "txtKdvToplam";
+            this.txtKdvToplam.Size = new System.Drawing.Size(113, 19);
+            this.txtKdvToplam.TabIndex = 30;
+            this.txtKdvToplam.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // lblStandart15
             // 
@@ -169,27 +234,27 @@ namespace BarcodeSales
             this.lblStandart15.TabIndex = 29;
             this.lblStandart15.Text = "Kdv Toplam";
             // 
-            // txtNumeric5
+            // txtGiderKrediKarti
             // 
-            this.txtNumeric5.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.txtNumeric5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtNumeric5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.txtNumeric5.Location = new System.Drawing.Point(1186, 208);
-            this.txtNumeric5.Name = "txtNumeric5";
-            this.txtNumeric5.Size = new System.Drawing.Size(93, 23);
-            this.txtNumeric5.TabIndex = 28;
-            this.txtNumeric5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtGiderKrediKarti.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtGiderKrediKarti.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtGiderKrediKarti.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.txtGiderKrediKarti.Location = new System.Drawing.Point(1186, 208);
+            this.txtGiderKrediKarti.Name = "txtGiderKrediKarti";
+            this.txtGiderKrediKarti.Size = new System.Drawing.Size(93, 19);
+            this.txtGiderKrediKarti.TabIndex = 28;
+            this.txtGiderKrediKarti.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // txtNumeric6
+            // txtGiderNakit
             // 
-            this.txtNumeric6.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.txtNumeric6.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtNumeric6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.txtNumeric6.Location = new System.Drawing.Point(1186, 168);
-            this.txtNumeric6.Name = "txtNumeric6";
-            this.txtNumeric6.Size = new System.Drawing.Size(93, 23);
-            this.txtNumeric6.TabIndex = 27;
-            this.txtNumeric6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtGiderNakit.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtGiderNakit.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtGiderNakit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.txtGiderNakit.Location = new System.Drawing.Point(1186, 168);
+            this.txtGiderNakit.Name = "txtGiderNakit";
+            this.txtGiderNakit.Size = new System.Drawing.Size(93, 19);
+            this.txtGiderNakit.TabIndex = 27;
+            this.txtGiderNakit.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // lblStandart9
             // 
@@ -224,27 +289,27 @@ namespace BarcodeSales
             this.lblStandart11.TabIndex = 24;
             this.lblStandart11.Text = "Gider Toplam";
             // 
-            // txtNumeric7
+            // txtGelirKrediKarti
             // 
-            this.txtNumeric7.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.txtNumeric7.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtNumeric7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.txtNumeric7.Location = new System.Drawing.Point(1189, 88);
-            this.txtNumeric7.Name = "txtNumeric7";
-            this.txtNumeric7.Size = new System.Drawing.Size(93, 23);
-            this.txtNumeric7.TabIndex = 23;
-            this.txtNumeric7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtGelirKrediKarti.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtGelirKrediKarti.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtGelirKrediKarti.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.txtGelirKrediKarti.Location = new System.Drawing.Point(1189, 88);
+            this.txtGelirKrediKarti.Name = "txtGelirKrediKarti";
+            this.txtGelirKrediKarti.Size = new System.Drawing.Size(93, 19);
+            this.txtGelirKrediKarti.TabIndex = 23;
+            this.txtGelirKrediKarti.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // txtNumeric8
+            // txtGelirNakit
             // 
-            this.txtNumeric8.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.txtNumeric8.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtNumeric8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.txtNumeric8.Location = new System.Drawing.Point(1189, 48);
-            this.txtNumeric8.Name = "txtNumeric8";
-            this.txtNumeric8.Size = new System.Drawing.Size(93, 23);
-            this.txtNumeric8.TabIndex = 22;
-            this.txtNumeric8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtGelirNakit.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtGelirNakit.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtGelirNakit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.txtGelirNakit.Location = new System.Drawing.Point(1189, 48);
+            this.txtGelirNakit.Name = "txtGelirNakit";
+            this.txtGelirNakit.Size = new System.Drawing.Size(93, 19);
+            this.txtGelirNakit.TabIndex = 22;
+            this.txtGelirNakit.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // lblStandart12
             // 
@@ -279,27 +344,27 @@ namespace BarcodeSales
             this.lblStandart14.TabIndex = 19;
             this.lblStandart14.Text = "Gelir Toplam";
             // 
-            // txtNumeric3
+            // txtIadeKrediKarti
             // 
-            this.txtNumeric3.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.txtNumeric3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtNumeric3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.txtNumeric3.Location = new System.Drawing.Point(975, 88);
-            this.txtNumeric3.Name = "txtNumeric3";
-            this.txtNumeric3.Size = new System.Drawing.Size(93, 23);
-            this.txtNumeric3.TabIndex = 18;
-            this.txtNumeric3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtIadeKrediKarti.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtIadeKrediKarti.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtIadeKrediKarti.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.txtIadeKrediKarti.Location = new System.Drawing.Point(975, 88);
+            this.txtIadeKrediKarti.Name = "txtIadeKrediKarti";
+            this.txtIadeKrediKarti.Size = new System.Drawing.Size(93, 19);
+            this.txtIadeKrediKarti.TabIndex = 18;
+            this.txtIadeKrediKarti.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // txtNumeric4
+            // txtIadeNakit
             // 
-            this.txtNumeric4.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.txtNumeric4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtNumeric4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.txtNumeric4.Location = new System.Drawing.Point(975, 48);
-            this.txtNumeric4.Name = "txtNumeric4";
-            this.txtNumeric4.Size = new System.Drawing.Size(93, 23);
-            this.txtNumeric4.TabIndex = 17;
-            this.txtNumeric4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtIadeNakit.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtIadeNakit.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtIadeNakit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.txtIadeNakit.Location = new System.Drawing.Point(975, 48);
+            this.txtIadeNakit.Name = "txtIadeNakit";
+            this.txtIadeNakit.Size = new System.Drawing.Size(93, 19);
+            this.txtIadeNakit.TabIndex = 17;
+            this.txtIadeNakit.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // lblStandart6
             // 
@@ -334,27 +399,27 @@ namespace BarcodeSales
             this.lblStandart8.TabIndex = 14;
             this.lblStandart8.Text = "İade Toplam";
             // 
-            // txtNumeric2
+            // txtSatisKrediKarti
             // 
-            this.txtNumeric2.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.txtNumeric2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtNumeric2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.txtNumeric2.Location = new System.Drawing.Point(763, 88);
-            this.txtNumeric2.Name = "txtNumeric2";
-            this.txtNumeric2.Size = new System.Drawing.Size(93, 23);
-            this.txtNumeric2.TabIndex = 13;
-            this.txtNumeric2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtSatisKrediKarti.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtSatisKrediKarti.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtSatisKrediKarti.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.txtSatisKrediKarti.Location = new System.Drawing.Point(763, 88);
+            this.txtSatisKrediKarti.Name = "txtSatisKrediKarti";
+            this.txtSatisKrediKarti.Size = new System.Drawing.Size(93, 19);
+            this.txtSatisKrediKarti.TabIndex = 13;
+            this.txtSatisKrediKarti.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // txtNumeric1
+            // txtSatisNakit
             // 
-            this.txtNumeric1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.txtNumeric1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtNumeric1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.txtNumeric1.Location = new System.Drawing.Point(763, 48);
-            this.txtNumeric1.Name = "txtNumeric1";
-            this.txtNumeric1.Size = new System.Drawing.Size(93, 23);
-            this.txtNumeric1.TabIndex = 12;
-            this.txtNumeric1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtSatisNakit.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtSatisNakit.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtSatisNakit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.txtSatisNakit.Location = new System.Drawing.Point(763, 48);
+            this.txtSatisNakit.Name = "txtSatisNakit";
+            this.txtSatisNakit.Size = new System.Drawing.Size(93, 19);
+            this.txtSatisNakit.TabIndex = 12;
+            this.txtSatisNakit.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // lblStandart3
             // 
@@ -389,22 +454,6 @@ namespace BarcodeSales
             this.lblStandart1.TabIndex = 9;
             this.lblStandart1.Text = "Satış Toplam";
             // 
-            // dateTimePickerBitis
-            // 
-            this.dateTimePickerBitis.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePickerBitis.Location = new System.Drawing.Point(174, 140);
-            this.dateTimePickerBitis.Name = "dateTimePickerBitis";
-            this.dateTimePickerBitis.Size = new System.Drawing.Size(318, 26);
-            this.dateTimePickerBitis.TabIndex = 7;
-            // 
-            // dateTimePickerBaslangic
-            // 
-            this.dateTimePickerBaslangic.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePickerBaslangic.Location = new System.Drawing.Point(174, 71);
-            this.dateTimePickerBaslangic.Name = "dateTimePickerBaslangic";
-            this.dateTimePickerBaslangic.Size = new System.Drawing.Size(318, 26);
-            this.dateTimePickerBaslangic.TabIndex = 6;
-            // 
             // lblStandart5
             // 
             this.lblStandart5.AutoSize = true;
@@ -427,23 +476,6 @@ namespace BarcodeSales
             this.lblStandart4.TabIndex = 4;
             this.lblStandart4.Text = "Başlangıç Tarihi";
             // 
-            // listBoxFiltre
-            // 
-            this.listBoxFiltre.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.listBoxFiltre.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listBoxFiltre.FormattingEnabled = true;
-            this.listBoxFiltre.ItemHeight = 20;
-            this.listBoxFiltre.Items.AddRange(new object[] {
-            "Tümü",
-            "Satışlar",
-            "İade",
-            "Gelir (Satış Hariç)",
-            "Gider (İade Hariç)"});
-            this.listBoxFiltre.Location = new System.Drawing.Point(13, 42);
-            this.listBoxFiltre.Name = "listBoxFiltre";
-            this.listBoxFiltre.Size = new System.Drawing.Size(150, 124);
-            this.listBoxFiltre.TabIndex = 1;
-            // 
             // lblFiltrelemeTuru
             // 
             this.lblFiltrelemeTuru.AutoSize = true;
@@ -455,37 +487,6 @@ namespace BarcodeSales
             this.lblFiltrelemeTuru.TabIndex = 0;
             this.lblFiltrelemeTuru.Text = "FiltrelemeTuru";
             // 
-            // btnAra
-            // 
-            this.btnAra.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAra.Image = global::BarcodeSales.Properties.Resources.searchReport;
-            this.btnAra.Location = new System.Drawing.Point(507, 71);
-            this.btnAra.Margin = new System.Windows.Forms.Padding(1);
-            this.btnAra.Name = "btnAra";
-            this.btnAra.Size = new System.Drawing.Size(136, 95);
-            this.btnAra.TabIndex = 8;
-            this.btnAra.Text = "Göster";
-            this.btnAra.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnAra.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Image = global::BarcodeSales.Properties.Resources.plus;
-            this.button1.Location = new System.Drawing.Point(1289, 46);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(50, 50);
-            this.button1.TabIndex = 33;
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Image = global::BarcodeSales.Properties.Resources.plus_1_;
-            this.button2.Location = new System.Drawing.Point(1289, 169);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(50, 50);
-            this.button2.TabIndex = 34;
-            this.button2.UseVisualStyleBackColor = true;
-            // 
             // dataGridViewRapor
             // 
             this.dataGridViewRapor.AllowUserToAddRows = false;
@@ -494,17 +495,17 @@ namespace BarcodeSales
             this.dataGridViewRapor.BackgroundColor = System.Drawing.Color.LightBlue;
             this.dataGridViewRapor.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridViewRapor.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.LightBlue;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(3);
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewRapor.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.LightBlue;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(3);
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewRapor.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewRapor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewRapor.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridViewRapor.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewRapor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewRapor.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dataGridViewRapor.Location = new System.Drawing.Point(0, 0);
@@ -513,20 +514,21 @@ namespace BarcodeSales
             this.dataGridViewRapor.ReadOnly = true;
             this.dataGridViewRapor.RowHeadersVisible = false;
             this.dataGridViewRapor.RowHeadersWidth = 51;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(1);
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewRapor.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(1);
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewRapor.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewRapor.RowTemplate.DefaultCellStyle.Padding = new System.Windows.Forms.Padding(3);
             this.dataGridViewRapor.RowTemplate.Height = 30;
             this.dataGridViewRapor.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewRapor.Size = new System.Drawing.Size(1457, 502);
             this.dataGridViewRapor.TabIndex = 16;
+            this.dataGridViewRapor.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridViewRapor_CellFormatting);
             // 
             // fRapor
             // 
@@ -553,38 +555,38 @@ namespace BarcodeSales
 
         private System.Windows.Forms.SplitContainer splitContainer1;
         private lblStandart lblFiltrelemeTuru;
-        private System.Windows.Forms.ListBox listBoxFiltre;
+        private System.Windows.Forms.ListBox listBoxFiltrelemeTuru;
         private System.Windows.Forms.DateTimePicker dateTimePickerBitis;
         private System.Windows.Forms.DateTimePicker dateTimePickerBaslangic;
         private lblStandart lblStandart5;
         private lblStandart lblStandart4;
-        private System.Windows.Forms.Button btnAra;
+        private System.Windows.Forms.Button btnGoster;
         private lblStandart lblStandart1;
         private lblStandart lblStandart3;
         private lblStandart lblStandart2;
-        private txtNumeric txtNumeric1;
-        private txtNumeric txtNumeric2;
-        private txtNumeric txtNumeric3;
-        private txtNumeric txtNumeric4;
+        private txtNumeric txtSatisNakit;
+        private txtNumeric txtSatisKrediKarti;
+        private txtNumeric txtIadeKrediKarti;
+        private txtNumeric txtIadeNakit;
         private lblStandart lblStandart6;
         private lblStandart lblStandart7;
         private lblStandart lblStandart8;
-        private txtNumeric txtNumeric5;
-        private txtNumeric txtNumeric6;
+        private txtNumeric txtGiderKrediKarti;
+        private txtNumeric txtGiderNakit;
         private lblStandart lblStandart9;
         private lblStandart lblStandart10;
         private lblStandart lblStandart11;
-        private txtNumeric txtNumeric7;
-        private txtNumeric txtNumeric8;
+        private txtNumeric txtGelirKrediKarti;
+        private txtNumeric txtGelirNakit;
         private lblStandart lblStandart12;
         private lblStandart lblStandart13;
         private lblStandart lblStandart14;
-        private txtNumeric txtNumeric9;
+        private txtNumeric txtKdvToplam;
         private lblStandart lblStandart15;
-        private txtNumeric txtNumeric10;
+        private txtNumeric txtKartKomisyon;
         private lblStandart lblStandart16;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnGiderEkle;
+        private System.Windows.Forms.Button btnGelirEkle;
         private ozelDataGridView dataGridViewRapor;
     }
 }

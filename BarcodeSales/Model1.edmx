@@ -45,6 +45,13 @@
           <Property Name="Tarih" Type="datetime" />
           <Property Name="Kullanici" Type="nvarchar" MaxLength="50" />
         </EntityType>
+        <EntityType Name="KartKomisyon">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="KartKomisyon" Type="int" />
+        </EntityType>
         <EntityType Name="Satis">
           <Key>
             <PropertyRef Name="SatisId" />
@@ -114,6 +121,7 @@
           <EntitySet Name="HizliUrun" EntityType="Self.HizliUrun" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Islem" EntityType="Self.Islem" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="IslemOzet" EntityType="Self.IslemOzet" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="KartKomisyon" EntityType="Self.KartKomisyon" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Satis" EntityType="Self.Satis" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="StokHaraket" EntityType="Self.StokHaraket" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Terazi" EntityType="Self.Terazi" Schema="dbo" store:Type="Tables" />
@@ -194,6 +202,7 @@
           <EntitySet Name="Barkods" EntityType="BarcodeSalesDbModel.Barkod" />
           <EntitySet Name="IslemOzets" EntityType="BarcodeSalesDbModel.IslemOzet" />
           <EntitySet Name="StokHarakets" EntityType="BarcodeSalesDbModel.StokHaraket" />
+          <EntitySet Name="KartKomisyons" EntityType="BarcodeSalesDbModel.KartKomisyon" />
         </EntityContainer>
         <EntityType Name="UrunGrup">
           <Key>
@@ -238,6 +247,13 @@
           <Property Name="UrunGrup" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Kullanici" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Tarih" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="KartKomisyon">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="KartKomisyon1" Type="Int32" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -355,6 +371,14 @@
                 <ScalarProperty Name="UrunAdi" ColumnName="UrunAdi" />
                 <ScalarProperty Name="Barkod" ColumnName="Barkod" />
                 <ScalarProperty Name="StokHaraketId" ColumnName="StokHaraketId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="KartKomisyons">
+            <EntityTypeMapping TypeName="BarcodeSalesDbModel.KartKomisyon">
+              <MappingFragment StoreEntitySet="KartKomisyon">
+                <ScalarProperty Name="KartKomisyon1" ColumnName="KartKomisyon" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

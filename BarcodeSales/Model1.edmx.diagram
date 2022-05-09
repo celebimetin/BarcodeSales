@@ -14,6 +14,7 @@
         <EntityTypeShape EntityType="BarcodeSalesDbModel.Barkod" Width="1.5" PointX="2.375" PointY="4.75" />
         <EntityTypeShape EntityType="BarcodeSalesDbModel.IslemOzet" Width="1.5" PointX="8" PointY="0.5" />
         <EntityTypeShape EntityType="BarcodeSalesDbModel.StokHaraket" Width="1.5" PointX="4.25" PointY="2.625" />
+        <EntityTypeShape EntityType="BarcodeSalesDbModel.KartKomisyon" Width="1.5" PointX="8.125" PointY="4" IsExpanded="true" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

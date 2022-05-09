@@ -55,6 +55,9 @@ namespace BarcodeSales
                         case "UrunId":
                             dgv.Columns[i].HeaderText = "Ürün Numarası";
                             break;
+                        case "IslemNo":
+                            dgv.Columns[i].HeaderText = "İşlem Numarası";
+                            break;
                         case "UrunAdi":
                             dgv.Columns[i].HeaderText = "Ürün Adı";
                             break;
@@ -118,6 +121,11 @@ namespace BarcodeSales
                             dgv.Columns[i].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
                             dgv.Columns[i].DefaultCellStyle.Format = "C2";
                             break;
+                        case "AlisFiyatToplam":
+                            dgv.Columns[i].HeaderText = "Alış Fiyat Toplam";
+                            dgv.Columns[i].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                            dgv.Columns[i].DefaultCellStyle.Format = "C2";
+                            break;
                             //İşlem Özeti tablosu end.
                     }
                 }
@@ -139,7 +147,24 @@ namespace BarcodeSales
 
                 db.StokHarakets.Add(stokHaraket);
                 db.SaveChanges();
-            }  
+            }
+        }
+
+        public static int KartKomisyon()
+        {
+            int? sonuc = 0;
+            using (var db = new BarcodeSalesDbEntities())
+            {
+                if (db.KartKomisyons.Any())
+                {
+                    sonuc = db.KartKomisyons.First().KartKomisyon1;
+                }
+                else
+                {
+                    sonuc = 0;
+                }
+            }
+            return Convert.ToInt16(sonuc);
         }
     }
 }

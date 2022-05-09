@@ -111,7 +111,7 @@ namespace BarcodeSales
                         Islemler.StokArttir(dataGridViewSatisListesi.Rows[i].Cells["gvBarkod"].Value.ToString(), Islemler.DoubleYap(dataGridViewSatisListesi.Rows[i].Cells["gvMiktar"].Value.ToString()));
                     }
 
-                    alisFiyatToplam += Islemler.DoubleYap(dataGridViewSatisListesi.Rows[i].Cells["gvAlisFiyati"].Value.ToString());
+                    alisFiyatToplam += Islemler.DoubleYap(dataGridViewSatisListesi.Rows[i].Cells["gvAlisFiyati"].Value.ToString()) * Islemler.DoubleYap(dataGridViewSatisListesi.Rows[i].Cells["gvMiktar"].Value.ToString());
                 }
 
                 IslemOzet islemOzet = new IslemOzet();
@@ -374,7 +374,7 @@ namespace BarcodeSales
             else
             {
                 chSatisIadeIslemi.Checked = true;
-                chSatisIadeIslemi.Text = "İade işlemi";
+                chSatisIadeIslemi.Text = "İade Yapılıyor";
             }
         }
 
@@ -511,6 +511,18 @@ namespace BarcodeSales
             if (char.IsDigit(e.KeyChar) == false && e.KeyChar != (char)08)
             {
                 e.Handled = true;
+            }
+        }
+
+        private void chSatisIadeIslemi_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chSatisIadeIslemi.Checked)
+            {
+                chSatisIadeIslemi.Text = "İade Yapılıyor";
+            }
+            else
+            {
+                chSatisIadeIslemi.Text = "Satış Yapılıyor";
             }
         }
     }
