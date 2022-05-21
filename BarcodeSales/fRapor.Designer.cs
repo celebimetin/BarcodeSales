@@ -29,15 +29,13 @@ namespace BarcodeSales
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.lblKullanici = new BarcodeSales.lblStandart();
             this.btnGiderEkle = new System.Windows.Forms.Button();
             this.btnGelirEkle = new System.Windows.Forms.Button();
-            this.btnGoster = new System.Windows.Forms.Button();
-            this.dateTimePickerBitis = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePickerBaslangic = new System.Windows.Forms.DateTimePicker();
-            this.listBoxFiltrelemeTuru = new System.Windows.Forms.ListBox();
             this.txtKartKomisyon = new BarcodeSales.txtNumeric();
             this.lblStandart16 = new BarcodeSales.lblStandart();
             this.txtKdvToplam = new BarcodeSales.txtNumeric();
@@ -62,15 +60,22 @@ namespace BarcodeSales
             this.lblStandart3 = new BarcodeSales.lblStandart();
             this.lblStandart2 = new BarcodeSales.lblStandart();
             this.lblStandart1 = new BarcodeSales.lblStandart();
+            this.btnGoster = new System.Windows.Forms.Button();
+            this.dateTimePickerBitis = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePickerBaslangic = new System.Windows.Forms.DateTimePicker();
             this.lblStandart5 = new BarcodeSales.lblStandart();
             this.lblStandart4 = new BarcodeSales.lblStandart();
+            this.listBoxFiltrelemeTuru = new System.Windows.Forms.ListBox();
             this.lblFiltrelemeTuru = new BarcodeSales.lblStandart();
             this.dataGridViewRapor = new BarcodeSales.ozelDataGridView();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.detayGösterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRapor)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -84,6 +89,7 @@ namespace BarcodeSales
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.lblKullanici);
             this.splitContainer1.Panel1.Controls.Add(this.btnGiderEkle);
             this.splitContainer1.Panel1.Controls.Add(this.btnGelirEkle);
             this.splitContainer1.Panel1.Controls.Add(this.txtKartKomisyon);
@@ -125,6 +131,17 @@ namespace BarcodeSales
             this.splitContainer1.SplitterDistance = 242;
             this.splitContainer1.TabIndex = 0;
             // 
+            // lblKullanici
+            // 
+            this.lblKullanici.AutoSize = true;
+            this.lblKullanici.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lblKullanici.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.lblKullanici.Location = new System.Drawing.Point(13, 201);
+            this.lblKullanici.Name = "lblKullanici";
+            this.lblKullanici.Size = new System.Drawing.Size(85, 25);
+            this.lblKullanici.TabIndex = 35;
+            this.lblKullanici.Text = "Kullanıcı";
+            // 
             // btnGiderEkle
             // 
             this.btnGiderEkle.Image = global::BarcodeSales.Properties.Resources.plus_1_;
@@ -133,6 +150,7 @@ namespace BarcodeSales
             this.btnGiderEkle.Size = new System.Drawing.Size(50, 50);
             this.btnGiderEkle.TabIndex = 34;
             this.btnGiderEkle.UseVisualStyleBackColor = true;
+            this.btnGiderEkle.Click += new System.EventHandler(this.btnGiderEkle_Click);
             // 
             // btnGelirEkle
             // 
@@ -142,53 +160,7 @@ namespace BarcodeSales
             this.btnGelirEkle.Size = new System.Drawing.Size(50, 50);
             this.btnGelirEkle.TabIndex = 33;
             this.btnGelirEkle.UseVisualStyleBackColor = true;
-            // 
-            // btnGoster
-            // 
-            this.btnGoster.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGoster.Image = global::BarcodeSales.Properties.Resources.searchReport;
-            this.btnGoster.Location = new System.Drawing.Point(507, 71);
-            this.btnGoster.Margin = new System.Windows.Forms.Padding(1);
-            this.btnGoster.Name = "btnGoster";
-            this.btnGoster.Size = new System.Drawing.Size(136, 95);
-            this.btnGoster.TabIndex = 8;
-            this.btnGoster.Text = "Göster";
-            this.btnGoster.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnGoster.UseVisualStyleBackColor = true;
-            this.btnGoster.Click += new System.EventHandler(this.btnGoster_Click);
-            // 
-            // dateTimePickerBitis
-            // 
-            this.dateTimePickerBitis.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePickerBitis.Location = new System.Drawing.Point(174, 140);
-            this.dateTimePickerBitis.Name = "dateTimePickerBitis";
-            this.dateTimePickerBitis.Size = new System.Drawing.Size(318, 26);
-            this.dateTimePickerBitis.TabIndex = 7;
-            // 
-            // dateTimePickerBaslangic
-            // 
-            this.dateTimePickerBaslangic.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePickerBaslangic.Location = new System.Drawing.Point(174, 71);
-            this.dateTimePickerBaslangic.Name = "dateTimePickerBaslangic";
-            this.dateTimePickerBaslangic.Size = new System.Drawing.Size(318, 26);
-            this.dateTimePickerBaslangic.TabIndex = 6;
-            // 
-            // listBoxFiltrelemeTuru
-            // 
-            this.listBoxFiltrelemeTuru.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.listBoxFiltrelemeTuru.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listBoxFiltrelemeTuru.FormattingEnabled = true;
-            this.listBoxFiltrelemeTuru.ItemHeight = 20;
-            this.listBoxFiltrelemeTuru.Items.AddRange(new object[] {
-            "Tümü",
-            "Satışlar",
-            "İade",
-            "Gelir (Satış Hariç)",
-            "Gider (İade Hariç)"});
-            this.listBoxFiltrelemeTuru.Location = new System.Drawing.Point(13, 42);
-            this.listBoxFiltrelemeTuru.Name = "listBoxFiltrelemeTuru";
-            this.listBoxFiltrelemeTuru.Size = new System.Drawing.Size(150, 124);
-            this.listBoxFiltrelemeTuru.TabIndex = 1;
+            this.btnGelirEkle.Click += new System.EventHandler(this.btnGelirEkle_Click);
             // 
             // txtKartKomisyon
             // 
@@ -454,6 +426,36 @@ namespace BarcodeSales
             this.lblStandart1.TabIndex = 9;
             this.lblStandart1.Text = "Satış Toplam";
             // 
+            // btnGoster
+            // 
+            this.btnGoster.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGoster.Image = global::BarcodeSales.Properties.Resources.searchReport;
+            this.btnGoster.Location = new System.Drawing.Point(507, 71);
+            this.btnGoster.Margin = new System.Windows.Forms.Padding(1);
+            this.btnGoster.Name = "btnGoster";
+            this.btnGoster.Size = new System.Drawing.Size(136, 95);
+            this.btnGoster.TabIndex = 8;
+            this.btnGoster.Text = "Göster";
+            this.btnGoster.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnGoster.UseVisualStyleBackColor = true;
+            this.btnGoster.Click += new System.EventHandler(this.btnGoster_Click);
+            // 
+            // dateTimePickerBitis
+            // 
+            this.dateTimePickerBitis.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePickerBitis.Location = new System.Drawing.Point(174, 140);
+            this.dateTimePickerBitis.Name = "dateTimePickerBitis";
+            this.dateTimePickerBitis.Size = new System.Drawing.Size(318, 26);
+            this.dateTimePickerBitis.TabIndex = 7;
+            // 
+            // dateTimePickerBaslangic
+            // 
+            this.dateTimePickerBaslangic.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePickerBaslangic.Location = new System.Drawing.Point(174, 71);
+            this.dateTimePickerBaslangic.Name = "dateTimePickerBaslangic";
+            this.dateTimePickerBaslangic.Size = new System.Drawing.Size(318, 26);
+            this.dateTimePickerBaslangic.TabIndex = 6;
+            // 
             // lblStandart5
             // 
             this.lblStandart5.AutoSize = true;
@@ -475,6 +477,23 @@ namespace BarcodeSales
             this.lblStandart4.Size = new System.Drawing.Size(151, 25);
             this.lblStandart4.TabIndex = 4;
             this.lblStandart4.Text = "Başlangıç Tarihi";
+            // 
+            // listBoxFiltrelemeTuru
+            // 
+            this.listBoxFiltrelemeTuru.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.listBoxFiltrelemeTuru.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listBoxFiltrelemeTuru.FormattingEnabled = true;
+            this.listBoxFiltrelemeTuru.ItemHeight = 20;
+            this.listBoxFiltrelemeTuru.Items.AddRange(new object[] {
+            "Tümü",
+            "Satışlar",
+            "İade",
+            "Gelir (Satış Hariç)",
+            "Gider (İade Hariç)"});
+            this.listBoxFiltrelemeTuru.Location = new System.Drawing.Point(13, 42);
+            this.listBoxFiltrelemeTuru.Name = "listBoxFiltrelemeTuru";
+            this.listBoxFiltrelemeTuru.Size = new System.Drawing.Size(150, 124);
+            this.listBoxFiltrelemeTuru.TabIndex = 1;
             // 
             // lblFiltrelemeTuru
             // 
@@ -505,6 +524,7 @@ namespace BarcodeSales
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewRapor.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewRapor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewRapor.ContextMenuStrip = this.contextMenuStrip1;
             this.dataGridViewRapor.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewRapor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewRapor.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -530,6 +550,21 @@ namespace BarcodeSales
             this.dataGridViewRapor.TabIndex = 16;
             this.dataGridViewRapor.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridViewRapor_CellFormatting);
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.detayGösterToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(211, 56);
+            // 
+            // detayGösterToolStripMenuItem
+            // 
+            this.detayGösterToolStripMenuItem.Name = "detayGösterToolStripMenuItem";
+            this.detayGösterToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.detayGösterToolStripMenuItem.Text = "Detay Göster";
+            this.detayGösterToolStripMenuItem.Click += new System.EventHandler(this.detayGösterToolStripMenuItem_Click);
+            // 
             // fRapor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -547,6 +582,7 @@ namespace BarcodeSales
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRapor)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -588,5 +624,8 @@ namespace BarcodeSales
         private System.Windows.Forms.Button btnGiderEkle;
         private System.Windows.Forms.Button btnGelirEkle;
         private ozelDataGridView dataGridViewRapor;
+        private lblStandart lblKullanici;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem detayGösterToolStripMenuItem;
     }
 }

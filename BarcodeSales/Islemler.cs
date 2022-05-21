@@ -91,6 +91,11 @@ namespace BarcodeSales
                             dgv.Columns[i].HeaderText = "Miktar";
                             dgv.Columns[i].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
                             break;
+                        case "Toplam":
+                            dgv.Columns[i].HeaderText = "Toplam";
+                            dgv.Columns[i].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                            dgv.Columns[i].DefaultCellStyle.Format = "C2";
+                            break;
                         case "Kullanici":
                             dgv.Columns[i].HeaderText = "Kullanıcı";
                             break;

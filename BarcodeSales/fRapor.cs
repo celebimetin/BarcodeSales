@@ -17,9 +17,10 @@ namespace BarcodeSales
         {
             listBoxFiltrelemeTuru.SelectedIndex = 0;
             txtKartKomisyon.Text = Islemler.KartKomisyon().ToString();
+            btnGoster_Click(null, null);
         }
 
-        private void btnGoster_Click(object sender, EventArgs e)
+        public void btnGoster_Click(object sender, EventArgs e)
         {
             Cursor.Current = Cursors.WaitCursor;
             DateTime baslangic = DateTime.Parse(dateTimePickerBaslangic.Value.ToShortDateString());
@@ -90,6 +91,36 @@ namespace BarcodeSales
                     bool value = (bool)e.Value;
                     e.Value = (value) ? "Evet" : "Hayır";
                     e.FormattingApplied = true;
+                }
+            }
+        }
+
+        private void btnGelirEkle_Click(object sender, EventArgs e)
+        {
+            fGelirGider fGelirGider = new fGelirGider();
+            fGelirGider.GelirGider = "Gelir";
+            fGelirGider.Kullanici = lblKullanici.Text;
+            fGelirGider.ShowDialog();
+        }
+
+        private void btnGiderEkle_Click(object sender, EventArgs e)
+        {
+            fGelirGider fGelirGider = new fGelirGider();
+            fGelirGider.GelirGider = "Gider";
+            fGelirGider.Kullanici = lblKullanici.Text;
+            fGelirGider.ShowDialog();
+        }
+
+        private void detayGösterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (dataGridViewRapor.Rows.Count > 0)
+            {
+                int islemNo = Convert.ToInt32(dataGridViewRapor.CurrentRow.Cells["IslemNoId"].Value.ToString());
+                if (islemNo != 0)
+                {
+                    fDetayGoster fDetayGoster = new fDetayGoster();
+                    fDetayGoster.IslemNo = islemNo;
+                    fDetayGoster.ShowDialog();
                 }
             }
         }
