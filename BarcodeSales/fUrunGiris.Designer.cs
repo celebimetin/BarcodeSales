@@ -35,6 +35,10 @@ namespace BarcodeSales
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.txtSatisFiyati = new System.Windows.Forms.TextBox();
             this.txtAlisFiyati = new System.Windows.Forms.TextBox();
+            this.comboBoxUrunGrubu = new System.Windows.Forms.ComboBox();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.silToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.chBarkodluUrunTipi = new System.Windows.Forms.CheckBox();
             this.lblKullanici = new BarcodeSales.lblStandart();
             this.lblStandart10 = new BarcodeSales.lblStandart();
             this.txtUrunSayisi = new BarcodeSales.txtNumeric();
@@ -54,19 +58,17 @@ namespace BarcodeSales
             this.lblStandart4 = new BarcodeSales.lblStandart();
             this.txtUrunAdi = new BarcodeSales.txtStandart();
             this.txtBarkod = new BarcodeSales.txtStandart();
-            this.comboBoxUrunGrubu = new System.Windows.Forms.ComboBox();
             this.lblStandart3 = new BarcodeSales.lblStandart();
             this.lblStandart2 = new BarcodeSales.lblStandart();
             this.lblStandart1 = new BarcodeSales.lblStandart();
             this.dataGridViewUrunGiris = new BarcodeSales.ozelDataGridView();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.silToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.düzenleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUrunGiris)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUrunGiris)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -79,6 +81,7 @@ namespace BarcodeSales
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.chBarkodluUrunTipi);
             this.splitContainer1.Panel1.Controls.Add(this.txtSatisFiyati);
             this.splitContainer1.Panel1.Controls.Add(this.txtAlisFiyati);
             this.splitContainer1.Panel1.Controls.Add(this.lblKullanici);
@@ -134,12 +137,57 @@ namespace BarcodeSales
             this.txtAlisFiyati.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtAlisFiyati.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAlisFiyati_KeyPress);
             // 
+            // comboBoxUrunGrubu
+            // 
+            this.comboBoxUrunGrubu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxUrunGrubu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxUrunGrubu.FormattingEnabled = true;
+            this.comboBoxUrunGrubu.Location = new System.Drawing.Point(124, 91);
+            this.comboBoxUrunGrubu.Name = "comboBoxUrunGrubu";
+            this.comboBoxUrunGrubu.Size = new System.Drawing.Size(250, 33);
+            this.comboBoxUrunGrubu.TabIndex = 2;
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.silToolStripMenuItem,
+            this.düzenleToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(211, 80);
+            // 
+            // silToolStripMenuItem
+            // 
+            this.silToolStripMenuItem.Name = "silToolStripMenuItem";
+            this.silToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.silToolStripMenuItem.Text = "Sil";
+            this.silToolStripMenuItem.Click += new System.EventHandler(this.silToolStripMenuItem_Click);
+            // 
+            // chBarkodluUrunTipi
+            // 
+            this.chBarkodluUrunTipi.Appearance = System.Windows.Forms.Appearance.Button;
+            this.chBarkodluUrunTipi.AutoSize = true;
+            this.chBarkodluUrunTipi.BackColor = System.Drawing.Color.LimeGreen;
+            this.chBarkodluUrunTipi.FlatAppearance.BorderColor = System.Drawing.Color.LightBlue;
+            this.chBarkodluUrunTipi.FlatAppearance.CheckedBackColor = System.Drawing.Color.Red;
+            this.chBarkodluUrunTipi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.chBarkodluUrunTipi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chBarkodluUrunTipi.ForeColor = System.Drawing.Color.White;
+            this.chBarkodluUrunTipi.Location = new System.Drawing.Point(871, 7);
+            this.chBarkodluUrunTipi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.chBarkodluUrunTipi.Name = "chBarkodluUrunTipi";
+            this.chBarkodluUrunTipi.Size = new System.Drawing.Size(195, 30);
+            this.chBarkodluUrunTipi.TabIndex = 26;
+            this.chBarkodluUrunTipi.Text = "Barkodlu Ürün İşlemi";
+            this.chBarkodluUrunTipi.UseVisualStyleBackColor = false;
+            this.chBarkodluUrunTipi.CheckedChanged += new System.EventHandler(this.chBarkodluUrunTipi_CheckedChanged);
+            // 
             // lblKullanici
             // 
             this.lblKullanici.AutoSize = true;
             this.lblKullanici.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.lblKullanici.ForeColor = System.Drawing.Color.Black;
-            this.lblKullanici.Location = new System.Drawing.Point(858, 40);
+            this.lblKullanici.Location = new System.Drawing.Point(1011, 265);
             this.lblKullanici.Name = "lblKullanici";
             this.lblKullanici.Size = new System.Drawing.Size(104, 25);
             this.lblKullanici.TabIndex = 25;
@@ -150,7 +198,7 @@ namespace BarcodeSales
             this.lblStandart10.AutoSize = true;
             this.lblStandart10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.lblStandart10.ForeColor = System.Drawing.Color.Black;
-            this.lblStandart10.Location = new System.Drawing.Point(858, 11);
+            this.lblStandart10.Location = new System.Drawing.Point(1011, 236);
             this.lblStandart10.Name = "lblStandart10";
             this.lblStandart10.Size = new System.Drawing.Size(85, 25);
             this.lblStandart10.TabIndex = 24;
@@ -374,16 +422,6 @@ namespace BarcodeSales
             this.txtBarkod.TabIndex = 15;
             this.txtBarkod.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBarkod_KeyDown);
             // 
-            // comboBoxUrunGrubu
-            // 
-            this.comboBoxUrunGrubu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxUrunGrubu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxUrunGrubu.FormattingEnabled = true;
-            this.comboBoxUrunGrubu.Location = new System.Drawing.Point(124, 91);
-            this.comboBoxUrunGrubu.Name = "comboBoxUrunGrubu";
-            this.comboBoxUrunGrubu.Size = new System.Drawing.Size(250, 33);
-            this.comboBoxUrunGrubu.TabIndex = 2;
-            // 
             // lblStandart3
             // 
             this.lblStandart3.AutoSize = true;
@@ -460,20 +498,12 @@ namespace BarcodeSales
             this.dataGridViewUrunGiris.Size = new System.Drawing.Size(1127, 355);
             this.dataGridViewUrunGiris.TabIndex = 14;
             // 
-            // contextMenuStrip1
+            // düzenleToolStripMenuItem
             // 
-            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.silToolStripMenuItem});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(95, 28);
-            // 
-            // silToolStripMenuItem
-            // 
-            this.silToolStripMenuItem.Name = "silToolStripMenuItem";
-            this.silToolStripMenuItem.Size = new System.Drawing.Size(94, 24);
-            this.silToolStripMenuItem.Text = "Sil";
-            this.silToolStripMenuItem.Click += new System.EventHandler(this.silToolStripMenuItem_Click);
+            this.düzenleToolStripMenuItem.Name = "düzenleToolStripMenuItem";
+            this.düzenleToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.düzenleToolStripMenuItem.Text = "Düzenle";
+            this.düzenleToolStripMenuItem.Click += new System.EventHandler(this.düzenleToolStripMenuItem_Click);
             // 
             // fUrunGiris
             // 
@@ -491,8 +521,8 @@ namespace BarcodeSales
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUrunGiris)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUrunGiris)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -528,5 +558,7 @@ namespace BarcodeSales
         private System.Windows.Forms.TextBox txtSatisFiyati;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem silToolStripMenuItem;
+        private System.Windows.Forms.CheckBox chBarkodluUrunTipi;
+        private System.Windows.Forms.ToolStripMenuItem düzenleToolStripMenuItem;
     }
 }

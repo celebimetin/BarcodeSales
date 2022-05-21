@@ -39,6 +39,7 @@ namespace BarcodeSales
             txtMiktar.Text = 0.ToString();
             txtKdvOrani.Text = 8.ToString();
             txtBarkod.Focus();
+            chBarkodluUrunTipi.Checked = false;
         }
 
         private void btnIptal_Click(object sender, EventArgs e)
@@ -67,7 +68,14 @@ namespace BarcodeSales
                     urunGüncelle.KdvOrani = Convert.ToInt32(txtKdvOrani.Text);
                     urunGüncelle.KdvTutari = Islemler.DoubleYap(txtSatisFiyati.Text) * Convert.ToInt32(txtKdvOrani.Text) / 100;
                     urunGüncelle.Miktar += Convert.ToDouble(txtMiktar.Text);
-                    urunGüncelle.Birim = Convert.ToString(BirimTipi.Adet);
+                    if (chBarkodluUrunTipi.Checked)
+                    {
+                        urunGüncelle.Birim = Convert.ToString(BirimTipi.Kg);
+                    }
+                    else
+                    {
+                        urunGüncelle.Birim = Convert.ToString(BirimTipi.Adet);
+                    }
                     urunGüncelle.Tarih = DateTime.Now;
                     urunGüncelle.Kullanici = lblKullanici.Text;
 
@@ -84,7 +92,14 @@ namespace BarcodeSales
                     urun.KdvOrani = Convert.ToInt32(txtKdvOrani.Text);
                     urun.KdvTutari = Islemler.DoubleYap(txtSatisFiyati.Text) * Convert.ToInt32(txtKdvOrani.Text) / 100;
                     urun.Miktar = Convert.ToDouble(txtMiktar.Text);
-                    urun.Birim = Convert.ToString(BirimTipi.Adet);
+                    if (chBarkodluUrunTipi.Checked)
+                    {
+                        urun.Birim = Convert.ToString(BirimTipi.Kg);
+                    }
+                    else
+                    {
+                        urun.Birim = Convert.ToString(BirimTipi.Adet);
+                    }
                     urun.Tarih = DateTime.Now;
                     urun.Kullanici = lblKullanici.Text;
 
@@ -152,6 +167,14 @@ namespace BarcodeSales
                     txtSatisFiyati.Text = urun.SatisFiyat.ToString();
                     txtMiktar.Text = urun.Miktar.ToString();
                     txtKdvOrani.Text = urun.KdvOrani.ToString();
+                    if (urun.Birim == Convert.ToString(BirimTipi.Kg))
+                    {
+                        chBarkodluUrunTipi.Checked = true;
+                    }
+                    else
+                    {
+                        chBarkodluUrunTipi.Checked = false;
+                    }
                 }
                 else
                 {
@@ -186,6 +209,20 @@ namespace BarcodeSales
             }
         }
 
+        private void chBarkodluUrunTipi_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chBarkodluUrunTipi.Checked)
+            {
+                chBarkodluUrunTipi.Text = "Gramajlı Ürün Tipi";
+                btnBarkodOlustur.Enabled = false;
+            }
+            else
+            {
+                chBarkodluUrunTipi.Text = "Barkodlu Ürün İşlemi";
+                btnBarkodOlustur.Enabled = true;
+            }
+        }
+
         private void silToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (dataGridViewUrunGiris.Rows.Count > 0)
@@ -210,6 +247,30 @@ namespace BarcodeSales
                     dataGridViewUrunGiris.DataSource = db.Uruns.OrderByDescending(x => x.UrunId).Take(12).ToList();
                     Islemler.DataGridViewDüzenle(dataGridViewUrunGiris);
                     txtBarkod.Focus();
+                }
+            }
+        }
+
+        private void düzenleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (dataGridViewUrunGiris.Rows.Count > 0)
+            {
+                txtBarkod.Text = dataGridViewUrunGiris.CurrentRow.Cells["Barkod"].Value.ToString();
+                txtUrunAdi.Text = dataGridViewUrunGiris.CurrentRow.Cells["UrunAdi"].Value.ToString();
+                txtUrunAdi.Text = dataGridViewUrunGiris.CurrentRow.Cells["UrunAdi"].Value.ToString();
+                comboBoxUrunGrubu.Text = dataGridViewUrunGiris.CurrentRow.Cells["UrunGrup"].Value.ToString();
+                txtAlisFiyati.Text = dataGridViewUrunGiris.CurrentRow.Cells["AlisFiyat"].Value.ToString();
+                txtSatisFiyati.Text = dataGridViewUrunGiris.CurrentRow.Cells["SatisFiyat"].Value.ToString();
+                txtKdvOrani.Text = dataGridViewUrunGiris.CurrentRow.Cells["KdvOrani"].Value.ToString();
+                txtMiktar.Text = dataGridViewUrunGiris.CurrentRow.Cells["Miktar"].Value.ToString();
+                string birim = dataGridViewUrunGiris.CurrentRow.Cells["Birim"].Value.ToString();
+                if (birim == Convert.ToString(BirimTipi.Kg))
+                {
+                    chBarkodluUrunTipi.Checked = true;
+                }
+                else
+                {
+                    chBarkodluUrunTipi.Checked = false;
                 }
             }
         }

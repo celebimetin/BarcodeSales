@@ -13,7 +13,7 @@ namespace BarcodeSales
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new fRapor());
+            Application.Run(new fUrunGiris());
         }
     }
 }
