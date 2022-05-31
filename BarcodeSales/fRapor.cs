@@ -124,5 +124,24 @@ namespace BarcodeSales
                 }
             }
         }
+
+        private void btnRaporAl_Click(object sender, EventArgs e)
+        {
+            Raporlar.Baslik = "Genel Rapor";
+            Raporlar.SatisNakit = txtSatisNakit.Text;
+            Raporlar.SatisKart = txtSatisKrediKarti.Text;
+            Raporlar.IadeNakit = txtIadeNakit.Text;
+            Raporlar.IadeKart = txtIadeKrediKarti.Text;
+            Raporlar.GelirNakit = txtGelirNakit.Text;
+            Raporlar.GelirKart = txtGelirKrediKarti.Text;
+            Raporlar.GiderKart = txtGiderKrediKarti.Text;
+            Raporlar.GiderNakit = txtGiderNakit.Text;
+            Raporlar.TarihBaslangic = dateTimePickerBaslangic.Value.ToShortDateString();
+            Raporlar.TarihBitis = dateTimePickerBitis.Value.ToShortDateString();
+            Raporlar.KdvToplam = txtKdvToplam.Text;
+            Raporlar.KartKomisyon = txtKartKomisyon.Text;
+
+            Raporlar.RaporSayfasiRaporu(dataGridViewRapor);
+        }
     }
 }
