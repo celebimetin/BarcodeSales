@@ -98,5 +98,14 @@ namespace BarcodeSales
                 Islemler.DataGridViewDüzenle(dataGridViewStok);
             }
         }
+
+        private void btnRaporAl_Click(object sender, EventArgs e)
+        {
+            Raporlar.Baslik = comboBoxIslemTuru.Text + " Raporu";
+            Raporlar.TarihBaslangic = dateTimePickerBaslangic.Value.ToShortDateString();
+            Raporlar.TarihBitis = dateTimePickerBitis.Value.ToShortDateString();
+
+            Raporlar.StokRaporu(dataGridViewStok);
+        }
     }
 }

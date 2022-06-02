@@ -102,6 +102,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BarcodeSalesDbDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="BarcodeSalesDbDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BarcodeSalesDbDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Barkod.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -266,6 +271,9 @@
     <EmbeddedResource Include="rpGenelRapor.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
+    <EmbeddedResource Include="rpStokUrun.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EntityDeploy Include="Model1.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Model1.Designer.cs</LastGenOutput>
@@ -280,6 +288,17 @@
     </None>
     <None Include="BarcodeSalesDbDataSet.xss">
       <DependentUpon>BarcodeSalesDbDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BarcodeSalesDbDataSet1.xsc">
+      <DependentUpon>BarcodeSalesDbDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="BarcodeSalesDbDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BarcodeSalesDbDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BarcodeSalesDbDataSet1.xss">
+      <DependentUpon>BarcodeSalesDbDataSet1.xsd</DependentUpon>
     </None>
     <None Include="Model1.edmx.diagram">
       <DependentUpon>Model1.edmx</DependentUpon>

@@ -29,29 +29,30 @@ namespace BarcodeSales
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.btnAra = new System.Windows.Forms.Button();
             this.panelIslemTuru = new System.Windows.Forms.Panel();
             this.comboBoxIslemTuru = new System.Windows.Forms.ComboBox();
+            this.lblStandart2 = new BarcodeSales.lblStandart();
             this.panelTarih = new System.Windows.Forms.Panel();
             this.dateTimePickerBitis = new System.Windows.Forms.DateTimePicker();
             this.dateTimePickerBaslangic = new System.Windows.Forms.DateTimePicker();
+            this.lblStandart5 = new BarcodeSales.lblStandart();
+            this.lblStandart4 = new BarcodeSales.lblStandart();
             this.panelUrunGrubu = new System.Windows.Forms.Panel();
             this.comboBoxUrunGrubu = new System.Windows.Forms.ComboBox();
+            this.lblStandart3 = new BarcodeSales.lblStandart();
             this.panelFiltrelemeGrubu = new System.Windows.Forms.Panel();
             this.rdBtnUrunGrubunaGore = new System.Windows.Forms.RadioButton();
             this.rdBtnTumu = new System.Windows.Forms.RadioButton();
-            this.splitContainer2 = new System.Windows.Forms.SplitContainer();
-            this.lblStandart2 = new BarcodeSales.lblStandart();
-            this.lblStandart5 = new BarcodeSales.lblStandart();
-            this.lblStandart4 = new BarcodeSales.lblStandart();
-            this.lblStandart3 = new BarcodeSales.lblStandart();
             this.lblStandart1 = new BarcodeSales.lblStandart();
+            this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.txtUrunAra = new BarcodeSales.txtStandart();
             this.lblStandart6 = new BarcodeSales.lblStandart();
             this.dataGridViewStok = new BarcodeSales.ozelDataGridView();
+            this.btnRaporAl = new BarcodeSales.btnStandart();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -127,6 +128,17 @@ namespace BarcodeSales
             this.comboBoxIslemTuru.Size = new System.Drawing.Size(329, 28);
             this.comboBoxIslemTuru.TabIndex = 4;
             // 
+            // lblStandart2
+            // 
+            this.lblStandart2.AutoSize = true;
+            this.lblStandart2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lblStandart2.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.lblStandart2.Location = new System.Drawing.Point(13, 5);
+            this.lblStandart2.Name = "lblStandart2";
+            this.lblStandart2.Size = new System.Drawing.Size(104, 25);
+            this.lblStandart2.TabIndex = 3;
+            this.lblStandart2.Text = "İşlem Türü";
+            // 
             // panelTarih
             // 
             this.panelTarih.Controls.Add(this.dateTimePickerBitis);
@@ -154,6 +166,28 @@ namespace BarcodeSales
             this.dateTimePickerBaslangic.Size = new System.Drawing.Size(318, 26);
             this.dateTimePickerBaslangic.TabIndex = 2;
             // 
+            // lblStandart5
+            // 
+            this.lblStandart5.AutoSize = true;
+            this.lblStandart5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lblStandart5.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.lblStandart5.Location = new System.Drawing.Point(9, 80);
+            this.lblStandart5.Name = "lblStandart5";
+            this.lblStandart5.Size = new System.Drawing.Size(102, 25);
+            this.lblStandart5.TabIndex = 1;
+            this.lblStandart5.Text = "Bitiş Tarihi";
+            // 
+            // lblStandart4
+            // 
+            this.lblStandart4.AutoSize = true;
+            this.lblStandart4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lblStandart4.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.lblStandart4.Location = new System.Drawing.Point(10, 10);
+            this.lblStandart4.Name = "lblStandart4";
+            this.lblStandart4.Size = new System.Drawing.Size(151, 25);
+            this.lblStandart4.TabIndex = 0;
+            this.lblStandart4.Text = "Başlangıç Tarihi";
+            // 
             // panelUrunGrubu
             // 
             this.panelUrunGrubu.Controls.Add(this.comboBoxUrunGrubu);
@@ -172,6 +206,17 @@ namespace BarcodeSales
             this.comboBoxUrunGrubu.Name = "comboBoxUrunGrubu";
             this.comboBoxUrunGrubu.Size = new System.Drawing.Size(324, 28);
             this.comboBoxUrunGrubu.TabIndex = 1;
+            // 
+            // lblStandart3
+            // 
+            this.lblStandart3.AutoSize = true;
+            this.lblStandart3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lblStandart3.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.lblStandart3.Location = new System.Drawing.Point(10, 11);
+            this.lblStandart3.Name = "lblStandart3";
+            this.lblStandart3.Size = new System.Drawing.Size(113, 25);
+            this.lblStandart3.TabIndex = 0;
+            this.lblStandart3.Text = "Ürün Grubu";
             // 
             // panelFiltrelemeGrubu
             // 
@@ -207,6 +252,17 @@ namespace BarcodeSales
             this.rdBtnTumu.Text = "Tümü";
             this.rdBtnTumu.UseVisualStyleBackColor = true;
             // 
+            // lblStandart1
+            // 
+            this.lblStandart1.AutoSize = true;
+            this.lblStandart1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lblStandart1.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.lblStandart1.Location = new System.Drawing.Point(9, 12);
+            this.lblStandart1.Name = "lblStandart1";
+            this.lblStandart1.Size = new System.Drawing.Size(142, 25);
+            this.lblStandart1.TabIndex = 1;
+            this.lblStandart1.Text = "Filtreleme Türü";
+            // 
             // splitContainer2
             // 
             this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -219,6 +275,7 @@ namespace BarcodeSales
             // splitContainer2.Panel1
             // 
             this.splitContainer2.Panel1.BackColor = System.Drawing.Color.Gainsboro;
+            this.splitContainer2.Panel1.Controls.Add(this.btnRaporAl);
             this.splitContainer2.Panel1.Controls.Add(this.txtUrunAra);
             this.splitContainer2.Panel1.Controls.Add(this.lblStandart6);
             // 
@@ -228,61 +285,6 @@ namespace BarcodeSales
             this.splitContainer2.Size = new System.Drawing.Size(808, 733);
             this.splitContainer2.SplitterDistance = 60;
             this.splitContainer2.TabIndex = 0;
-            // 
-            // lblStandart2
-            // 
-            this.lblStandart2.AutoSize = true;
-            this.lblStandart2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lblStandart2.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.lblStandart2.Location = new System.Drawing.Point(13, 5);
-            this.lblStandart2.Name = "lblStandart2";
-            this.lblStandart2.Size = new System.Drawing.Size(104, 25);
-            this.lblStandart2.TabIndex = 3;
-            this.lblStandart2.Text = "İşlem Türü";
-            // 
-            // lblStandart5
-            // 
-            this.lblStandart5.AutoSize = true;
-            this.lblStandart5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lblStandart5.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.lblStandart5.Location = new System.Drawing.Point(9, 80);
-            this.lblStandart5.Name = "lblStandart5";
-            this.lblStandart5.Size = new System.Drawing.Size(102, 25);
-            this.lblStandart5.TabIndex = 1;
-            this.lblStandart5.Text = "Bitiş Tarihi";
-            // 
-            // lblStandart4
-            // 
-            this.lblStandart4.AutoSize = true;
-            this.lblStandart4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lblStandart4.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.lblStandart4.Location = new System.Drawing.Point(10, 10);
-            this.lblStandart4.Name = "lblStandart4";
-            this.lblStandart4.Size = new System.Drawing.Size(151, 25);
-            this.lblStandart4.TabIndex = 0;
-            this.lblStandart4.Text = "Başlangıç Tarihi";
-            // 
-            // lblStandart3
-            // 
-            this.lblStandart3.AutoSize = true;
-            this.lblStandart3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lblStandart3.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.lblStandart3.Location = new System.Drawing.Point(10, 11);
-            this.lblStandart3.Name = "lblStandart3";
-            this.lblStandart3.Size = new System.Drawing.Size(113, 25);
-            this.lblStandart3.TabIndex = 0;
-            this.lblStandart3.Text = "Ürün Grubu";
-            // 
-            // lblStandart1
-            // 
-            this.lblStandart1.AutoSize = true;
-            this.lblStandart1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lblStandart1.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.lblStandart1.Location = new System.Drawing.Point(9, 12);
-            this.lblStandart1.Name = "lblStandart1";
-            this.lblStandart1.Size = new System.Drawing.Size(142, 25);
-            this.lblStandart1.TabIndex = 1;
-            this.lblStandart1.Text = "Filtreleme Türü";
             // 
             // txtUrunAra
             // 
@@ -313,17 +315,17 @@ namespace BarcodeSales
             this.dataGridViewStok.BackgroundColor = System.Drawing.Color.LightBlue;
             this.dataGridViewStok.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridViewStok.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.LightBlue;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(3);
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewStok.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.LightBlue;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(3);
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewStok.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridViewStok.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewStok.DefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridViewStok.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridViewStok.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewStok.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dataGridViewStok.Location = new System.Drawing.Point(0, 0);
@@ -332,20 +334,38 @@ namespace BarcodeSales
             this.dataGridViewStok.ReadOnly = true;
             this.dataGridViewStok.RowHeadersVisible = false;
             this.dataGridViewStok.RowHeadersWidth = 51;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(1);
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewStok.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(1);
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewStok.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridViewStok.RowTemplate.DefaultCellStyle.Padding = new System.Windows.Forms.Padding(3);
             this.dataGridViewStok.RowTemplate.Height = 30;
             this.dataGridViewStok.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewStok.Size = new System.Drawing.Size(808, 669);
             this.dataGridViewStok.TabIndex = 15;
+            // 
+            // btnRaporAl
+            // 
+            this.btnRaporAl.BackColor = System.Drawing.Color.DarkGreen;
+            this.btnRaporAl.FlatAppearance.BorderColor = System.Drawing.SystemColors.WindowText;
+            this.btnRaporAl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRaporAl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRaporAl.ForeColor = System.Drawing.Color.White;
+            this.btnRaporAl.Image = global::BarcodeSales.Properties.Resources.import;
+            this.btnRaporAl.Location = new System.Drawing.Point(655, 8);
+            this.btnRaporAl.Margin = new System.Windows.Forms.Padding(1);
+            this.btnRaporAl.Name = "btnRaporAl";
+            this.btnRaporAl.Size = new System.Drawing.Size(143, 46);
+            this.btnRaporAl.TabIndex = 37;
+            this.btnRaporAl.Text = "  Rapor Al";
+            this.btnRaporAl.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnRaporAl.UseVisualStyleBackColor = false;
+            this.btnRaporAl.Click += new System.EventHandler(this.btnRaporAl_Click);
             // 
             // fStokIslemleri
             // 
@@ -403,5 +423,6 @@ namespace BarcodeSales
         private lblStandart lblStandart6;
         private ozelDataGridView dataGridViewStok;
         private System.Windows.Forms.Button btnAra;
+        private btnStandart btnRaporAl;
     }
 }
