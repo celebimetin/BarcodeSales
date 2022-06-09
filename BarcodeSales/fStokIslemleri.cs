@@ -101,11 +101,22 @@ namespace BarcodeSales
 
         private void btnRaporAl_Click(object sender, EventArgs e)
         {
-            Raporlar.Baslik = comboBoxIslemTuru.Text + " Raporu";
-            Raporlar.TarihBaslangic = dateTimePickerBaslangic.Value.ToShortDateString();
-            Raporlar.TarihBitis = dateTimePickerBitis.Value.ToShortDateString();
+            if (comboBoxIslemTuru.SelectedIndex == 0)
+            {
+                Raporlar.Baslik = comboBoxIslemTuru.Text + " Raporu";
+                Raporlar.TarihBaslangic = dateTimePickerBaslangic.Value.ToShortDateString();
+                Raporlar.TarihBitis = dateTimePickerBitis.Value.ToShortDateString();
 
-            Raporlar.StokRaporu(dataGridViewStok);
+                Raporlar.StokRaporu(dataGridViewStok);
+            }
+            else if (comboBoxIslemTuru.SelectedIndex == 1)
+            {
+                Raporlar.Baslik = comboBoxIslemTuru.Text + " Raporu";
+                Raporlar.TarihBaslangic = dateTimePickerBaslangic.Value.ToShortDateString();
+                Raporlar.TarihBitis = dateTimePickerBitis.Value.ToShortDateString();
+
+                Raporlar.StokIzlemeRaporu(dataGridViewStok);
+            }
         }
     }
 }

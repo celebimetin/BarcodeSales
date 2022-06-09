@@ -20,7 +20,6 @@ namespace BarcodeSales
         public static string GelirKart { get; set; }
         public static string KartKomisyon { get; set; }
         public static string KdvToplam { get; set; }
-        //public static string Kullanici { get; set; }
 
         public static void RaporSayfasiRaporu(DataGridView dataGridView)
         {
@@ -112,6 +111,47 @@ namespace BarcodeSales
             parameters[1] = new ReportParameter("TarihBaslangic", TarihBaslangic);
             parameters[2] = new ReportParameter("TarihBitis", TarihBitis);
             //parameters[3] = new ReportParameter("Kullanici", Kullanici);
+
+            fRaporGoster.reportViewer1.LocalReport.SetParameters(parameters);
+            fRaporGoster.reportViewer1.SetDisplayMode(DisplayMode.PrintLayout);
+            fRaporGoster.reportViewer1.ZoomMode = ZoomMode.PageWidth;
+            fRaporGoster.ShowDialog();
+
+            Cursor.Current = Cursors.Default;
+        }
+
+        public static void StokIzlemeRaporu(DataGridView dataGridView)
+        {
+            Cursor.Current = Cursors.WaitCursor;
+
+            List<StokHaraket> uruns = new List<StokHaraket>();
+            uruns.Clear();
+
+            for (int i = 0; i < dataGridView.Rows.Count; i++)
+            {
+                uruns.Add(new StokHaraket
+                {
+                    Barkod = dataGridView.Rows[i].Cells["Barkod"].Value.ToString(),
+                    UrunAdi = dataGridView.Rows[i].Cells["UrunAdi"].Value.ToString(),
+                    UrunGrup = dataGridView.Rows[i].Cells["UrunGrup"].Value.ToString(),
+                    Birim = dataGridView.Rows[i].Cells["Birim"].Value.ToString(),
+                    Miktar = Islemler.DoubleYap(dataGridView.Rows[i].Cells["Miktar"].Value.ToString()),
+                    Tarih = Convert.ToDateTime(dataGridView.Rows[i].Cells["Tarih"].Value.ToString()),
+                });
+            }
+            ReportDataSource reportDataSource = new ReportDataSource();
+            reportDataSource.Name = "dsStokIzleme";
+            reportDataSource.Value = uruns;
+
+            fRaporGoster fRaporGoster = new fRaporGoster();
+            fRaporGoster.reportViewer1.LocalReport.DataSources.Clear();
+            fRaporGoster.reportViewer1.LocalReport.DataSources.Add(reportDataSource);
+            fRaporGoster.reportViewer1.LocalReport.ReportPath = Application.StartupPath + @"\rpStokIzleme.rdlc";
+
+            ReportParameter[] parameters = new ReportParameter[3];
+            parameters[0] = new ReportParameter("Baslik", Baslik);
+            parameters[1] = new ReportParameter("TarihBaslangic", TarihBaslangic);
+            parameters[2] = new ReportParameter("TarihBitis", TarihBitis);
 
             fRaporGoster.reportViewer1.LocalReport.SetParameters(parameters);
             fRaporGoster.reportViewer1.SetDisplayMode(DisplayMode.PrintLayout);
