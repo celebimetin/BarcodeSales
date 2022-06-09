@@ -33,7 +33,10 @@ namespace BarcodeSales
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.btnRaporAl = new BarcodeSales.btnStandart();
             this.lblKullanici = new BarcodeSales.lblStandart();
+            this.btnGiderEkle = new System.Windows.Forms.Button();
+            this.btnGelirEkle = new System.Windows.Forms.Button();
             this.txtKartKomisyon = new BarcodeSales.txtNumeric();
             this.lblStandart16 = new BarcodeSales.lblStandart();
             this.txtKdvToplam = new BarcodeSales.txtNumeric();
@@ -58,6 +61,7 @@ namespace BarcodeSales
             this.lblStandart3 = new BarcodeSales.lblStandart();
             this.lblStandart2 = new BarcodeSales.lblStandart();
             this.lblStandart1 = new BarcodeSales.lblStandart();
+            this.btnGoster = new System.Windows.Forms.Button();
             this.dateTimePickerBitis = new System.Windows.Forms.DateTimePicker();
             this.dateTimePickerBaslangic = new System.Windows.Forms.DateTimePicker();
             this.lblStandart5 = new BarcodeSales.lblStandart();
@@ -67,10 +71,6 @@ namespace BarcodeSales
             this.dataGridViewRapor = new BarcodeSales.ozelDataGridView();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.detayGösterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnRaporAl = new BarcodeSales.btnStandart();
-            this.btnGiderEkle = new System.Windows.Forms.Button();
-            this.btnGelirEkle = new System.Windows.Forms.Button();
-            this.btnGoster = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -133,6 +133,25 @@ namespace BarcodeSales
             this.splitContainer1.SplitterDistance = 242;
             this.splitContainer1.TabIndex = 0;
             // 
+            // btnRaporAl
+            // 
+            this.btnRaporAl.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnRaporAl.BackColor = System.Drawing.Color.DarkGreen;
+            this.btnRaporAl.FlatAppearance.BorderColor = System.Drawing.SystemColors.WindowText;
+            this.btnRaporAl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRaporAl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRaporAl.ForeColor = System.Drawing.Color.White;
+            this.btnRaporAl.Image = global::BarcodeSales.Properties.Resources.import;
+            this.btnRaporAl.Location = new System.Drawing.Point(1394, 168);
+            this.btnRaporAl.Margin = new System.Windows.Forms.Padding(1);
+            this.btnRaporAl.Name = "btnRaporAl";
+            this.btnRaporAl.Size = new System.Drawing.Size(143, 67);
+            this.btnRaporAl.TabIndex = 36;
+            this.btnRaporAl.Text = "  Rapor Al";
+            this.btnRaporAl.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnRaporAl.UseVisualStyleBackColor = false;
+            this.btnRaporAl.Click += new System.EventHandler(this.btnRaporAl_Click);
+            // 
             // lblKullanici
             // 
             this.lblKullanici.AutoSize = true;
@@ -143,6 +162,26 @@ namespace BarcodeSales
             this.lblKullanici.Size = new System.Drawing.Size(85, 25);
             this.lblKullanici.TabIndex = 35;
             this.lblKullanici.Text = "Kullanıcı";
+            // 
+            // btnGiderEkle
+            // 
+            this.btnGiderEkle.Image = global::BarcodeSales.Properties.Resources.plus_1_;
+            this.btnGiderEkle.Location = new System.Drawing.Point(1289, 169);
+            this.btnGiderEkle.Name = "btnGiderEkle";
+            this.btnGiderEkle.Size = new System.Drawing.Size(50, 50);
+            this.btnGiderEkle.TabIndex = 34;
+            this.btnGiderEkle.UseVisualStyleBackColor = true;
+            this.btnGiderEkle.Click += new System.EventHandler(this.btnGiderEkle_Click);
+            // 
+            // btnGelirEkle
+            // 
+            this.btnGelirEkle.Image = global::BarcodeSales.Properties.Resources.plus;
+            this.btnGelirEkle.Location = new System.Drawing.Point(1289, 46);
+            this.btnGelirEkle.Name = "btnGelirEkle";
+            this.btnGelirEkle.Size = new System.Drawing.Size(50, 50);
+            this.btnGelirEkle.TabIndex = 33;
+            this.btnGelirEkle.UseVisualStyleBackColor = true;
+            this.btnGelirEkle.Click += new System.EventHandler(this.btnGelirEkle_Click);
             // 
             // txtKartKomisyon
             // 
@@ -408,6 +447,20 @@ namespace BarcodeSales
             this.lblStandart1.TabIndex = 9;
             this.lblStandart1.Text = "Satış Toplam";
             // 
+            // btnGoster
+            // 
+            this.btnGoster.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGoster.Image = global::BarcodeSales.Properties.Resources.searchReport;
+            this.btnGoster.Location = new System.Drawing.Point(507, 71);
+            this.btnGoster.Margin = new System.Windows.Forms.Padding(1);
+            this.btnGoster.Name = "btnGoster";
+            this.btnGoster.Size = new System.Drawing.Size(136, 95);
+            this.btnGoster.TabIndex = 8;
+            this.btnGoster.Text = "Göster";
+            this.btnGoster.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnGoster.UseVisualStyleBackColor = true;
+            this.btnGoster.Click += new System.EventHandler(this.btnGoster_Click);
+            // 
             // dateTimePickerBitis
             // 
             this.dateTimePickerBitis.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -533,58 +586,6 @@ namespace BarcodeSales
             this.detayGösterToolStripMenuItem.Text = "Detay Göster";
             this.detayGösterToolStripMenuItem.Click += new System.EventHandler(this.detayGösterToolStripMenuItem_Click);
             // 
-            // btnRaporAl
-            // 
-            this.btnRaporAl.BackColor = System.Drawing.Color.DarkGreen;
-            this.btnRaporAl.FlatAppearance.BorderColor = System.Drawing.SystemColors.WindowText;
-            this.btnRaporAl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRaporAl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRaporAl.ForeColor = System.Drawing.Color.White;
-            this.btnRaporAl.Image = global::BarcodeSales.Properties.Resources.import;
-            this.btnRaporAl.Location = new System.Drawing.Point(1394, 168);
-            this.btnRaporAl.Margin = new System.Windows.Forms.Padding(1);
-            this.btnRaporAl.Name = "btnRaporAl";
-            this.btnRaporAl.Size = new System.Drawing.Size(143, 67);
-            this.btnRaporAl.TabIndex = 36;
-            this.btnRaporAl.Text = "  Rapor Al";
-            this.btnRaporAl.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnRaporAl.UseVisualStyleBackColor = false;
-            this.btnRaporAl.Click += new System.EventHandler(this.btnRaporAl_Click);
-            // 
-            // btnGiderEkle
-            // 
-            this.btnGiderEkle.Image = global::BarcodeSales.Properties.Resources.plus_1_;
-            this.btnGiderEkle.Location = new System.Drawing.Point(1289, 169);
-            this.btnGiderEkle.Name = "btnGiderEkle";
-            this.btnGiderEkle.Size = new System.Drawing.Size(50, 50);
-            this.btnGiderEkle.TabIndex = 34;
-            this.btnGiderEkle.UseVisualStyleBackColor = true;
-            this.btnGiderEkle.Click += new System.EventHandler(this.btnGiderEkle_Click);
-            // 
-            // btnGelirEkle
-            // 
-            this.btnGelirEkle.Image = global::BarcodeSales.Properties.Resources.plus;
-            this.btnGelirEkle.Location = new System.Drawing.Point(1289, 46);
-            this.btnGelirEkle.Name = "btnGelirEkle";
-            this.btnGelirEkle.Size = new System.Drawing.Size(50, 50);
-            this.btnGelirEkle.TabIndex = 33;
-            this.btnGelirEkle.UseVisualStyleBackColor = true;
-            this.btnGelirEkle.Click += new System.EventHandler(this.btnGelirEkle_Click);
-            // 
-            // btnGoster
-            // 
-            this.btnGoster.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGoster.Image = global::BarcodeSales.Properties.Resources.searchReport;
-            this.btnGoster.Location = new System.Drawing.Point(507, 71);
-            this.btnGoster.Margin = new System.Windows.Forms.Padding(1);
-            this.btnGoster.Name = "btnGoster";
-            this.btnGoster.Size = new System.Drawing.Size(136, 95);
-            this.btnGoster.TabIndex = 8;
-            this.btnGoster.Text = "Göster";
-            this.btnGoster.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnGoster.UseVisualStyleBackColor = true;
-            this.btnGoster.Click += new System.EventHandler(this.btnGoster_Click);
-            // 
             // fRapor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -644,9 +645,9 @@ namespace BarcodeSales
         private System.Windows.Forms.Button btnGiderEkle;
         private System.Windows.Forms.Button btnGelirEkle;
         private ozelDataGridView dataGridViewRapor;
-        private lblStandart lblKullanici;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem detayGösterToolStripMenuItem;
         private btnStandart btnRaporAl;
+        internal lblStandart lblKullanici;
     }
 }

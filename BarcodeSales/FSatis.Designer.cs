@@ -40,7 +40,6 @@ namespace BarcodeSales
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblKullanici = new BarcodeSales.lblStandart();
-            this.lblStandart10 = new BarcodeSales.lblStandart();
             this.lblNakit = new System.Windows.Forms.Label();
             this.lblKart = new System.Windows.Forms.Label();
             this.chSatisIadeIslemi = new System.Windows.Forms.CheckBox();
@@ -196,7 +195,6 @@ namespace BarcodeSales
             // panel1
             // 
             this.panel1.Controls.Add(this.lblKullanici);
-            this.panel1.Controls.Add(this.lblStandart10);
             this.panel1.Controls.Add(this.lblNakit);
             this.panel1.Controls.Add(this.lblKart);
             this.panel1.Controls.Add(this.chSatisIadeIslemi);
@@ -213,30 +211,20 @@ namespace BarcodeSales
             // 
             // lblKullanici
             // 
+            this.lblKullanici.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblKullanici.AutoSize = true;
             this.lblKullanici.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.lblKullanici.ForeColor = System.Drawing.Color.Black;
-            this.lblKullanici.Location = new System.Drawing.Point(376, 4);
+            this.lblKullanici.Location = new System.Drawing.Point(341, 7);
             this.lblKullanici.Name = "lblKullanici";
             this.lblKullanici.Size = new System.Drawing.Size(89, 20);
             this.lblKullanici.TabIndex = 27;
             this.lblKullanici.Text = "lblKullanici";
             // 
-            // lblStandart10
-            // 
-            this.lblStandart10.AutoSize = true;
-            this.lblStandart10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lblStandart10.ForeColor = System.Drawing.Color.Black;
-            this.lblStandart10.Location = new System.Drawing.Point(288, 4);
-            this.lblStandart10.Name = "lblStandart10";
-            this.lblStandart10.Size = new System.Drawing.Size(82, 20);
-            this.lblStandart10.TabIndex = 26;
-            this.lblStandart10.Text = "Kullanıcı :";
-            // 
             // lblNakit
             // 
             this.lblNakit.AutoSize = true;
-            this.lblNakit.Location = new System.Drawing.Point(471, 23);
+            this.lblNakit.Location = new System.Drawing.Point(425, 40);
             this.lblNakit.Name = "lblNakit";
             this.lblNakit.Size = new System.Drawing.Size(40, 17);
             this.lblNakit.TabIndex = 7;
@@ -1908,7 +1896,6 @@ namespace BarcodeSales
         public System.Windows.Forms.Label lblNakit;
         public System.Windows.Forms.Label lblKart;
         public System.Windows.Forms.TextBox txtGenelToplam;
-        private lblStandart lblStandart10;
         internal lblStandart lblKullanici;
     }
 }

@@ -37,7 +37,6 @@ namespace BarcodeSales
             this.txtSatisFiyati = new System.Windows.Forms.TextBox();
             this.txtAlisFiyati = new System.Windows.Forms.TextBox();
             this.lblKullanici = new BarcodeSales.lblStandart();
-            this.lblStandart10 = new BarcodeSales.lblStandart();
             this.txtUrunSayisi = new BarcodeSales.txtNumeric();
             this.lblStandart9 = new BarcodeSales.lblStandart();
             this.txtUrunAra = new BarcodeSales.txtStandart();
@@ -85,7 +84,6 @@ namespace BarcodeSales
             this.splitContainer1.Panel1.Controls.Add(this.txtSatisFiyati);
             this.splitContainer1.Panel1.Controls.Add(this.txtAlisFiyati);
             this.splitContainer1.Panel1.Controls.Add(this.lblKullanici);
-            this.splitContainer1.Panel1.Controls.Add(this.lblStandart10);
             this.splitContainer1.Panel1.Controls.Add(this.txtUrunSayisi);
             this.splitContainer1.Panel1.Controls.Add(this.lblStandart9);
             this.splitContainer1.Panel1.Controls.Add(this.txtUrunAra);
@@ -117,6 +115,7 @@ namespace BarcodeSales
             // 
             // chBarkodluUrunTipi
             // 
+            this.chBarkodluUrunTipi.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.chBarkodluUrunTipi.Appearance = System.Windows.Forms.Appearance.Button;
             this.chBarkodluUrunTipi.AutoSize = true;
             this.chBarkodluUrunTipi.BackColor = System.Drawing.Color.LimeGreen;
@@ -125,7 +124,7 @@ namespace BarcodeSales
             this.chBarkodluUrunTipi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.chBarkodluUrunTipi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chBarkodluUrunTipi.ForeColor = System.Drawing.Color.White;
-            this.chBarkodluUrunTipi.Location = new System.Drawing.Point(871, 7);
+            this.chBarkodluUrunTipi.Location = new System.Drawing.Point(920, 8);
             this.chBarkodluUrunTipi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chBarkodluUrunTipi.Name = "chBarkodluUrunTipi";
             this.chBarkodluUrunTipi.Size = new System.Drawing.Size(195, 30);
@@ -158,6 +157,7 @@ namespace BarcodeSales
             // 
             // lblKullanici
             // 
+            this.lblKullanici.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblKullanici.AutoSize = true;
             this.lblKullanici.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.lblKullanici.ForeColor = System.Drawing.Color.Black;
@@ -166,17 +166,6 @@ namespace BarcodeSales
             this.lblKullanici.Size = new System.Drawing.Size(104, 25);
             this.lblKullanici.TabIndex = 25;
             this.lblKullanici.Text = "lblKullanici";
-            // 
-            // lblStandart10
-            // 
-            this.lblStandart10.AutoSize = true;
-            this.lblStandart10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lblStandart10.ForeColor = System.Drawing.Color.Black;
-            this.lblStandart10.Location = new System.Drawing.Point(1011, 236);
-            this.lblStandart10.Name = "lblStandart10";
-            this.lblStandart10.Size = new System.Drawing.Size(85, 25);
-            this.lblStandart10.TabIndex = 24;
-            this.lblStandart10.Text = "Kullanıcı";
             // 
             // txtUrunSayisi
             // 
@@ -551,7 +540,6 @@ namespace BarcodeSales
         private txtNumeric txtUrunSayisi;
         private ozelDataGridView dataGridViewUrunGiris;
         internal txtStandart txtBarkod;
-        private lblStandart lblStandart10;
         internal System.Windows.Forms.ComboBox comboBoxUrunGrubu;
         private System.Windows.Forms.TextBox txtAlisFiyati;
         private System.Windows.Forms.TextBox txtSatisFiyati;
