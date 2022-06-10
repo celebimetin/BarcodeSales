@@ -160,9 +160,9 @@ namespace BarcodeSales
             int? sonuc = 0;
             using (var db = new BarcodeSalesDbEntities())
             {
-                if (db.KartKomisyons.Any())
+                if (db.Sabits.Any())
                 {
-                    sonuc = db.KartKomisyons.First().KartKomisyon1;
+                    sonuc = db.Sabits.First().KartKomisyon;
                 }
                 else
                 {
@@ -170,6 +170,25 @@ namespace BarcodeSales
                 }
             }
             return Convert.ToInt16(sonuc);
+        }
+
+        public static void SabitVarsayilan()
+        {
+            using (var db = new BarcodeSalesDbEntities())
+            {
+                if (!db.Sabits.Any())
+                {
+                    Sabit sabit = new Sabit();
+                    sabit.AdSoyad = "Admin";
+                    sabit.Unvan = "Unvan";
+                    sabit.Adres = "Adres";
+                    sabit.KartKomisyon = 0;
+                    sabit.Yazici = false;
+
+                    db.Sabits.Add(sabit);
+                    db.SaveChanges();
+                }
+            }
         }
     }
 }

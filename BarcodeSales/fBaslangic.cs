@@ -65,6 +65,8 @@ namespace BarcodeSales
         private void btnAyarlar_Click(object sender, EventArgs e)
         {
             Cursor.Current = Cursors.WaitCursor;
+            fAyarlar ayarlar = new fAyarlar();
+            ayarlar.ShowDialog();
             Cursor.Current = Cursors.Default;
         }
 

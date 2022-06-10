@@ -27,11 +27,10 @@ namespace BarcodeSales
             this.FlatStyle = FlatStyle.Flat;
             this.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold, GraphicsUnit.Point, (byte)0);
             this.ForeColor = Color.Black;
-            this.Image = global::BarcodeSales.Properties.Resources.cash;
-            this.Location = new System.Drawing.Point(1, 1);
-            this.Margin = new System.Windows.Forms.Padding(1);
+            this.Location = new Point(1, 1);
+            this.Margin = new Padding(1);
             this.Name = "btnNakit";
-            this.Size = new System.Drawing.Size(101, 155);
+            this.Size = new Size(101, 155);
             this.TabIndex = 0;
             this.Text = "NAKİT\r\n(F1)";
             this.TextImageRelation = TextImageRelation.TextAboveImage;

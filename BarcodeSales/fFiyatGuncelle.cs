@@ -60,11 +60,14 @@ namespace BarcodeSales
                     lblMevcutFiyat.Text = "";
                     txtBarkod.Clear();
                     txtYeniFiyat.Clear();
+
+                    txtBarkod.Focus();
                 }
             }
             else
             {
                 MessageBox.Show("Ürün Okutunuz.!");
+                txtBarkod.Focus();
             }
         }
     }
