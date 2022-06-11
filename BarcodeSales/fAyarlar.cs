@@ -34,8 +34,33 @@ namespace BarcodeSales
                 dataGridViewKullanici.DataSource = db.Kullanicis.Select(x => new { x.Id, x.AdiSoyadi, x.KullaniciAdi, x.Telefon, x.EPosta }).ToList();
 
                 Islemler.SabitVarsayilan();
-                var yaziciDurumu = db.Sabits.FirstOrDefault();
-                checkBoxYazmaDurumu.Checked = (bool)yaziciDurumu.Yazici;
+                TeraziOnEkDoldur();
+                SabitlerDoldur();
+            }
+        }
+
+        private void SabitlerDoldur()
+        {
+            using (var db = new BarcodeSalesDbEntities())
+            {
+                var sabitler = db.Sabits.FirstOrDefault();
+                txtKartKomisyon.Text = sabitler.KartKomisyon.ToString();
+                checkBoxYazmaDurumu.Checked = (bool)sabitler.Yazici;
+
+                txtIsyeriAdiSoyadi.Text = sabitler.AdSoyad;
+                txtUnvan.Text = sabitler.Unvan;
+                txtAdres.Text = sabitler.Adres;
+            }
+        }
+
+        private void TeraziOnEkDoldur()
+        {
+            using (var db = new BarcodeSalesDbEntities())
+            {
+                var teraziOnEk = db.Terazis.ToList();
+                comboBoxTeraziOnEk.DisplayMember = "TeraziOnEk";
+                comboBoxTeraziOnEk.ValueMember = "TeraziId";
+                comboBoxTeraziOnEk.DataSource = teraziOnEk;
             }
         }
 
@@ -168,7 +193,9 @@ namespace BarcodeSales
 
         private void fAyarlar_Load(object sender, EventArgs e)
         {
+            Cursor.Current = Cursors.WaitCursor;
             Doldur();
+            Cursor.Current = Cursors.Default;
         }
 
         private void checkBoxYazmaDurumu_CheckedChanged(object sender, EventArgs e)
@@ -192,6 +219,107 @@ namespace BarcodeSales
                     db.SaveChanges();
                     checkBoxYazmaDurumu.Text = "Yazma Durumu Aktif";
                 }
+            }
+        }
+
+        private void btnKartKomisyonKaydet_Click(object sender, EventArgs e)
+        {
+            if (txtKartKomisyon.Text != "")
+            {
+                using (var db = new BarcodeSalesDbEntities())
+                {
+                    var sabit = db.Sabits.FirstOrDefault();
+                    sabit.KartKomisyon = Convert.ToInt32(txtKartKomisyon.Text);
+                    db.SaveChanges();
+                    MessageBox.Show("Kart komisyon tanımlandı.");
+
+                    txtKartKomisyon.Clear();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Kart komisyon giriniz.");
+            }
+        }
+
+        private void btnTeraziOnEkKaydet_Click(object sender, EventArgs e)
+        {
+            if (txtTeraziOnEk.Text != "")
+            {
+                int teraziOnEk = Convert.ToInt16(txtTeraziOnEk.Text);
+
+                using (var db = new BarcodeSalesDbEntities())
+                {
+                    if (db.Terazis.Any(x => x.TeraziOnEk == teraziOnEk))
+                    {
+                        MessageBox.Show(teraziOnEk.ToString() + "Ön eki kayıtlı.");
+                    }
+                    else
+                    {
+                        Terazi terazi = new Terazi();
+                        terazi.TeraziOnEk = teraziOnEk;
+                        db.Terazis.Add(terazi);
+                        db.SaveChanges();
+                        MessageBox.Show("Bilgiler kayıt edilmiştir");
+
+                        TeraziOnEkDoldur();
+
+                        txtTeraziOnEk.Clear();
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Terazi ön ek giriniz.");
+            }
+        }
+
+        private void btnTeraziOnEkSil_Click(object sender, EventArgs e)
+        {
+            if (comboBoxTeraziOnEk.Text != "")
+            {
+                int onEkId = Convert.ToInt16(comboBoxTeraziOnEk.SelectedValue);
+                DialogResult onay = MessageBox.Show(comboBoxTeraziOnEk.Text + "Ön eki silmek istiyormusunuz?", "Terazi Ön Ek Silme İşlemi", MessageBoxButtons.YesNo);
+
+                if (onay == DialogResult.Yes)
+                {
+                    using (var db = new BarcodeSalesDbEntities())
+                    {
+                        var onEkTerazi = db.Terazis.Find(onEkId);
+                        db.Terazis.Remove(onEkTerazi);
+                        db.SaveChanges();
+
+                        TeraziOnEkDoldur();
+                        MessageBox.Show("Terazi ön ek silinmiştir");
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Terazi ön ek seçiniz.");
+            }
+        }
+
+        private void btnIsyeriBilgileriKaydet_Click(object sender, EventArgs e)
+        {
+            if (txtIsyeriAdiSoyadi.Text != "" && txtUnvan.Text != "" && txtAdres.Text != "")
+            {
+                using (var db = new BarcodeSalesDbEntities())
+                {
+                    var isyeriBilgileri = db.Sabits.FirstOrDefault();
+                    isyeriBilgileri.AdSoyad = txtIsyeriAdiSoyadi.Text;
+                    isyeriBilgileri.Unvan = txtUnvan.Text;
+                    isyeriBilgileri.Adres = txtAdres.Text;
+
+                    db.SaveChanges();
+                    MessageBox.Show("İşyeri bilgileri güncellenmiştir.");
+
+                    SabitlerDoldur();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Lütfen zorunlu alanları giriniz." + "\nAdı Soyadı \nUnvan \nAdres");
             }
         }
     }

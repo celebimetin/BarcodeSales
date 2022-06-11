@@ -30,8 +30,8 @@ namespace BarcodeSales
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
@@ -42,18 +42,12 @@ namespace BarcodeSales
             this.checkBoxStok = new System.Windows.Forms.CheckBox();
             this.checkBoxRapor = new System.Windows.Forms.CheckBox();
             this.checkBoxSatis = new System.Windows.Forms.CheckBox();
-            this.maskedTextBoxTelefon = new System.Windows.Forms.MaskedTextBox();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.düzenleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.silToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.checkBoxYazmaDurumu = new System.Windows.Forms.CheckBox();
             this.lblStandart8 = new BarcodeSales.lblStandart();
             this.btnIptal = new BarcodeSales.btnStandart();
             this.btnKaydet = new BarcodeSales.btnStandart();
             this.txtSifreTekrar = new BarcodeSales.txtStandart();
             this.lblStandart7 = new BarcodeSales.lblStandart();
+            this.maskedTextBoxTelefon = new System.Windows.Forms.MaskedTextBox();
             this.lblStandart6 = new BarcodeSales.lblStandart();
             this.txtSifre = new BarcodeSales.txtStandart();
             this.lblStandart5 = new BarcodeSales.lblStandart();
@@ -65,17 +59,44 @@ namespace BarcodeSales
             this.txtAdiSoyadi = new BarcodeSales.txtStandart();
             this.lblStandart1 = new BarcodeSales.lblStandart();
             this.dataGridViewKullanici = new BarcodeSales.ozelDataGridView();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.düzenleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.silToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.lblStandart11 = new BarcodeSales.lblStandart();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.btnTeraziOnEkSil = new System.Windows.Forms.Button();
+            this.txtTeraziOnEk = new BarcodeSales.txtNumeric();
+            this.comboBoxTeraziOnEk = new System.Windows.Forms.ComboBox();
+            this.btnTeraziOnEkKaydet = new System.Windows.Forms.Button();
+            this.lblStandart10 = new BarcodeSales.lblStandart();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.btnKartKomisyonKaydet = new System.Windows.Forms.Button();
+            this.txtKartKomisyon = new BarcodeSales.txtNumeric();
             this.lblStandart9 = new BarcodeSales.lblStandart();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.checkBoxYazmaDurumu = new System.Windows.Forms.CheckBox();
+            this.btnIsyeriBilgileriKaydet = new BarcodeSales.btnStandart();
+            this.txtAdres = new BarcodeSales.txtStandart();
+            this.lblStandart14 = new BarcodeSales.lblStandart();
+            this.txtUnvan = new BarcodeSales.txtStandart();
+            this.lblStandart15 = new BarcodeSales.lblStandart();
+            this.txtIsyeriAdiSoyadi = new BarcodeSales.txtStandart();
+            this.lblStandart16 = new BarcodeSales.lblStandart();
+            this.lblStandart12 = new BarcodeSales.lblStandart();
+            this.lblStandart13 = new BarcodeSales.lblStandart();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewKullanici)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewKullanici)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -83,6 +104,7 @@ namespace BarcodeSales
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -215,74 +237,6 @@ namespace BarcodeSales
             this.checkBoxSatis.Text = "Satış İşlemi";
             this.checkBoxSatis.UseVisualStyleBackColor = true;
             // 
-            // maskedTextBoxTelefon
-            // 
-            this.maskedTextBoxTelefon.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBoxTelefon.Location = new System.Drawing.Point(22, 156);
-            this.maskedTextBoxTelefon.Mask = "(999) 000-0000";
-            this.maskedTextBoxTelefon.Name = "maskedTextBoxTelefon";
-            this.maskedTextBoxTelefon.Size = new System.Drawing.Size(255, 30);
-            this.maskedTextBoxTelefon.TabIndex = 2;
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.düzenleToolStripMenuItem,
-            this.silToolStripMenuItem});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(133, 52);
-            // 
-            // düzenleToolStripMenuItem
-            // 
-            this.düzenleToolStripMenuItem.Name = "düzenleToolStripMenuItem";
-            this.düzenleToolStripMenuItem.Size = new System.Drawing.Size(132, 24);
-            this.düzenleToolStripMenuItem.Text = "Düzenle";
-            this.düzenleToolStripMenuItem.Click += new System.EventHandler(this.düzenleToolStripMenuItem_Click);
-            // 
-            // silToolStripMenuItem
-            // 
-            this.silToolStripMenuItem.Name = "silToolStripMenuItem";
-            this.silToolStripMenuItem.Size = new System.Drawing.Size(132, 24);
-            this.silToolStripMenuItem.Text = "Sil";
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Controls.Add(this.lblStandart9);
-            this.tabPage2.Controls.Add(this.panel1);
-            this.tabPage2.Location = new System.Drawing.Point(4, 25);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(943, 580);
-            this.tabPage2.TabIndex = 2;
-            this.tabPage2.Text = "Yazıcı / Terazi / Komisyon";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // panel1
-            // 
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.checkBoxYazmaDurumu);
-            this.panel1.Location = new System.Drawing.Point(13, 43);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(266, 245);
-            this.panel1.TabIndex = 0;
-            // 
-            // checkBoxYazmaDurumu
-            // 
-            this.checkBoxYazmaDurumu.Appearance = System.Windows.Forms.Appearance.Button;
-            this.checkBoxYazmaDurumu.AutoSize = true;
-            this.checkBoxYazmaDurumu.BackColor = System.Drawing.Color.Green;
-            this.checkBoxYazmaDurumu.FlatAppearance.CheckedBackColor = System.Drawing.Color.Red;
-            this.checkBoxYazmaDurumu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkBoxYazmaDurumu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxYazmaDurumu.Location = new System.Drawing.Point(3, 3);
-            this.checkBoxYazmaDurumu.Name = "checkBoxYazmaDurumu";
-            this.checkBoxYazmaDurumu.Size = new System.Drawing.Size(191, 30);
-            this.checkBoxYazmaDurumu.TabIndex = 0;
-            this.checkBoxYazmaDurumu.Text = "Yazma Durumu Aktif";
-            this.checkBoxYazmaDurumu.UseVisualStyleBackColor = false;
-            this.checkBoxYazmaDurumu.CheckedChanged += new System.EventHandler(this.checkBoxYazmaDurumu_CheckedChanged);
-            // 
             // lblStandart8
             // 
             this.lblStandart8.AutoSize = true;
@@ -348,6 +302,15 @@ namespace BarcodeSales
             this.lblStandart7.Size = new System.Drawing.Size(114, 25);
             this.lblStandart7.TabIndex = 11;
             this.lblStandart7.Text = "Şifre Tekrar";
+            // 
+            // maskedTextBoxTelefon
+            // 
+            this.maskedTextBoxTelefon.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.maskedTextBoxTelefon.Location = new System.Drawing.Point(22, 156);
+            this.maskedTextBoxTelefon.Mask = "(999) 000-0000";
+            this.maskedTextBoxTelefon.Name = "maskedTextBoxTelefon";
+            this.maskedTextBoxTelefon.Size = new System.Drawing.Size(255, 30);
+            this.maskedTextBoxTelefon.TabIndex = 2;
             // 
             // lblStandart6
             // 
@@ -460,18 +423,18 @@ namespace BarcodeSales
             this.dataGridViewKullanici.BackgroundColor = System.Drawing.Color.LightBlue;
             this.dataGridViewKullanici.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridViewKullanici.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.LightBlue;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(3);
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewKullanici.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.LightBlue;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(3);
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewKullanici.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewKullanici.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewKullanici.ContextMenuStrip = this.contextMenuStrip1;
-            this.dataGridViewKullanici.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridViewKullanici.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewKullanici.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewKullanici.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dataGridViewKullanici.Location = new System.Drawing.Point(0, 0);
@@ -480,31 +443,322 @@ namespace BarcodeSales
             this.dataGridViewKullanici.ReadOnly = true;
             this.dataGridViewKullanici.RowHeadersVisible = false;
             this.dataGridViewKullanici.RowHeadersWidth = 51;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(1);
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewKullanici.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(1);
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewKullanici.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewKullanici.RowTemplate.DefaultCellStyle.Padding = new System.Windows.Forms.Padding(3);
             this.dataGridViewKullanici.RowTemplate.Height = 30;
             this.dataGridViewKullanici.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewKullanici.Size = new System.Drawing.Size(440, 574);
             this.dataGridViewKullanici.TabIndex = 17;
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.düzenleToolStripMenuItem,
+            this.silToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(133, 52);
+            // 
+            // düzenleToolStripMenuItem
+            // 
+            this.düzenleToolStripMenuItem.Name = "düzenleToolStripMenuItem";
+            this.düzenleToolStripMenuItem.Size = new System.Drawing.Size(132, 24);
+            this.düzenleToolStripMenuItem.Text = "Düzenle";
+            this.düzenleToolStripMenuItem.Click += new System.EventHandler(this.düzenleToolStripMenuItem_Click);
+            // 
+            // silToolStripMenuItem
+            // 
+            this.silToolStripMenuItem.Name = "silToolStripMenuItem";
+            this.silToolStripMenuItem.Size = new System.Drawing.Size(132, 24);
+            this.silToolStripMenuItem.Text = "Sil";
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.lblStandart13);
+            this.tabPage2.Controls.Add(this.lblStandart12);
+            this.tabPage2.Controls.Add(this.btnIsyeriBilgileriKaydet);
+            this.tabPage2.Controls.Add(this.txtAdres);
+            this.tabPage2.Controls.Add(this.lblStandart14);
+            this.tabPage2.Controls.Add(this.txtUnvan);
+            this.tabPage2.Controls.Add(this.lblStandart15);
+            this.tabPage2.Controls.Add(this.txtIsyeriAdiSoyadi);
+            this.tabPage2.Controls.Add(this.lblStandart16);
+            this.tabPage2.Controls.Add(this.lblStandart11);
+            this.tabPage2.Controls.Add(this.panel3);
+            this.tabPage2.Controls.Add(this.lblStandart10);
+            this.tabPage2.Controls.Add(this.panel2);
+            this.tabPage2.Controls.Add(this.lblStandart9);
+            this.tabPage2.Controls.Add(this.panel1);
+            this.tabPage2.Location = new System.Drawing.Point(4, 25);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(943, 580);
+            this.tabPage2.TabIndex = 2;
+            this.tabPage2.Text = "Yazıcı - Terazi - Komisyon - İşyeri Bilgileri";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // lblStandart11
+            // 
+            this.lblStandart11.AutoSize = true;
+            this.lblStandart11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lblStandart11.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.lblStandart11.Location = new System.Drawing.Point(12, 255);
+            this.lblStandart11.Name = "lblStandart11";
+            this.lblStandart11.Size = new System.Drawing.Size(177, 25);
+            this.lblStandart11.TabIndex = 5;
+            this.lblStandart11.Text = "Terazi Ön Ek Ayarı";
+            // 
+            // panel3
+            // 
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.btnTeraziOnEkSil);
+            this.panel3.Controls.Add(this.txtTeraziOnEk);
+            this.panel3.Controls.Add(this.comboBoxTeraziOnEk);
+            this.panel3.Controls.Add(this.btnTeraziOnEkKaydet);
+            this.panel3.Location = new System.Drawing.Point(17, 283);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(266, 144);
+            this.panel3.TabIndex = 4;
+            // 
+            // btnTeraziOnEkSil
+            // 
+            this.btnTeraziOnEkSil.BackColor = System.Drawing.Color.Red;
+            this.btnTeraziOnEkSil.FlatAppearance.BorderColor = System.Drawing.Color.Red;
+            this.btnTeraziOnEkSil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTeraziOnEkSil.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTeraziOnEkSil.ForeColor = System.Drawing.Color.White;
+            this.btnTeraziOnEkSil.Location = new System.Drawing.Point(150, 89);
+            this.btnTeraziOnEkSil.Name = "btnTeraziOnEkSil";
+            this.btnTeraziOnEkSil.Size = new System.Drawing.Size(110, 30);
+            this.btnTeraziOnEkSil.TabIndex = 4;
+            this.btnTeraziOnEkSil.Text = "Sil";
+            this.btnTeraziOnEkSil.UseVisualStyleBackColor = false;
+            this.btnTeraziOnEkSil.Click += new System.EventHandler(this.btnTeraziOnEkSil_Click);
+            // 
+            // txtTeraziOnEk
+            // 
+            this.txtTeraziOnEk.BackColor = System.Drawing.Color.White;
+            this.txtTeraziOnEk.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtTeraziOnEk.Location = new System.Drawing.Point(3, 53);
+            this.txtTeraziOnEk.Name = "txtTeraziOnEk";
+            this.txtTeraziOnEk.Size = new System.Drawing.Size(141, 30);
+            this.txtTeraziOnEk.TabIndex = 3;
+            this.txtTeraziOnEk.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // comboBoxTeraziOnEk
+            // 
+            this.comboBoxTeraziOnEk.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxTeraziOnEk.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxTeraziOnEk.FormattingEnabled = true;
+            this.comboBoxTeraziOnEk.Location = new System.Drawing.Point(3, 3);
+            this.comboBoxTeraziOnEk.Name = "comboBoxTeraziOnEk";
+            this.comboBoxTeraziOnEk.Size = new System.Drawing.Size(258, 33);
+            this.comboBoxTeraziOnEk.TabIndex = 2;
+            // 
+            // btnTeraziOnEkKaydet
+            // 
+            this.btnTeraziOnEkKaydet.BackColor = System.Drawing.Color.Green;
+            this.btnTeraziOnEkKaydet.FlatAppearance.BorderColor = System.Drawing.Color.Green;
+            this.btnTeraziOnEkKaydet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTeraziOnEkKaydet.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTeraziOnEkKaydet.ForeColor = System.Drawing.Color.White;
+            this.btnTeraziOnEkKaydet.Location = new System.Drawing.Point(150, 53);
+            this.btnTeraziOnEkKaydet.Name = "btnTeraziOnEkKaydet";
+            this.btnTeraziOnEkKaydet.Size = new System.Drawing.Size(110, 30);
+            this.btnTeraziOnEkKaydet.TabIndex = 1;
+            this.btnTeraziOnEkKaydet.Text = "Kaydet";
+            this.btnTeraziOnEkKaydet.UseVisualStyleBackColor = false;
+            this.btnTeraziOnEkKaydet.Click += new System.EventHandler(this.btnTeraziOnEkKaydet_Click);
+            // 
+            // lblStandart10
+            // 
+            this.lblStandart10.AutoSize = true;
+            this.lblStandart10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lblStandart10.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.lblStandart10.Location = new System.Drawing.Point(12, 163);
+            this.lblStandart10.Name = "lblStandart10";
+            this.lblStandart10.Size = new System.Drawing.Size(140, 25);
+            this.lblStandart10.TabIndex = 3;
+            this.lblStandart10.Text = "Kart Komisyon";
+            // 
+            // panel2
+            // 
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.btnKartKomisyonKaydet);
+            this.panel2.Controls.Add(this.txtKartKomisyon);
+            this.panel2.Location = new System.Drawing.Point(17, 191);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(266, 41);
+            this.panel2.TabIndex = 2;
+            // 
+            // btnKartKomisyonKaydet
+            // 
+            this.btnKartKomisyonKaydet.BackColor = System.Drawing.Color.Green;
+            this.btnKartKomisyonKaydet.FlatAppearance.BorderColor = System.Drawing.Color.Green;
+            this.btnKartKomisyonKaydet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnKartKomisyonKaydet.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnKartKomisyonKaydet.ForeColor = System.Drawing.Color.White;
+            this.btnKartKomisyonKaydet.Location = new System.Drawing.Point(151, 3);
+            this.btnKartKomisyonKaydet.Name = "btnKartKomisyonKaydet";
+            this.btnKartKomisyonKaydet.Size = new System.Drawing.Size(110, 30);
+            this.btnKartKomisyonKaydet.TabIndex = 1;
+            this.btnKartKomisyonKaydet.Text = "Kaydet";
+            this.btnKartKomisyonKaydet.UseVisualStyleBackColor = false;
+            this.btnKartKomisyonKaydet.Click += new System.EventHandler(this.btnKartKomisyonKaydet_Click);
+            // 
+            // txtKartKomisyon
+            // 
+            this.txtKartKomisyon.BackColor = System.Drawing.Color.White;
+            this.txtKartKomisyon.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtKartKomisyon.Location = new System.Drawing.Point(3, 3);
+            this.txtKartKomisyon.Name = "txtKartKomisyon";
+            this.txtKartKomisyon.Size = new System.Drawing.Size(142, 30);
+            this.txtKartKomisyon.TabIndex = 0;
+            this.txtKartKomisyon.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // lblStandart9
             // 
             this.lblStandart9.AutoSize = true;
             this.lblStandart9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.lblStandart9.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.lblStandart9.Location = new System.Drawing.Point(8, 15);
+            this.lblStandart9.Location = new System.Drawing.Point(8, 77);
             this.lblStandart9.Name = "lblStandart9";
             this.lblStandart9.Size = new System.Drawing.Size(166, 25);
             this.lblStandart9.TabIndex = 1;
             this.lblStandart9.Text = "Yazıcı Aktif / Pasif";
+            // 
+            // panel1
+            // 
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.checkBoxYazmaDurumu);
+            this.panel1.Location = new System.Drawing.Point(13, 105);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(200, 41);
+            this.panel1.TabIndex = 0;
+            // 
+            // checkBoxYazmaDurumu
+            // 
+            this.checkBoxYazmaDurumu.Appearance = System.Windows.Forms.Appearance.Button;
+            this.checkBoxYazmaDurumu.AutoSize = true;
+            this.checkBoxYazmaDurumu.BackColor = System.Drawing.Color.Green;
+            this.checkBoxYazmaDurumu.FlatAppearance.CheckedBackColor = System.Drawing.Color.Red;
+            this.checkBoxYazmaDurumu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkBoxYazmaDurumu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxYazmaDurumu.Location = new System.Drawing.Point(3, 3);
+            this.checkBoxYazmaDurumu.Name = "checkBoxYazmaDurumu";
+            this.checkBoxYazmaDurumu.Size = new System.Drawing.Size(191, 30);
+            this.checkBoxYazmaDurumu.TabIndex = 0;
+            this.checkBoxYazmaDurumu.Text = "Yazma Durumu Aktif";
+            this.checkBoxYazmaDurumu.UseVisualStyleBackColor = false;
+            this.checkBoxYazmaDurumu.CheckedChanged += new System.EventHandler(this.checkBoxYazmaDurumu_CheckedChanged);
+            // 
+            // btnIsyeriBilgileriKaydet
+            // 
+            this.btnIsyeriBilgileriKaydet.BackColor = System.Drawing.Color.Green;
+            this.btnIsyeriBilgileriKaydet.FlatAppearance.BorderColor = System.Drawing.Color.Green;
+            this.btnIsyeriBilgileriKaydet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnIsyeriBilgileriKaydet.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIsyeriBilgileriKaydet.ForeColor = System.Drawing.Color.White;
+            this.btnIsyeriBilgileriKaydet.Location = new System.Drawing.Point(621, 411);
+            this.btnIsyeriBilgileriKaydet.Margin = new System.Windows.Forms.Padding(1);
+            this.btnIsyeriBilgileriKaydet.Name = "btnIsyeriBilgileriKaydet";
+            this.btnIsyeriBilgileriKaydet.Size = new System.Drawing.Size(250, 57);
+            this.btnIsyeriBilgileriKaydet.TabIndex = 24;
+            this.btnIsyeriBilgileriKaydet.Text = "Kaydet";
+            this.btnIsyeriBilgileriKaydet.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.btnIsyeriBilgileriKaydet.UseVisualStyleBackColor = false;
+            this.btnIsyeriBilgileriKaydet.Click += new System.EventHandler(this.btnIsyeriBilgileriKaydet_Click);
+            // 
+            // txtAdres
+            // 
+            this.txtAdres.BackColor = System.Drawing.Color.White;
+            this.txtAdres.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtAdres.Location = new System.Drawing.Point(621, 255);
+            this.txtAdres.Multiline = true;
+            this.txtAdres.Name = "txtAdres";
+            this.txtAdres.Size = new System.Drawing.Size(250, 132);
+            this.txtAdres.TabIndex = 22;
+            // 
+            // lblStandart14
+            // 
+            this.lblStandart14.AutoSize = true;
+            this.lblStandart14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lblStandart14.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.lblStandart14.Location = new System.Drawing.Point(616, 226);
+            this.lblStandart14.Name = "lblStandart14";
+            this.lblStandart14.Size = new System.Drawing.Size(64, 25);
+            this.lblStandart14.TabIndex = 23;
+            this.lblStandart14.Text = "Adres";
+            // 
+            // txtUnvan
+            // 
+            this.txtUnvan.BackColor = System.Drawing.Color.White;
+            this.txtUnvan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtUnvan.Location = new System.Drawing.Point(621, 182);
+            this.txtUnvan.Name = "txtUnvan";
+            this.txtUnvan.Size = new System.Drawing.Size(250, 30);
+            this.txtUnvan.TabIndex = 20;
+            // 
+            // lblStandart15
+            // 
+            this.lblStandart15.AutoSize = true;
+            this.lblStandart15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lblStandart15.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.lblStandart15.Location = new System.Drawing.Point(616, 153);
+            this.lblStandart15.Name = "lblStandart15";
+            this.lblStandart15.Size = new System.Drawing.Size(69, 25);
+            this.lblStandart15.TabIndex = 21;
+            this.lblStandart15.Text = "Unvan";
+            // 
+            // txtIsyeriAdiSoyadi
+            // 
+            this.txtIsyeriAdiSoyadi.BackColor = System.Drawing.Color.White;
+            this.txtIsyeriAdiSoyadi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtIsyeriAdiSoyadi.Location = new System.Drawing.Point(621, 105);
+            this.txtIsyeriAdiSoyadi.Name = "txtIsyeriAdiSoyadi";
+            this.txtIsyeriAdiSoyadi.Size = new System.Drawing.Size(250, 30);
+            this.txtIsyeriAdiSoyadi.TabIndex = 19;
+            // 
+            // lblStandart16
+            // 
+            this.lblStandart16.AutoSize = true;
+            this.lblStandart16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lblStandart16.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.lblStandart16.Location = new System.Drawing.Point(616, 77);
+            this.lblStandart16.Name = "lblStandart16";
+            this.lblStandart16.Size = new System.Drawing.Size(107, 25);
+            this.lblStandart16.TabIndex = 18;
+            this.lblStandart16.Text = "Adı Soyadı";
+            // 
+            // lblStandart12
+            // 
+            this.lblStandart12.AutoSize = true;
+            this.lblStandart12.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.lblStandart12.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.lblStandart12.Location = new System.Drawing.Point(8, 17);
+            this.lblStandart12.Name = "lblStandart12";
+            this.lblStandart12.Size = new System.Drawing.Size(414, 29);
+            this.lblStandart12.TabIndex = 25;
+            this.lblStandart12.Text = "Yazıcı Terazi ve Komisyon İşlemleri";
+            // 
+            // lblStandart13
+            // 
+            this.lblStandart13.AutoSize = true;
+            this.lblStandart13.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.lblStandart13.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.lblStandart13.Location = new System.Drawing.Point(616, 17);
+            this.lblStandart13.Name = "lblStandart13";
+            this.lblStandart13.Size = new System.Drawing.Size(163, 29);
+            this.lblStandart13.TabIndex = 26;
+            this.lblStandart13.Text = "İşyeri Bilgileri";
             // 
             // fAyarlar
             // 
@@ -524,12 +778,16 @@ namespace BarcodeSales
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewKullanici)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewKullanici)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -570,5 +828,24 @@ namespace BarcodeSales
         private lblStandart lblStandart9;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.CheckBox checkBoxYazmaDurumu;
+        private lblStandart lblStandart10;
+        private System.Windows.Forms.Panel panel2;
+        private txtNumeric txtKartKomisyon;
+        private System.Windows.Forms.Button btnKartKomisyonKaydet;
+        private lblStandart lblStandart11;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button btnTeraziOnEkKaydet;
+        private System.Windows.Forms.ComboBox comboBoxTeraziOnEk;
+        private txtNumeric txtTeraziOnEk;
+        private System.Windows.Forms.Button btnTeraziOnEkSil;
+        private btnStandart btnIsyeriBilgileriKaydet;
+        private txtStandart txtAdres;
+        private lblStandart lblStandart14;
+        private txtStandart txtUnvan;
+        private lblStandart lblStandart15;
+        private txtStandart txtIsyeriAdiSoyadi;
+        private lblStandart lblStandart16;
+        private lblStandart lblStandart12;
+        private lblStandart lblStandart13;
     }
 }
