@@ -39,6 +39,7 @@ namespace BarcodeSales
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.checkBoxYazdırmaDurumu = new System.Windows.Forms.CheckBox();
             this.lblKullanici = new BarcodeSales.lblStandart();
             this.lblNakit = new System.Windows.Forms.Label();
             this.lblKart = new System.Windows.Forms.Label();
@@ -194,6 +195,7 @@ namespace BarcodeSales
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.checkBoxYazdırmaDurumu);
             this.panel1.Controls.Add(this.lblKullanici);
             this.panel1.Controls.Add(this.lblNakit);
             this.panel1.Controls.Add(this.lblKart);
@@ -209,13 +211,24 @@ namespace BarcodeSales
             this.panel1.Size = new System.Drawing.Size(514, 96);
             this.panel1.TabIndex = 0;
             // 
+            // checkBoxYazdırmaDurumu
+            // 
+            this.checkBoxYazdırmaDurumu.AutoSize = true;
+            this.checkBoxYazdırmaDurumu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxYazdırmaDurumu.Location = new System.Drawing.Point(189, 5);
+            this.checkBoxYazdırmaDurumu.Name = "checkBoxYazdırmaDurumu";
+            this.checkBoxYazdırmaDurumu.Size = new System.Drawing.Size(166, 24);
+            this.checkBoxYazdırmaDurumu.TabIndex = 28;
+            this.checkBoxYazdırmaDurumu.Text = "Yazdırma Durumu";
+            this.checkBoxYazdırmaDurumu.UseVisualStyleBackColor = true;
+            // 
             // lblKullanici
             // 
             this.lblKullanici.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblKullanici.AutoSize = true;
             this.lblKullanici.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.lblKullanici.ForeColor = System.Drawing.Color.Black;
-            this.lblKullanici.Location = new System.Drawing.Point(341, 7);
+            this.lblKullanici.Location = new System.Drawing.Point(376, 6);
             this.lblKullanici.Name = "lblKullanici";
             this.lblKullanici.Size = new System.Drawing.Size(89, 20);
             this.lblKullanici.TabIndex = 27;
@@ -1897,5 +1910,6 @@ namespace BarcodeSales
         public System.Windows.Forms.Label lblKart;
         public System.Windows.Forms.TextBox txtGenelToplam;
         internal lblStandart lblKullanici;
+        private System.Windows.Forms.CheckBox checkBoxYazdırmaDurumu;
     }
 }

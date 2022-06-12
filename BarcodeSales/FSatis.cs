@@ -25,6 +25,12 @@ namespace BarcodeSales
             btn100TL.Text = 100.ToString("C2");
             btn200TL.Text = 200.ToString("C2");
             HizliButonDoldur();
+
+            using (var db = new BarcodeSalesDbEntities())
+            {
+                var sabit = db.Sabits.FirstOrDefault();
+                checkBoxYazdırmaDurumu.Checked = Convert.ToBoolean(sabit.Yazici);
+            }
         }
 
         private void ListeyeUrunGetir(Urun urun, string barkod, double miktar)
@@ -154,7 +160,11 @@ namespace BarcodeSales
                 islemNoArttir.IslemNo += 1;
                 db.SaveChanges();
 
-                MessageBox.Show("Yazdırma İşlemi Yap");
+                if (checkBoxYazdırmaDurumu.Checked)
+                {
+                    Yazdir yazdir = new Yazdir(islemNo);
+                    yazdir.Yazdirmaİslemi();
+                }
                 Temizle();
             }
         }
