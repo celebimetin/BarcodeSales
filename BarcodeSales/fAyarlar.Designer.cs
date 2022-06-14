@@ -63,6 +63,15 @@ namespace BarcodeSales
             this.düzenleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.silToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.lblStandart13 = new BarcodeSales.lblStandart();
+            this.lblStandart12 = new BarcodeSales.lblStandart();
+            this.btnIsyeriBilgileriKaydet = new BarcodeSales.btnStandart();
+            this.txtAdres = new BarcodeSales.txtStandart();
+            this.lblStandart14 = new BarcodeSales.lblStandart();
+            this.txtUnvan = new BarcodeSales.txtStandart();
+            this.lblStandart15 = new BarcodeSales.lblStandart();
+            this.txtIsyeriAdiSoyadi = new BarcodeSales.txtStandart();
+            this.lblStandart16 = new BarcodeSales.lblStandart();
             this.lblStandart11 = new BarcodeSales.lblStandart();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnTeraziOnEkSil = new System.Windows.Forms.Button();
@@ -76,15 +85,9 @@ namespace BarcodeSales
             this.lblStandart9 = new BarcodeSales.lblStandart();
             this.panel1 = new System.Windows.Forms.Panel();
             this.checkBoxYazmaDurumu = new System.Windows.Forms.CheckBox();
-            this.btnIsyeriBilgileriKaydet = new BarcodeSales.btnStandart();
-            this.txtAdres = new BarcodeSales.txtStandart();
-            this.lblStandart14 = new BarcodeSales.lblStandart();
-            this.txtUnvan = new BarcodeSales.txtStandart();
-            this.lblStandart15 = new BarcodeSales.lblStandart();
-            this.txtIsyeriAdiSoyadi = new BarcodeSales.txtStandart();
-            this.lblStandart16 = new BarcodeSales.lblStandart();
-            this.lblStandart12 = new BarcodeSales.lblStandart();
-            this.lblStandart13 = new BarcodeSales.lblStandart();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.lblStandart17 = new BarcodeSales.lblStandart();
+            this.btnYedektenYukle = new BarcodeSales.btnStandart();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -97,12 +100,14 @@ namespace BarcodeSales
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.tabPage3.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
@@ -119,7 +124,7 @@ namespace BarcodeSales
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(943, 580);
             this.tabPage1.TabIndex = 1;
-            this.tabPage1.Text = "Kullanıcılar";
+            this.tabPage1.Text = "Kullanıcılar -";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // splitContainer1
@@ -502,8 +507,108 @@ namespace BarcodeSales
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(943, 580);
             this.tabPage2.TabIndex = 2;
-            this.tabPage2.Text = "Yazıcı - Terazi - Komisyon - İşyeri Bilgileri";
+            this.tabPage2.Text = "Yazıcı - Terazi - Komisyon - İşyeri Bilgileri -";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // lblStandart13
+            // 
+            this.lblStandart13.AutoSize = true;
+            this.lblStandart13.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.lblStandart13.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.lblStandart13.Location = new System.Drawing.Point(616, 17);
+            this.lblStandart13.Name = "lblStandart13";
+            this.lblStandart13.Size = new System.Drawing.Size(163, 29);
+            this.lblStandart13.TabIndex = 26;
+            this.lblStandart13.Text = "İşyeri Bilgileri";
+            // 
+            // lblStandart12
+            // 
+            this.lblStandart12.AutoSize = true;
+            this.lblStandart12.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.lblStandart12.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.lblStandart12.Location = new System.Drawing.Point(8, 17);
+            this.lblStandart12.Name = "lblStandart12";
+            this.lblStandart12.Size = new System.Drawing.Size(414, 29);
+            this.lblStandart12.TabIndex = 25;
+            this.lblStandart12.Text = "Yazıcı Terazi ve Komisyon İşlemleri";
+            // 
+            // btnIsyeriBilgileriKaydet
+            // 
+            this.btnIsyeriBilgileriKaydet.BackColor = System.Drawing.Color.Green;
+            this.btnIsyeriBilgileriKaydet.FlatAppearance.BorderColor = System.Drawing.Color.Green;
+            this.btnIsyeriBilgileriKaydet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnIsyeriBilgileriKaydet.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIsyeriBilgileriKaydet.ForeColor = System.Drawing.Color.White;
+            this.btnIsyeriBilgileriKaydet.Location = new System.Drawing.Point(621, 411);
+            this.btnIsyeriBilgileriKaydet.Margin = new System.Windows.Forms.Padding(1);
+            this.btnIsyeriBilgileriKaydet.Name = "btnIsyeriBilgileriKaydet";
+            this.btnIsyeriBilgileriKaydet.Size = new System.Drawing.Size(250, 57);
+            this.btnIsyeriBilgileriKaydet.TabIndex = 24;
+            this.btnIsyeriBilgileriKaydet.Text = "Kaydet";
+            this.btnIsyeriBilgileriKaydet.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.btnIsyeriBilgileriKaydet.UseVisualStyleBackColor = false;
+            this.btnIsyeriBilgileriKaydet.Click += new System.EventHandler(this.btnIsyeriBilgileriKaydet_Click);
+            // 
+            // txtAdres
+            // 
+            this.txtAdres.BackColor = System.Drawing.Color.White;
+            this.txtAdres.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtAdres.Location = new System.Drawing.Point(621, 255);
+            this.txtAdres.Multiline = true;
+            this.txtAdres.Name = "txtAdres";
+            this.txtAdres.Size = new System.Drawing.Size(250, 132);
+            this.txtAdres.TabIndex = 22;
+            // 
+            // lblStandart14
+            // 
+            this.lblStandart14.AutoSize = true;
+            this.lblStandart14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lblStandart14.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.lblStandart14.Location = new System.Drawing.Point(616, 226);
+            this.lblStandart14.Name = "lblStandart14";
+            this.lblStandart14.Size = new System.Drawing.Size(64, 25);
+            this.lblStandart14.TabIndex = 23;
+            this.lblStandart14.Text = "Adres";
+            // 
+            // txtUnvan
+            // 
+            this.txtUnvan.BackColor = System.Drawing.Color.White;
+            this.txtUnvan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtUnvan.Location = new System.Drawing.Point(621, 182);
+            this.txtUnvan.Name = "txtUnvan";
+            this.txtUnvan.Size = new System.Drawing.Size(250, 30);
+            this.txtUnvan.TabIndex = 20;
+            // 
+            // lblStandart15
+            // 
+            this.lblStandart15.AutoSize = true;
+            this.lblStandart15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lblStandart15.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.lblStandart15.Location = new System.Drawing.Point(616, 153);
+            this.lblStandart15.Name = "lblStandart15";
+            this.lblStandart15.Size = new System.Drawing.Size(69, 25);
+            this.lblStandart15.TabIndex = 21;
+            this.lblStandart15.Text = "Unvan";
+            // 
+            // txtIsyeriAdiSoyadi
+            // 
+            this.txtIsyeriAdiSoyadi.BackColor = System.Drawing.Color.White;
+            this.txtIsyeriAdiSoyadi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtIsyeriAdiSoyadi.Location = new System.Drawing.Point(621, 105);
+            this.txtIsyeriAdiSoyadi.Name = "txtIsyeriAdiSoyadi";
+            this.txtIsyeriAdiSoyadi.Size = new System.Drawing.Size(250, 30);
+            this.txtIsyeriAdiSoyadi.TabIndex = 19;
+            // 
+            // lblStandart16
+            // 
+            this.lblStandart16.AutoSize = true;
+            this.lblStandart16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lblStandart16.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.lblStandart16.Location = new System.Drawing.Point(616, 77);
+            this.lblStandart16.Name = "lblStandart16";
+            this.lblStandart16.Size = new System.Drawing.Size(107, 25);
+            this.lblStandart16.TabIndex = 18;
+            this.lblStandart16.Text = "Adı Soyadı";
             // 
             // lblStandart11
             // 
@@ -660,105 +765,46 @@ namespace BarcodeSales
             this.checkBoxYazmaDurumu.UseVisualStyleBackColor = false;
             this.checkBoxYazmaDurumu.CheckedChanged += new System.EventHandler(this.checkBoxYazmaDurumu_CheckedChanged);
             // 
-            // btnIsyeriBilgileriKaydet
+            // tabPage3
             // 
-            this.btnIsyeriBilgileriKaydet.BackColor = System.Drawing.Color.Green;
-            this.btnIsyeriBilgileriKaydet.FlatAppearance.BorderColor = System.Drawing.Color.Green;
-            this.btnIsyeriBilgileriKaydet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnIsyeriBilgileriKaydet.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIsyeriBilgileriKaydet.ForeColor = System.Drawing.Color.White;
-            this.btnIsyeriBilgileriKaydet.Location = new System.Drawing.Point(621, 411);
-            this.btnIsyeriBilgileriKaydet.Margin = new System.Windows.Forms.Padding(1);
-            this.btnIsyeriBilgileriKaydet.Name = "btnIsyeriBilgileriKaydet";
-            this.btnIsyeriBilgileriKaydet.Size = new System.Drawing.Size(250, 57);
-            this.btnIsyeriBilgileriKaydet.TabIndex = 24;
-            this.btnIsyeriBilgileriKaydet.Text = "Kaydet";
-            this.btnIsyeriBilgileriKaydet.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.btnIsyeriBilgileriKaydet.UseVisualStyleBackColor = false;
-            this.btnIsyeriBilgileriKaydet.Click += new System.EventHandler(this.btnIsyeriBilgileriKaydet_Click);
+            this.tabPage3.Controls.Add(this.lblStandart17);
+            this.tabPage3.Controls.Add(this.btnYedektenYukle);
+            this.tabPage3.Location = new System.Drawing.Point(4, 25);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(943, 580);
+            this.tabPage3.TabIndex = 3;
+            this.tabPage3.Text = "Yedek Yükleme";
+            this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // txtAdres
+            // lblStandart17
             // 
-            this.txtAdres.BackColor = System.Drawing.Color.White;
-            this.txtAdres.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtAdres.Location = new System.Drawing.Point(621, 255);
-            this.txtAdres.Multiline = true;
-            this.txtAdres.Name = "txtAdres";
-            this.txtAdres.Size = new System.Drawing.Size(250, 132);
-            this.txtAdres.TabIndex = 22;
+            this.lblStandart17.AutoSize = true;
+            this.lblStandart17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lblStandart17.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.lblStandart17.Location = new System.Drawing.Point(9, 32);
+            this.lblStandart17.Name = "lblStandart17";
+            this.lblStandart17.Size = new System.Drawing.Size(336, 100);
+            this.lblStandart17.TabIndex = 26;
+            this.lblStandart17.Text = "Önceden aldığınız yedeği belirleyiniz. \r\nYedek yükle butonuna basarak \r\nyedeği te" +
+    "krardan yükleyiniz.\r\nBu işlemi gerektiğinde yapınız.";
             // 
-            // lblStandart14
+            // btnYedektenYukle
             // 
-            this.lblStandart14.AutoSize = true;
-            this.lblStandart14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lblStandart14.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.lblStandart14.Location = new System.Drawing.Point(616, 226);
-            this.lblStandart14.Name = "lblStandart14";
-            this.lblStandart14.Size = new System.Drawing.Size(64, 25);
-            this.lblStandart14.TabIndex = 23;
-            this.lblStandart14.Text = "Adres";
-            // 
-            // txtUnvan
-            // 
-            this.txtUnvan.BackColor = System.Drawing.Color.White;
-            this.txtUnvan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtUnvan.Location = new System.Drawing.Point(621, 182);
-            this.txtUnvan.Name = "txtUnvan";
-            this.txtUnvan.Size = new System.Drawing.Size(250, 30);
-            this.txtUnvan.TabIndex = 20;
-            // 
-            // lblStandart15
-            // 
-            this.lblStandart15.AutoSize = true;
-            this.lblStandart15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lblStandart15.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.lblStandart15.Location = new System.Drawing.Point(616, 153);
-            this.lblStandart15.Name = "lblStandart15";
-            this.lblStandart15.Size = new System.Drawing.Size(69, 25);
-            this.lblStandart15.TabIndex = 21;
-            this.lblStandart15.Text = "Unvan";
-            // 
-            // txtIsyeriAdiSoyadi
-            // 
-            this.txtIsyeriAdiSoyadi.BackColor = System.Drawing.Color.White;
-            this.txtIsyeriAdiSoyadi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtIsyeriAdiSoyadi.Location = new System.Drawing.Point(621, 105);
-            this.txtIsyeriAdiSoyadi.Name = "txtIsyeriAdiSoyadi";
-            this.txtIsyeriAdiSoyadi.Size = new System.Drawing.Size(250, 30);
-            this.txtIsyeriAdiSoyadi.TabIndex = 19;
-            // 
-            // lblStandart16
-            // 
-            this.lblStandart16.AutoSize = true;
-            this.lblStandart16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lblStandart16.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.lblStandart16.Location = new System.Drawing.Point(616, 77);
-            this.lblStandart16.Name = "lblStandart16";
-            this.lblStandart16.Size = new System.Drawing.Size(107, 25);
-            this.lblStandart16.TabIndex = 18;
-            this.lblStandart16.Text = "Adı Soyadı";
-            // 
-            // lblStandart12
-            // 
-            this.lblStandart12.AutoSize = true;
-            this.lblStandart12.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.lblStandart12.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.lblStandart12.Location = new System.Drawing.Point(8, 17);
-            this.lblStandart12.Name = "lblStandart12";
-            this.lblStandart12.Size = new System.Drawing.Size(414, 29);
-            this.lblStandart12.TabIndex = 25;
-            this.lblStandart12.Text = "Yazıcı Terazi ve Komisyon İşlemleri";
-            // 
-            // lblStandart13
-            // 
-            this.lblStandart13.AutoSize = true;
-            this.lblStandart13.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.lblStandart13.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.lblStandart13.Location = new System.Drawing.Point(616, 17);
-            this.lblStandart13.Name = "lblStandart13";
-            this.lblStandart13.Size = new System.Drawing.Size(163, 29);
-            this.lblStandart13.TabIndex = 26;
-            this.lblStandart13.Text = "İşyeri Bilgileri";
+            this.btnYedektenYukle.BackColor = System.Drawing.Color.DarkOrange;
+            this.btnYedektenYukle.FlatAppearance.BorderColor = System.Drawing.Color.DarkOrange;
+            this.btnYedektenYukle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnYedektenYukle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnYedektenYukle.ForeColor = System.Drawing.Color.White;
+            this.btnYedektenYukle.Location = new System.Drawing.Point(14, 153);
+            this.btnYedektenYukle.Margin = new System.Windows.Forms.Padding(1);
+            this.btnYedektenYukle.Name = "btnYedektenYukle";
+            this.btnYedektenYukle.Size = new System.Drawing.Size(233, 133);
+            this.btnYedektenYukle.TabIndex = 25;
+            this.btnYedektenYukle.Text = "Yedekten Yükle\r\n(Restore)";
+            this.btnYedektenYukle.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.btnYedektenYukle.UseVisualStyleBackColor = false;
+            this.btnYedektenYukle.Click += new System.EventHandler(this.btnYedektenYukle_Click);
             // 
             // fAyarlar
             // 
@@ -788,6 +834,8 @@ namespace BarcodeSales
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -847,5 +895,8 @@ namespace BarcodeSales
         private lblStandart lblStandart16;
         private lblStandart lblStandart12;
         private lblStandart lblStandart13;
+        private System.Windows.Forms.TabPage tabPage3;
+        private lblStandart lblStandart17;
+        private btnStandart btnYedektenYukle;
     }
 }

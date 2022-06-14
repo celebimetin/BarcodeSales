@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Data.Entity;
 using System.Globalization;
+using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -187,6 +189,39 @@ namespace BarcodeSales
 
                     db.Sabits.Add(sabit);
                     db.SaveChanges();
+                }
+            }
+        }
+
+        public static void Backup()
+        {
+            SaveFileDialog saveFile = new SaveFileDialog();
+            saveFile.Filter = "Veri yedek dosyası|0.bak";
+            saveFile.FileName = "Barkodlu_Satis_Programi_" + DateTime.Now.ToShortDateString();
+
+            if (saveFile.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    Cursor.Current = Cursors.WaitCursor;
+                    if (File.Exists(saveFile.FileName))
+                    {
+                        File.Delete(saveFile.FileName);
+                    }
+                    var dbHedef = saveFile.FileName;
+                    string dbKaynak = Application.LocalUserAppDataPath;
+                    using (var db = new BarcodeSalesDbEntities())
+                    {
+                        var cmd = @"BACKUP DATABASE[" + dbKaynak + "] TO DISK='" + dbHedef + "'";
+                        db.Database.ExecuteSqlCommand(TransactionalBehavior.DoNotEnsureTransaction, cmd);
+                    }
+                    Cursor.Current = Cursors.Default;
+                    MessageBox.Show("Yedek alınmıştır.");
+                }
+                catch (Exception exception)
+                {
+
+                    MessageBox.Show(exception.ToString());
                 }
             }
         }

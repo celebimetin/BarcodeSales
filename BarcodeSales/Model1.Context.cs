@@ -15,10 +15,7 @@ namespace BarcodeSales
     
     public partial class BarcodeSalesDbEntities : DbContext
     {
-        public BarcodeSalesDbEntities()
-            : base("name=BarcodeSalesDbEntities")
-        {
-        }
+        public BarcodeSalesDbEntities() : base("name=BarcodeSalesDbEntities") { }
     
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

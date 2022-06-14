@@ -35,6 +35,15 @@ namespace BarcodeSales
                 var satisListe = db.Satis.Where(x => x.IslemNoId == IslemNo).ToList();
                 if (isyeri != null && satisListe != null)
                 {
+                    int kagıtUzunluk = 120;
+                    for (int i = 0; i < satisListe.Count; i++)
+                    {
+                        kagıtUzunluk += 15;
+                    }
+
+                    PaperSize paperSize = new PaperSize("58mm Termal", 220, kagıtUzunluk + 120);
+                    printDocument.DefaultPageSettings.PaperSize = paperSize;
+
                     Font fontBuyuk = new Font("Calibri", 10, FontStyle.Bold);
                     Font fontSabit = new Font("Calibri", 8, FontStyle.Bold);
                     Font fontIcerikBaslik = new Font("Calibri", 8, FontStyle.Underline);
@@ -68,9 +77,6 @@ namespace BarcodeSales
                     e.Graphics.DrawString("Toplam : " + genelToplam.ToString("C2"), fontBuyuk, Brushes.Black, new Point(5, yukseklik + 20));
                     e.Graphics.DrawString("----------------------------------------", fontSabit, Brushes.Black, new Point(5, yukseklik + 40));
                     e.Graphics.DrawString("***** Mali Değeri Yoktur *****", fontSabit, Brushes.Black, new Point(5, yukseklik + 60));
-
-                    PaperSize paperSize = new PaperSize("58mm Termal", 220, yukseklik + 80);
-                    printDocument.DefaultPageSettings.PaperSize = paperSize;
                 }
             }
         }

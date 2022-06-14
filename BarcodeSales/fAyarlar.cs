@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -321,6 +322,12 @@ namespace BarcodeSales
             {
                 MessageBox.Show("Lütfen zorunlu alanları giriniz." + "\nAdı Soyadı \nUnvan \nAdres");
             }
+        }
+
+        private void btnYedektenYukle_Click(object sender, EventArgs e)
+        {
+            Process.Start(Application.StartupPath + "\\ProgramRestore.exe");
+            Application.Exit();
         }
     }
 }

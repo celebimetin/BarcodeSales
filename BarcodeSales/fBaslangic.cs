@@ -72,8 +72,7 @@ namespace BarcodeSales
 
         private void btnBackup_Click(object sender, EventArgs e)
         {
-            Cursor.Current = Cursors.WaitCursor;
-            Cursor.Current = Cursors.Default;
+            Islemler.Backup();
         }
 
         private void btnKullaniciDegistir_Click(object sender, EventArgs e)
