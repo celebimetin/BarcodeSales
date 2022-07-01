@@ -101,6 +101,7 @@ namespace BarcodeSales
             this.btnGiris.Text = "Giriş";
             this.btnGiris.UseVisualStyleBackColor = false;
             this.btnGiris.Click += new System.EventHandler(this.btnGiris_Click);
+            this.btnGiris.KeyDown += new System.Windows.Forms.KeyEventHandler(this.btnGiris_KeyDown);
             // 
             // fLogin
             // 
@@ -114,6 +115,7 @@ namespace BarcodeSales
             this.Controls.Add(this.txtKullaniciAdi);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.KeyPreview = true;
             this.Name = "fLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";

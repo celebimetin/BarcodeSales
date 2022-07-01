@@ -12,7 +12,7 @@ namespace BarcodeSales
             InitializeComponent();
         }
 
-        private void btnGiris_Click(object sender, EventArgs e)
+        private void GirisYap()
         {
             if (txtKullaniciAdi.Text != "" && txtSifre.Text != "")
             {
@@ -53,9 +53,22 @@ namespace BarcodeSales
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message);
+                    MessageBox.Show(ex.ToString());
                     throw;
                 }
+            }
+        }
+
+        private void btnGiris_Click(object sender, EventArgs e)
+        {
+            GirisYap();
+        }
+
+        private void btnGiris_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                GirisYap();
             }
         }
     }
