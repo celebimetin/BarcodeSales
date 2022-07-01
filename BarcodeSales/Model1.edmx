@@ -61,6 +61,7 @@
           <Property Name="UrunGiris" Type="bit" />
           <Property Name="Ayarlar" Type="bit" />
           <Property Name="FiyatGuncelleme" Type="bit" />
+          <Property Name="Yedekleme" Type="bit" />
         </EntityType>
         <EntityType Name="Sabit">
           <Key>
@@ -224,8 +225,8 @@
           <EntitySet Name="Barkods" EntityType="BarcodeSalesDbModel.Barkod" />
           <EntitySet Name="IslemOzets" EntityType="BarcodeSalesDbModel.IslemOzet" />
           <EntitySet Name="StokHarakets" EntityType="BarcodeSalesDbModel.StokHaraket" />
-          <EntitySet Name="Kullanicis" EntityType="BarcodeSalesDbModel.Kullanici" />
           <EntitySet Name="Sabits" EntityType="BarcodeSalesDbModel.Sabit" />
+          <EntitySet Name="Kullanicis" EntityType="BarcodeSalesDbModel.Kullanici" />
         </EntityContainer>
         <EntityType Name="UrunGrup">
           <Key>
@@ -271,6 +272,17 @@
           <Property Name="Kullanici" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Tarih" Type="DateTime" Precision="3" />
         </EntityType>
+        <EntityType Name="Sabit">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="KartKomisyon" Type="Int32" />
+          <Property Name="Yazici" Type="Boolean" />
+          <Property Name="AdSoyad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Unvan" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Adres" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+        </EntityType>
         <EntityType Name="Kullanici">
           <Key>
             <PropertyRef Name="Id" />
@@ -287,17 +299,7 @@
           <Property Name="UrunGiris" Type="Boolean" />
           <Property Name="Ayarlar" Type="Boolean" />
           <Property Name="FiyatGuncelleme" Type="Boolean" />
-        </EntityType>
-        <EntityType Name="Sabit">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="KartKomisyon" Type="Int32" />
-          <Property Name="Yazici" Type="Boolean" />
-          <Property Name="AdSoyad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Unvan" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Adres" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Yedekleme" Type="Boolean" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -418,9 +420,22 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="Sabits">
+            <EntityTypeMapping TypeName="BarcodeSalesDbModel.Sabit">
+              <MappingFragment StoreEntitySet="Sabit">
+                <ScalarProperty Name="Adres" ColumnName="Adres" />
+                <ScalarProperty Name="Unvan" ColumnName="Unvan" />
+                <ScalarProperty Name="AdSoyad" ColumnName="AdSoyad" />
+                <ScalarProperty Name="Yazici" ColumnName="Yazici" />
+                <ScalarProperty Name="KartKomisyon" ColumnName="KartKomisyon" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="Kullanicis">
             <EntityTypeMapping TypeName="BarcodeSalesDbModel.Kullanici">
               <MappingFragment StoreEntitySet="Kullanici">
+                <ScalarProperty Name="Yedekleme" ColumnName="Yedekleme" />
                 <ScalarProperty Name="FiyatGuncelleme" ColumnName="FiyatGuncelleme" />
                 <ScalarProperty Name="Ayarlar" ColumnName="Ayarlar" />
                 <ScalarProperty Name="UrunGiris" ColumnName="UrunGiris" />
@@ -432,18 +447,6 @@
                 <ScalarProperty Name="EPosta" ColumnName="EPosta" />
                 <ScalarProperty Name="Telefon" ColumnName="Telefon" />
                 <ScalarProperty Name="AdiSoyadi" ColumnName="AdiSoyadi" />
-                <ScalarProperty Name="Id" ColumnName="Id" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Sabits">
-            <EntityTypeMapping TypeName="BarcodeSalesDbModel.Sabit">
-              <MappingFragment StoreEntitySet="Sabit">
-                <ScalarProperty Name="Adres" ColumnName="Adres" />
-                <ScalarProperty Name="Unvan" ColumnName="Unvan" />
-                <ScalarProperty Name="AdSoyad" ColumnName="AdSoyad" />
-                <ScalarProperty Name="Yazici" ColumnName="Yazici" />
-                <ScalarProperty Name="KartKomisyon" ColumnName="KartKomisyon" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>

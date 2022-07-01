@@ -66,6 +66,7 @@ namespace BarcodeSales
         {
             Cursor.Current = Cursors.WaitCursor;
             fAyarlar ayarlar = new fAyarlar();
+            ayarlar.lblKullanici.Text = lblKullanici.Text;
             ayarlar.ShowDialog();
             Cursor.Current = Cursors.Default;
         }
@@ -77,8 +78,9 @@ namespace BarcodeSales
 
         private void btnKullaniciDegistir_Click(object sender, EventArgs e)
         {
-            Cursor.Current = Cursors.WaitCursor;
-            Cursor.Current = Cursors.Default;
+            fLogin login = new fLogin();
+            login.Show();
+            this.Hide();
         }
 
         private void btnCikis_Click(object sender, EventArgs e)

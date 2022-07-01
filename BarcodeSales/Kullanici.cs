@@ -26,5 +26,6 @@ namespace BarcodeSales
         public Nullable<bool> UrunGiris { get; set; }
         public Nullable<bool> Ayarlar { get; set; }
         public Nullable<bool> FiyatGuncelleme { get; set; }
+        public Nullable<bool> Yedekleme { get; set; }
     }
 }

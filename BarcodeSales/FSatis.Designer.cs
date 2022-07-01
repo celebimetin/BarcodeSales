@@ -1909,7 +1909,7 @@ namespace BarcodeSales
         public System.Windows.Forms.Label lblNakit;
         public System.Windows.Forms.Label lblKart;
         public System.Windows.Forms.TextBox txtGenelToplam;
-        internal lblStandart lblKullanici;
         private System.Windows.Forms.CheckBox checkBoxYazdırmaDurumu;
+        protected internal lblStandart lblKullanici;
     }
 }

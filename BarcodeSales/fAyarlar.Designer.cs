@@ -88,6 +88,7 @@ namespace BarcodeSales
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.lblStandart17 = new BarcodeSales.lblStandart();
             this.btnYedektenYukle = new BarcodeSales.btnStandart();
+            this.lblKullanici = new BarcodeSales.lblStandart();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -136,6 +137,7 @@ namespace BarcodeSales
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.lblKullanici);
             this.splitContainer1.Panel1.Controls.Add(this.lblKullaniciId);
             this.splitContainer1.Panel1.Controls.Add(this.checkBoxFiyatGuncelleme);
             this.splitContainer1.Panel1.Controls.Add(this.checkBoxAyarlar);
@@ -806,6 +808,17 @@ namespace BarcodeSales
             this.btnYedektenYukle.UseVisualStyleBackColor = false;
             this.btnYedektenYukle.Click += new System.EventHandler(this.btnYedektenYukle_Click);
             // 
+            // lblKullanici
+            // 
+            this.lblKullanici.AutoSize = true;
+            this.lblKullanici.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lblKullanici.ForeColor = System.Drawing.Color.Black;
+            this.lblKullanici.Location = new System.Drawing.Point(322, 544);
+            this.lblKullanici.Name = "lblKullanici";
+            this.lblKullanici.Size = new System.Drawing.Size(89, 20);
+            this.lblKullanici.TabIndex = 29;
+            this.lblKullanici.Text = "lblKullanici";
+            // 
             // fAyarlar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -898,5 +911,6 @@ namespace BarcodeSales
         private System.Windows.Forms.TabPage tabPage3;
         private lblStandart lblStandart17;
         private btnStandart btnYedektenYukle;
+        protected internal lblStandart lblKullanici;
     }
 }

@@ -15,7 +15,10 @@ namespace BarcodeSales
     
     public partial class BarcodeSalesDbEntities : DbContext
     {
-        public BarcodeSalesDbEntities() : base("name=BarcodeSalesDbEntities") { }
+        public BarcodeSalesDbEntities()
+            : base("name=BarcodeSalesDbEntities")
+        {
+        }
     
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -31,7 +34,7 @@ namespace BarcodeSales
         public virtual DbSet<Barkod> Barkods { get; set; }
         public virtual DbSet<IslemOzet> IslemOzets { get; set; }
         public virtual DbSet<StokHaraket> StokHarakets { get; set; }
-        public virtual DbSet<Kullanici> Kullanicis { get; set; }
         public virtual DbSet<Sabit> Sabits { get; set; }
+        public virtual DbSet<Kullanici> Kullanicis { get; set; }
     }
 }

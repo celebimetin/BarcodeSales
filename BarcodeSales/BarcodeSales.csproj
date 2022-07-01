@@ -158,6 +158,12 @@
     <Compile Include="fIsemBeklet.Designer.cs">
       <DependentUpon>fIsemBeklet.cs</DependentUpon>
     </Compile>
+    <Compile Include="fLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fLogin.Designer.cs">
+      <DependentUpon>fLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="fNakitKart.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -272,6 +278,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="fIsemBeklet.resx">
       <DependentUpon>fIsemBeklet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fLogin.resx">
+      <DependentUpon>fLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fNakitKart.resx">
       <DependentUpon>fNakitKart.cs</DependentUpon>

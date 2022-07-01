@@ -30,15 +30,15 @@ namespace BarcodeSales
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnSatisIslemi = new System.Windows.Forms.Button();
-            this.btnRaporlar = new System.Windows.Forms.Button();
-            this.btnStok = new System.Windows.Forms.Button();
-            this.btnUrunGiris = new System.Windows.Forms.Button();
-            this.btnFiyatGuncelle = new System.Windows.Forms.Button();
-            this.btnAyarlar = new System.Windows.Forms.Button();
-            this.btnBackup = new System.Windows.Forms.Button();
-            this.btnKullaniciDegistir = new System.Windows.Forms.Button();
             this.btnCikis = new System.Windows.Forms.Button();
+            this.btnKullaniciDegistir = new System.Windows.Forms.Button();
+            this.btnBackup = new System.Windows.Forms.Button();
+            this.btnAyarlar = new System.Windows.Forms.Button();
+            this.btnFiyatGuncelle = new System.Windows.Forms.Button();
+            this.btnUrunGiris = new System.Windows.Forms.Button();
+            this.btnStok = new System.Windows.Forms.Button();
+            this.btnRaporlar = new System.Windows.Forms.Button();
+            this.btnSatisIslemi = new System.Windows.Forms.Button();
             this.lblKullanici = new System.Windows.Forms.Label();
             this.lblFirmaBilgisi = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
@@ -68,110 +68,20 @@ namespace BarcodeSales
             this.tableLayoutPanel1.Size = new System.Drawing.Size(688, 343);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
-            // btnSatisIslemi
+            // btnCikis
             // 
-            this.btnSatisIslemi.BackColor = System.Drawing.Color.Turquoise;
-            this.btnSatisIslemi.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnSatisIslemi.FlatAppearance.BorderColor = System.Drawing.Color.Turquoise;
-            this.btnSatisIslemi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSatisIslemi.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSatisIslemi.Location = new System.Drawing.Point(3, 3);
-            this.btnSatisIslemi.Name = "btnSatisIslemi";
-            this.btnSatisIslemi.Size = new System.Drawing.Size(223, 108);
-            this.btnSatisIslemi.TabIndex = 0;
-            this.btnSatisIslemi.Text = "Satış İşlemi";
-            this.btnSatisIslemi.UseVisualStyleBackColor = false;
-            this.btnSatisIslemi.Click += new System.EventHandler(this.btnSatisIslemi_Click);
-            // 
-            // btnRaporlar
-            // 
-            this.btnRaporlar.BackColor = System.Drawing.Color.Orange;
-            this.btnRaporlar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnRaporlar.FlatAppearance.BorderColor = System.Drawing.Color.Orange;
-            this.btnRaporlar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRaporlar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRaporlar.Location = new System.Drawing.Point(232, 3);
-            this.btnRaporlar.Name = "btnRaporlar";
-            this.btnRaporlar.Size = new System.Drawing.Size(223, 108);
-            this.btnRaporlar.TabIndex = 1;
-            this.btnRaporlar.Text = "Raporlar";
-            this.btnRaporlar.UseVisualStyleBackColor = false;
-            this.btnRaporlar.Click += new System.EventHandler(this.btnRaporlar_Click);
-            // 
-            // btnStok
-            // 
-            this.btnStok.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnStok.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnStok.FlatAppearance.BorderColor = System.Drawing.Color.SteelBlue;
-            this.btnStok.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStok.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStok.Location = new System.Drawing.Point(461, 3);
-            this.btnStok.Name = "btnStok";
-            this.btnStok.Size = new System.Drawing.Size(224, 108);
-            this.btnStok.TabIndex = 2;
-            this.btnStok.Text = "Stok Takibi";
-            this.btnStok.UseVisualStyleBackColor = false;
-            this.btnStok.Click += new System.EventHandler(this.btnStok_Click);
-            // 
-            // btnUrunGiris
-            // 
-            this.btnUrunGiris.BackColor = System.Drawing.Color.LightGreen;
-            this.btnUrunGiris.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnUrunGiris.FlatAppearance.BorderColor = System.Drawing.Color.LightGreen;
-            this.btnUrunGiris.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUrunGiris.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUrunGiris.Location = new System.Drawing.Point(3, 117);
-            this.btnUrunGiris.Name = "btnUrunGiris";
-            this.btnUrunGiris.Size = new System.Drawing.Size(223, 108);
-            this.btnUrunGiris.TabIndex = 3;
-            this.btnUrunGiris.Text = "Ürün Giriş";
-            this.btnUrunGiris.UseVisualStyleBackColor = false;
-            this.btnUrunGiris.Click += new System.EventHandler(this.btnUrunGiris_Click);
-            // 
-            // btnFiyatGuncelle
-            // 
-            this.btnFiyatGuncelle.BackColor = System.Drawing.Color.SlateBlue;
-            this.btnFiyatGuncelle.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnFiyatGuncelle.FlatAppearance.BorderColor = System.Drawing.Color.SlateBlue;
-            this.btnFiyatGuncelle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFiyatGuncelle.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFiyatGuncelle.Location = new System.Drawing.Point(232, 117);
-            this.btnFiyatGuncelle.Name = "btnFiyatGuncelle";
-            this.btnFiyatGuncelle.Size = new System.Drawing.Size(223, 108);
-            this.btnFiyatGuncelle.TabIndex = 4;
-            this.btnFiyatGuncelle.Text = "Fiyat Güncelle";
-            this.btnFiyatGuncelle.UseVisualStyleBackColor = false;
-            this.btnFiyatGuncelle.Click += new System.EventHandler(this.btnFiyatGuncelle_Click);
-            // 
-            // btnAyarlar
-            // 
-            this.btnAyarlar.BackColor = System.Drawing.Color.SlateGray;
-            this.btnAyarlar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnAyarlar.FlatAppearance.BorderColor = System.Drawing.Color.SlateGray;
-            this.btnAyarlar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAyarlar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAyarlar.Location = new System.Drawing.Point(461, 117);
-            this.btnAyarlar.Name = "btnAyarlar";
-            this.btnAyarlar.Size = new System.Drawing.Size(224, 108);
-            this.btnAyarlar.TabIndex = 5;
-            this.btnAyarlar.Text = "Ayarlar";
-            this.btnAyarlar.UseVisualStyleBackColor = false;
-            this.btnAyarlar.Click += new System.EventHandler(this.btnAyarlar_Click);
-            // 
-            // btnBackup
-            // 
-            this.btnBackup.BackColor = System.Drawing.Color.MediumPurple;
-            this.btnBackup.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnBackup.FlatAppearance.BorderColor = System.Drawing.Color.MediumPurple;
-            this.btnBackup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBackup.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBackup.Location = new System.Drawing.Point(3, 231);
-            this.btnBackup.Name = "btnBackup";
-            this.btnBackup.Size = new System.Drawing.Size(223, 109);
-            this.btnBackup.TabIndex = 6;
-            this.btnBackup.Text = "Yedekle \r\n(Backup)";
-            this.btnBackup.UseVisualStyleBackColor = false;
-            this.btnBackup.Click += new System.EventHandler(this.btnBackup_Click);
+            this.btnCikis.BackColor = System.Drawing.Color.Red;
+            this.btnCikis.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnCikis.FlatAppearance.BorderColor = System.Drawing.Color.Red;
+            this.btnCikis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCikis.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCikis.Location = new System.Drawing.Point(461, 231);
+            this.btnCikis.Name = "btnCikis";
+            this.btnCikis.Size = new System.Drawing.Size(224, 109);
+            this.btnCikis.TabIndex = 8;
+            this.btnCikis.Text = "Çıkış";
+            this.btnCikis.UseVisualStyleBackColor = false;
+            this.btnCikis.Click += new System.EventHandler(this.btnCikis_Click);
             // 
             // btnKullaniciDegistir
             // 
@@ -188,20 +98,110 @@ namespace BarcodeSales
             this.btnKullaniciDegistir.UseVisualStyleBackColor = false;
             this.btnKullaniciDegistir.Click += new System.EventHandler(this.btnKullaniciDegistir_Click);
             // 
-            // btnCikis
+            // btnBackup
             // 
-            this.btnCikis.BackColor = System.Drawing.Color.Red;
-            this.btnCikis.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnCikis.FlatAppearance.BorderColor = System.Drawing.Color.Red;
-            this.btnCikis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCikis.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCikis.Location = new System.Drawing.Point(461, 231);
-            this.btnCikis.Name = "btnCikis";
-            this.btnCikis.Size = new System.Drawing.Size(224, 109);
-            this.btnCikis.TabIndex = 8;
-            this.btnCikis.Text = "Çıkış";
-            this.btnCikis.UseVisualStyleBackColor = false;
-            this.btnCikis.Click += new System.EventHandler(this.btnCikis_Click);
+            this.btnBackup.BackColor = System.Drawing.Color.MediumPurple;
+            this.btnBackup.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnBackup.FlatAppearance.BorderColor = System.Drawing.Color.MediumPurple;
+            this.btnBackup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBackup.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBackup.Location = new System.Drawing.Point(3, 231);
+            this.btnBackup.Name = "btnBackup";
+            this.btnBackup.Size = new System.Drawing.Size(223, 109);
+            this.btnBackup.TabIndex = 6;
+            this.btnBackup.Text = "Yedekle \r\n(Backup)";
+            this.btnBackup.UseVisualStyleBackColor = false;
+            this.btnBackup.Click += new System.EventHandler(this.btnBackup_Click);
+            // 
+            // btnAyarlar
+            // 
+            this.btnAyarlar.BackColor = System.Drawing.Color.SlateGray;
+            this.btnAyarlar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnAyarlar.FlatAppearance.BorderColor = System.Drawing.Color.SlateGray;
+            this.btnAyarlar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAyarlar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAyarlar.Location = new System.Drawing.Point(461, 117);
+            this.btnAyarlar.Name = "btnAyarlar";
+            this.btnAyarlar.Size = new System.Drawing.Size(224, 108);
+            this.btnAyarlar.TabIndex = 5;
+            this.btnAyarlar.Text = "Ayarlar";
+            this.btnAyarlar.UseVisualStyleBackColor = false;
+            this.btnAyarlar.Click += new System.EventHandler(this.btnAyarlar_Click);
+            // 
+            // btnFiyatGuncelle
+            // 
+            this.btnFiyatGuncelle.BackColor = System.Drawing.Color.SlateBlue;
+            this.btnFiyatGuncelle.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnFiyatGuncelle.FlatAppearance.BorderColor = System.Drawing.Color.SlateBlue;
+            this.btnFiyatGuncelle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFiyatGuncelle.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFiyatGuncelle.Location = new System.Drawing.Point(232, 117);
+            this.btnFiyatGuncelle.Name = "btnFiyatGuncelle";
+            this.btnFiyatGuncelle.Size = new System.Drawing.Size(223, 108);
+            this.btnFiyatGuncelle.TabIndex = 4;
+            this.btnFiyatGuncelle.Text = "Fiyat Güncelle";
+            this.btnFiyatGuncelle.UseVisualStyleBackColor = false;
+            this.btnFiyatGuncelle.Click += new System.EventHandler(this.btnFiyatGuncelle_Click);
+            // 
+            // btnUrunGiris
+            // 
+            this.btnUrunGiris.BackColor = System.Drawing.Color.LightGreen;
+            this.btnUrunGiris.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnUrunGiris.FlatAppearance.BorderColor = System.Drawing.Color.LightGreen;
+            this.btnUrunGiris.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUrunGiris.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUrunGiris.Location = new System.Drawing.Point(3, 117);
+            this.btnUrunGiris.Name = "btnUrunGiris";
+            this.btnUrunGiris.Size = new System.Drawing.Size(223, 108);
+            this.btnUrunGiris.TabIndex = 3;
+            this.btnUrunGiris.Text = "Ürün Giriş";
+            this.btnUrunGiris.UseVisualStyleBackColor = false;
+            this.btnUrunGiris.Click += new System.EventHandler(this.btnUrunGiris_Click);
+            // 
+            // btnStok
+            // 
+            this.btnStok.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnStok.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnStok.FlatAppearance.BorderColor = System.Drawing.Color.SteelBlue;
+            this.btnStok.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStok.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStok.Location = new System.Drawing.Point(461, 3);
+            this.btnStok.Name = "btnStok";
+            this.btnStok.Size = new System.Drawing.Size(224, 108);
+            this.btnStok.TabIndex = 2;
+            this.btnStok.Text = "Stok Takibi";
+            this.btnStok.UseVisualStyleBackColor = false;
+            this.btnStok.Click += new System.EventHandler(this.btnStok_Click);
+            // 
+            // btnRaporlar
+            // 
+            this.btnRaporlar.BackColor = System.Drawing.Color.Orange;
+            this.btnRaporlar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnRaporlar.FlatAppearance.BorderColor = System.Drawing.Color.Orange;
+            this.btnRaporlar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRaporlar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRaporlar.Location = new System.Drawing.Point(232, 3);
+            this.btnRaporlar.Name = "btnRaporlar";
+            this.btnRaporlar.Size = new System.Drawing.Size(223, 108);
+            this.btnRaporlar.TabIndex = 1;
+            this.btnRaporlar.Text = "Raporlar";
+            this.btnRaporlar.UseVisualStyleBackColor = false;
+            this.btnRaporlar.Click += new System.EventHandler(this.btnRaporlar_Click);
+            // 
+            // btnSatisIslemi
+            // 
+            this.btnSatisIslemi.BackColor = System.Drawing.Color.Turquoise;
+            this.btnSatisIslemi.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnSatisIslemi.FlatAppearance.BorderColor = System.Drawing.Color.Turquoise;
+            this.btnSatisIslemi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSatisIslemi.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSatisIslemi.Location = new System.Drawing.Point(3, 3);
+            this.btnSatisIslemi.Name = "btnSatisIslemi";
+            this.btnSatisIslemi.Size = new System.Drawing.Size(223, 108);
+            this.btnSatisIslemi.TabIndex = 0;
+            this.btnSatisIslemi.Text = "Satış İşlemi";
+            this.btnSatisIslemi.UseVisualStyleBackColor = false;
+            this.btnSatisIslemi.Click += new System.EventHandler(this.btnSatisIslemi_Click);
             // 
             // lblKullanici
             // 
@@ -217,11 +217,11 @@ namespace BarcodeSales
             // lblFirmaBilgisi
             // 
             this.lblFirmaBilgisi.AutoSize = true;
-            this.lblFirmaBilgisi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFirmaBilgisi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFirmaBilgisi.ForeColor = System.Drawing.Color.White;
             this.lblFirmaBilgisi.Location = new System.Drawing.Point(50, 9);
             this.lblFirmaBilgisi.Name = "lblFirmaBilgisi";
-            this.lblFirmaBilgisi.Size = new System.Drawing.Size(103, 20);
+            this.lblFirmaBilgisi.Size = new System.Drawing.Size(116, 25);
             this.lblFirmaBilgisi.TabIndex = 2;
             this.lblFirmaBilgisi.Text = "Firma Bilgisi";
             // 
@@ -247,16 +247,16 @@ namespace BarcodeSales
         #endregion
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Button btnSatisIslemi;
-        private System.Windows.Forms.Button btnCikis;
-        private System.Windows.Forms.Button btnKullaniciDegistir;
-        private System.Windows.Forms.Button btnBackup;
-        private System.Windows.Forms.Button btnAyarlar;
-        private System.Windows.Forms.Button btnFiyatGuncelle;
-        private System.Windows.Forms.Button btnUrunGiris;
-        private System.Windows.Forms.Button btnStok;
-        private System.Windows.Forms.Button btnRaporlar;
-        private System.Windows.Forms.Label lblKullanici;
-        private System.Windows.Forms.Label lblFirmaBilgisi;
+        protected internal System.Windows.Forms.Button btnStok;
+        protected internal System.Windows.Forms.Button btnSatisIslemi;
+        protected internal System.Windows.Forms.Button btnCikis;
+        protected internal System.Windows.Forms.Button btnKullaniciDegistir;
+        protected internal System.Windows.Forms.Button btnBackup;
+        protected internal System.Windows.Forms.Button btnAyarlar;
+        protected internal System.Windows.Forms.Button btnFiyatGuncelle;
+        protected internal System.Windows.Forms.Button btnUrunGiris;
+        protected internal System.Windows.Forms.Button btnRaporlar;
+        protected internal System.Windows.Forms.Label lblKullanici;
+        protected internal System.Windows.Forms.Label lblFirmaBilgisi;
     }
 }
