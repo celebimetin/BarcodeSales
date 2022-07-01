@@ -439,6 +439,6 @@ namespace BarcodeSales
         private ozelDataGridView dataGridViewStok;
         private System.Windows.Forms.Button btnAra;
         private btnStandart btnRaporAl;
-        protected internal lblStandart lblKullanici;
+        internal lblStandart lblKullanici;
     }
 }

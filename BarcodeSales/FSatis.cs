@@ -47,6 +47,10 @@ namespace BarcodeSales
 
                         dataGridViewSatisListesi.Rows[i].Cells["gvToplam"].Value = Math.Round(Convert.ToDouble(dataGridViewSatisListesi.Rows[i].Cells["gvMiktar"].Value) * Convert.ToDouble(dataGridViewSatisListesi.Rows[i].Cells["gvFiyat"].Value), 2);
 
+                        double dblKdvTutari = (double)urun.KdvTutari;
+
+                        dataGridViewSatisListesi.Rows[i].Cells["gvKdvTutari"].Value = Convert.ToDouble(dataGridViewSatisListesi.Rows[i].Cells["gvMiktar"].Value) * dblKdvTutari;
+
                         eklenmismi = true;
                     }
                 }
@@ -431,7 +435,7 @@ namespace BarcodeSales
         {
 
         }
-        
+
         private void bh_MouseDown(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Right)

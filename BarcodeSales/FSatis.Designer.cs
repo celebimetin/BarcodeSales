@@ -1910,6 +1910,6 @@ namespace BarcodeSales
         public System.Windows.Forms.Label lblKart;
         public System.Windows.Forms.TextBox txtGenelToplam;
         private System.Windows.Forms.CheckBox checkBoxYazdırmaDurumu;
-        protected internal lblStandart lblKullanici;
+        internal lblStandart lblKullanici;
     }
 }

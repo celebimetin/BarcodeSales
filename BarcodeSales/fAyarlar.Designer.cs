@@ -911,6 +911,6 @@ namespace BarcodeSales
         private System.Windows.Forms.TabPage tabPage3;
         private lblStandart lblStandart17;
         private btnStandart btnYedektenYukle;
-        protected internal lblStandart lblKullanici;
+        internal lblStandart lblKullanici;
     }
 }

@@ -648,6 +648,6 @@ namespace BarcodeSales
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem detayGösterToolStripMenuItem;
         private btnStandart btnRaporAl;
-        protected internal lblStandart lblKullanici;
+        internal lblStandart lblKullanici;
     }
 }
